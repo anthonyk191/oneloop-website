@@ -23,7 +23,9 @@ app.post('/contact-us', (req, res) => {
         from: req.body.email,
         to: process.env.EMAIL_USER,
         subject: req.body.subject,
-        text: req.body.message
+        text: req.body.message,
+        sender: req.body.email,
+        replyTo: req.body.email
     };
 
     transporter.sendMail(mailOptions, function (error, info) {
