@@ -6,23 +6,22 @@ const About_body = () =>{
 	return(
 		<React.Fragment>
 			<div className="oneloop-about-body">
-				<h1>This is for Minh and Wanyue!</h1>
 
 				<h1 className="AboutUs">About Us</h1>
 				<p className="imgsub">Team 2018 - 2019</p>
 				<div className="OurMission">
 					<h2 className="secTitle"> Our Mission </h2>
 					<li>
-						OUR MISSION IS TO FURTHER EXPLORE HYPERLOOP TECHNOLOGIES BY PROMOTING FASTER, CLEANER, AND MORE ENERGY EFFICIENT SOLUTIONS TO THE TRANSPORTATION SECTOR. 
+					Our mission is to further explore hyperloop technologies by promoting faster, cleaner, and more energy-efficient solutions to the transportation sector.
 					</li>
 					<li>
-						WE SEEK TO ACHIEVE THIS THROUGH CULTIVATING AN ENVIRONMENT THAT FOSTERS CONTINUOUS IMPROVEMENT, COLLABORATION WITH INDUSTRY PROFESSIONALS, AND TEAMWORK.
+					We seek to achieve this through cultivating an environment that fosters continuous improvement, collaboration with industry professionals, and teamwork.
 					</li>
 					<li>
- 						ONELOOP WAS FOUNDED IN 2016 BY A GROUP OF ENGINEERING STUDENTS AT UC DAVIS IN RESPONSE TO SPACEX’S ANNOUNCEMENT OF ITS ANNUAL HYPERLOOP COMPETITION. 
+					OneLoop was founded in 2016 by a group of engineering students at UC Davis in response to SpaceX's announcement of its annual hyperloop competition. 
 					</li>
 					<li>
-						ONELOOP BECAME ONE OF THE TOP 21 TEAMS IN THE 2019 HYPERLOOP POD COMPETITION AND WAS INVITED TO THE SPACEX HQ IN HAWTHORNE TO TAKE PART IN THE FINAL ROUND OF THE COMPETITION. BASED ON THE NUMBER OF TESTS PASSED, ONELOOP PLACED 3RD IN THE UNITED STATES AND TOP-TEN IN THE WORLD.
+					OneLoop became one of the top 21 teams in the 2019 hyperloop pod competition and was invited to the SpaceX HQ in Hawthorne to take part in the final round of the competition. Based on the number of tests passed, OneLoop placed 3rd in the united states and top ten in the world.
 					</li>
 				</div>
 				<div className="OurFacultyAdv">
@@ -30,9 +29,9 @@ const About_body = () =>{
 					<img></img>
 
 					<div className="ProfIntro">
-						<p id="bolder">PROFESSOR C.P “CASE” VAN DAM</p>
-						<p>PROFESSOR OF MECHNANICAL AND AEROSPACE ENGINEERING</p>
-						<p>UNIVERSITY OF CALIFORNIA, DAVIS</p>
+						<p id="bolder">Professor C.P “Case” Van Dam</p>
+						<p>Professor of Mechanical and Aerospace Engineering</p>
+						<p>University of California, Davis</p>
 					</div>
 				</div>
 				<div className="OurHistory">
