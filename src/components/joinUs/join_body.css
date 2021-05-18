@@ -1,0 +1,78 @@
+/*Mobile*/
+
+
+.JoinUs_Title
+{
+    color:#022851;  
+    font-family:Playfair Display;
+}
+.join_body_image
+{
+    margin: auto;
+    margin-bottom: 8%;
+    display: block;
+    width: 20%;
+}
+
+input[type=text], select
+{
+    width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+
+}
+
+input[type=message_text], select
+{
+    width: 100%;
+    padding: 60px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+.JoinUs_button
+{
+    color:white;
+    background-color:#022851;
+    font-family:open sans;
+    border-radius:10px;
+    margin-top: 2em;
+    padding-top: 0.5em;
+   padding-bottom: 0.5em;
+   padding-left: 2em;
+   padding-right: 2em;
+}
+
+.After_pic
+{
+font-family: 'Open Sans', Arial, sans-serif;
+font-weight: 600;
+font-style: italic;
+}
+
+.Basic_Qualifications
+{
+    
+}
+
+.How_to_Apply
+{
+    margin: 0 0 0.25em 0;
+}
+
+/*Tablet*/
+@media only screen and ( min-width:768px)
+{
+
+}
+
+/*desktop*/
+
+@media only screen and ( min-width:1000px)
+{
+
+}
