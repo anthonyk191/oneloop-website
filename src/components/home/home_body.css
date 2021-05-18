@@ -32,16 +32,30 @@
     width: 100%;
     text-align: center;
     padding: 0;
-    transition: height 0.5s;
 }
 
-.slideshow img
+.frame-wrapper
 {
-    display: block;
+    position: relative;
+    height: 16em;
+    margin-bottom: 1em;
+}
+
+.ss-image
+{
+    position: absolute;
+    height: 100%;
     width: 100%;
     margin: 0;
-    transition: height 0.2s;
-    margin-bottom: 1em;
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+}
+
+.ss-idle
+{
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
 .slideshow span
@@ -60,6 +74,19 @@
 .slideshow span.active
 {
     background-color: var(--primary-clr);
+}
+
+@media (min-width: 48rem)
+{
+    .oneloop-home-body h1
+    {
+        text-align: left;
+    }
+
+    .frame-wrapper
+    {
+        height: 32.5em;
+    }
 }
 
 @media (hover: hover) 
