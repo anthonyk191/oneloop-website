@@ -47,16 +47,21 @@ input[type=message_text], select
    padding-right: 2em;
 }
 
-
-
-.oneloop-join-body
+.After_pic
 {
+font-family: 'Open Sans', Arial, sans-serif;
+font-weight: 600;
+font-style: italic;
+}
 
+.Basic_Qualifications
+{
+    
 }
 
 .How_to_Apply
 {
-
+    margin: 0 0 0.25em 0;
 }
 
 /*Tablet*/

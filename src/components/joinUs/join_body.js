@@ -7,12 +7,11 @@ const Join_body = () => {
   return (
     <React.Fragment>
       <div className="oneloop-join-body">
-        <h1>This is for Ronvic, Nivrithi, and Raunak pt.2</h1>
         <h1 className="JoinUs_Title">Join Us</h1>
-        <p>INTERESTED IN GAINING HANDS-ON EXPERIENCE? JOIN THE TEAM!</p>
+        <p className="After_pic">INTERESTED IN GAINING HANDS-ON EXPERIENCE? JOIN THE TEAM!</p>
       </div>
-      <div className="Basic_Qualifications">
         <h1 className="JoinUs_Title">Basic Qualifications</h1>
+        <div className="Basic_Qualifications">
         <li>
           Currently pursuing an undergraduate or graduate degree at UC Davis
         </li>
@@ -27,8 +26,9 @@ const Join_body = () => {
         </li>
       </div>
 
-      <div classname="How_to_Apply">
+      
         <h1 className="JoinUs_Title">How To Apply</h1>
+        <div classname="How_to_Apply">
         <li>
           Send an email to <a href="/">davishyperloop@gmail.com</a> with your
           resume, cover-letter and transcript
