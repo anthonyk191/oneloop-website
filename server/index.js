@@ -3,12 +3,15 @@ const app = express();
 const port = 5000;
 
 const nodemailer = require('nodemailer');
+const fetch = require('node-fetch');
 
 require('dotenv').config();
 
+app.use(express.static(__dirname + '/public'));
+
 app.use(express.json());
 
-app.post('/contact-us', (req, res) => {
+app.post('/work-with-us', (req, res) => {
     console.log(req.body);
 
     const transporter = nodemailer.createTransport({
@@ -20,10 +23,11 @@ app.post('/contact-us', (req, res) => {
     });
 
     const mailOptions = {
-        from: req.body.email,
+        from: `${req.body.name} [${req.body.email}] <zoomerinsight@gmail.com>`,
         to: process.env.EMAIL_USER,
         subject: req.body.subject,
-        text: req.body.message
+        text: req.body.message,
+        replyTo: req.body.email
     };
 
     transporter.sendMail(mailOptions, function (error, info) {
@@ -36,7 +40,23 @@ app.post('/contact-us', (req, res) => {
     });
 });
 
+app.post('/join-us', (req, res) => {
+
+});
+
+app.post('/captcha', (req, res) => {
+    console.log(req.body.code);
+
+    fetch(`https://www.google.com/recaptcha/api/siteverify?secret=${process.env.CAPTCHA_KEY}&response=${req.body.code}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+    }).then(response => response.json()).then(data => {
+        console.log(data);
+    })
+
+    res.send('ok');
+});
+
 app.listen(port, () => {
     console.log('Currently listening on port ' + port);
 });
-

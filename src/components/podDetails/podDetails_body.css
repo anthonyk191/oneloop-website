@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,600&display=swap');
+
+.oneloop-poddetails-title{
+	color: #022851; 
+	font-family: 'Playfair Display', sans-serif;
+	font-size : 30; 
+	text-align : center; 
+}
+
+.oneloop-poddetails-subtitle{
+	color: #022851; 
+	font-family: 'Playfair Display', sans-serif;
+	font-size : 24; 
+
+	width: 100%;
+	padding: 12px 20px;
+	display: inline-block;
+}
+
+.oneloop-poddetails-caption{
+	color: black; 
+	font-family: "Open Sans", Arial, sans-serif;
+	font-style: italic; 
+	font-size : 11; 
+
+	width: 100%;
+	padding: 12px 20px;
+	display: inline-block;
+}
+
+.oneloop-poddetails-mainphoto{
+}
+
+.oneloop-poddetails-photo{
+}
+
+/*
+.slideshow
+{
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    transition: height 0.5s;
+}
+
+.slideshow img
+{
+    display: block;
+    width: 100%;
+    margin: 0;
+    transition: height 0.2s;
+    margin-bottom: 1em;
+}
+
+.slideshow span
+{
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    margin: 0.2em 1em;
+    background-color: white;
+    transition: background-color ease;
+    transition-duration: 0.3s;
+    border: 1px solid var(--primary-clr);
+}
+
+.slideshow span.active
+{
+    background-color: var(--primary-clr);
+}*/
