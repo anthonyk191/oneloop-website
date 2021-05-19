@@ -4,7 +4,7 @@ function Slideshow() {
 
     // changes images once they're available
     const Images = [
-        'https://placekitten.com/500/400',
+        'https://placekitten.com/200/400',
         'https://placekitten.com/505/400',
         'https://placekitten.com/510/400',
         'https://placekitten.com/520/400'
@@ -27,7 +27,14 @@ function Slideshow() {
 
     return (
         <div className="slideshow">
-            <img src={ Images[imageOffset] }/>
+            <div className="frame-wrapper">                
+                <div key={ imageOffset } 
+                    className="ss-image"
+                    style={{ backgroundImage: `url(${Images[imageOffset]})` }}></div>
+                <div key={ (imageOffset - 1 + Images.length) % Images.length } 
+                    className="ss-image ss-idle" 
+                    style={{ backgroundImage: `url(${Images[(imageOffset - 1 + Images.length) % Images.length]})` }}></div>
+            </div>
             { Dots }
         </div>
     );

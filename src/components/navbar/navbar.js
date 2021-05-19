@@ -1,15 +1,28 @@
-import './navbar.css';
+import React from 'react';
+import styled from 'styled-components';
+import Burger from './Burger';
 
-import React, { useEffect } from 'react';
+const Nav = styled.nav`
+  height: 65px;
+  border-bottom: 2px solid #f1f1f1;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #022851;
+  .logo {
+    padding: 8px 0px;
+  }
+`
 
-const Navbar = () =>{
-	return(
-		<React.Fragment>
-			<div className="oneloop-navbar">
-				<h1>Navbar!</h1>
-			</div>
-		</React.Fragment>
-	);
+const Navbar = () => {
+  return (
+    <Nav>
+      <div className="logo">
+        <a href="/"><img src="images/WhiteHyperloopLogo.svg" /></a>
+      </div>
+      <Burger />
+    </Nav>
+  )
 }
 
 export default Navbar;

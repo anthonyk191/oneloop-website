@@ -1,6 +1,83 @@
+/*title*/
+h1 {
+  color:#022851;  
+  font-family:Playfair Display;
+  font-size: 30;
+}
+
+/*subtitle (heading1 in figma) */
+h2 {
+  color:#022851;  
+  font-family:Playfair Display;
+  font-size: 24;
+}
+
+/*after-pic (heading 2.5 in figma) */
+h3{
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-style: italic;
+  font-size: 11;
+}
+
+/*basic qualifications bullet points (body in figma)*/
+li{
+  font-family: 'Open Sans', Arial, sans-serif;
+  padding: 12px 10px;
+}
+
+body{
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.oneloop-joinus-title {
+  text-align : center; 
+  padding: 12px 20px;
+}
+
+.oneloop-joinus-mainimage {
+  text-align : center; 
+}
+
+.oneloop-joinus{
+  padding: 12px 20px;
+}
+
+.oneloop-joinus-basic-qualifications {
+  padding: 12px 20px;
+}
+
+.oneloop-joinus-application {
+  padding: 12px 20px;
+}
+
+.oneloop-joinus-contact{
+  padding: 12px 20px;
+}
+
+/*TO DO: 
+fix form boxes, padding
+join us form buttons
+switch bewteen work with us/join us (with underline)*/
+
+.JoinUs_button {
+  color:white;
+  background-color:#022851;
+  font-family:open sans;
+  border-radius:10px;
+  margin-top: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.How_to_Apply {
+  margin: 0 0 0.25em 0;
+}
+
 /*Mobile*/
 
-
+/*
 .JoinUs_Title
 {
     color:#022851;  
@@ -58,21 +135,80 @@ font-style: italic;
 {
     
 }
-
+.Basic_Q
+{
+    margin-bottom: 2em;
+}
 .How_to_Apply
 {
     margin: 0 0 0.25em 0;
-}
+}*/
+
 
 /*Tablet*/
-@media only screen and ( min-width:768px)
-{
-
+@media only screen and (min-width: 768px) {
 }
 
 /*desktop*/
 
-@media only screen and ( min-width:1000px)
-{
+@media only screen and (min-width: 1000px) {
+  .JoinUs_Title {
+    color: #022851;
+    font-family: Playfair Display;
+  }
+  .After_pic {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
 
+  .Basic_Q {
+    margin-bottom: 2em;
+  }
+
+  input[type="text"],
+  select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+  }
+
+  input[type="message_text"],
+  select {
+    width: 100%;
+    padding: 60px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+  }
+
+  .JoinUs_button {
+    color: white;
+    background-color: #022851;
+    font-family: open sans;
+    border-radius: 10px;
+    margin-top: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .addfile_button
+  {
+    margin-top:1em;
+  }
+  .resume_letter
+  {
+      margin-bottom:1em;
+  }
+}
+.Q1_space
+{
+    margin-top:2em;
+    margin-bottom:2em;
 }
