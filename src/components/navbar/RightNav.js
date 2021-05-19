@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Ul = styled.ul`
+  z-index: 18;
 	margin-top: 0px;
   	list-style: none;
   	display: flex;
