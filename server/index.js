@@ -43,7 +43,39 @@ app.post('/work-with-us', (req, res) => {
 });
 
 app.post('/join-us', (req, res) => {
+    
+    const mailOptions = {
+        from: `${req.body.name} [${req.body.email}] <zoomerinsight@gmail.com>`,
+        to: 'zoomerinsight@gmail.com',
+        subject: req.body.subject,
+        replyTo: req.body.email,
+        markdown: [
+            `## name: ${req.body.name}`,
+            `year: ${req.body.year}`,
+            `major: ${req.body.major}`,
+            `uc-davis-email: ${req.body.email}`,
+            `gpa: ${req.body.gpa}`,
+            `hours-to-commit: ${req.body.hours}`,
+            `subteams-interested:`,
+            `${req.body['subteams-interested'][0]}`,
+            `software-familiar: `,
+            `${req.body['software-familiar'][0]}`,
+            `programming-languages-familiar:`,
+            `${req.body['programming_languages-familiar'][0]}`,
+            `reference:`,
+            `${req.body.reference[0]}`,
+        ].join('\n')
+    };
 
+    transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            console.log(error);
+        } else {
+            console.log('Email sent: ' + info.response);
+            res.send("successfully sent email to " + mailOptions.to);
+        }
+    });
+    
 });
 
 app.post('/captcha', (req, res) => {
