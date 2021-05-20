@@ -44,7 +44,6 @@
 {
     position: relative;
     height: 16em;
-    margin-bottom: 1em;
 }
 
 .ss-image
@@ -70,7 +69,8 @@
     width: 0.75rem;
     height: 0.75rem;
     border-radius: 50%;
-    margin: 0.2em 1em;
+    margin: 0 1em;
+    margin-top: 1.25em;
     background-color: white;
     transition: background-color 0.3s;
     border: 1px solid var(--primary-clr);
@@ -86,11 +86,18 @@
     .oneloop-home-body h1
     {
         text-align: left;
+        margin: 1.4em 0;
     }
 
     .frame-wrapper
     {
         height: 32.5em;
+    }
+
+    .slideshow span
+    {
+        margin-top: 1.75em;
+        margin-bottom: 2em;
     }
 }
 
