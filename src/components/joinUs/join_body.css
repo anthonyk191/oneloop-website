@@ -1,35 +1,34 @@
-/*title*/
-h1 {
+/*text*/
+.oneloop-joinus-title {
   color:#022851;  
   font-family:Playfair Display;
   font-size: 30;
 }
 
-/*subtitle (heading1 in figma) */
-h2 {
+.oneloop-joinus-heading1 {
   color:#022851;  
   font-family:Playfair Display;
   font-size: 24;
 }
 
-/*after-pic (heading 2.5 in figma) */
-h3{
+.oneloop-joinus-heading25 {
   font-family: 'Open Sans', Arial, sans-serif;
   font-style: italic;
   font-size: 11;
 }
 
-/*basic qualifications bullet points (body in figma)*/
+/*basic qualifications bullet points*/
 li{
   font-family: 'Open Sans', Arial, sans-serif;
   padding: 12px 10px;
 }
 
-body{
+body {
   font-family: 'Open Sans', Arial, sans-serif;
 }
 
-.oneloop-joinus-title {
+/*containers*/
+.oneloop-joinus-topcontainer {
   text-align : center; 
   padding: 12px 20px;
 }

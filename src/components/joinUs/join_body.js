@@ -7,17 +7,17 @@ const Join_body = () => {
   return (
     <React.Fragment>
 
-    <div className="oneloop-joinus-title">
-      <h1>Contact Us </h1>
-      <h3> INTERESTED IN GAINING HANDS-ON EXPERIENCE? <br /> JOIN THE TEAM! </h3>
+    <div className="oneloop-joinus-topcontainer">
+      <div className="oneloop-joinus-title"> Contact Us </div>
+      <div className="oneloop-joinus-heading25"> INTERESTED IN GAINING HANDS-ON EXPERIENCE? <br /> JOIN THE TEAM! </div>
     </div>
 
     <div className="oneloop-joinus">
-      <h2> Work with Us | Join Us </h2>
+      <div className="oneloop-joinus-heading1"> Work with Us | Join Us </div>
     </div>
 
     <div className="oneloop-joinus-basic-qualifications">
-      <h2> Basic Qualifications </h2>
+      <div className="oneloop-joinus-heading1"> Basic Qualifications </div>
       <li> Currently pursuing an undergraduate or graduate degree at UC Davis </li>
       <li> $40/year dues </li>
       <li> 4hr/week minimum commitment (weekly subteam meetings and individual projects) </li>
@@ -25,7 +25,7 @@ const Join_body = () => {
     </div>
 
     <div className="oneloop-joinus-application">
-        <h2> OneLoop New Member Application </h2>
+        <div className="oneloop-joinus-heading1"> OneLoop New Member Application </div>
         <body>
           <form action="/" className="Application">
             <label for="name">Name:<br /> </label>
@@ -389,7 +389,7 @@ const Join_body = () => {
       </div>
 
     <div className="oneloop-joinus">
-      <h2> Work with Us | Join Us </h2>
+      <div className="oneloop-joinus-heading1"> Work with Us | Join Us </div>
     </div>
 
     <div className="oneloop-joinus-contact">
