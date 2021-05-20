@@ -352,6 +352,9 @@
   
 
   @media only screen and (min-width: 600px) {
+    .AboutUs {
+      justify-content: flex-start;
+    }
     .container button {
       display: none;
     }
@@ -360,7 +363,7 @@
     }
     .Upper {
       display:flex;
-      justify-content: space-evenly;
+      justify-content: space-between;
       flex-direction: row-reverse;
     }
     .OurMission {
@@ -368,5 +371,9 @@
     }
     .OurFacultyAdv {
       width: 40%;
+    }
+    .oneloop-about-body {
+      padding-left: 5%;
+      padding-right: 5%;
     }
   }
