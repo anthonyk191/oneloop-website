@@ -3,6 +3,7 @@ const app = express();
 const port = 5000;
 
 const nodemailer = require('nodemailer');
+const markdown = require('nodemailer-markdown').markdown;
 const fetch = require('node-fetch');
 
 require('dotenv').config();
@@ -11,16 +12,17 @@ app.use(express.static(__dirname + '/public'));
 
 app.use(express.json());
 
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
+    } //npm install dotenv
+});
+transporter.use('compile', markdown());
+
 app.post('/work-with-us', (req, res) => {
     console.log(req.body);
-
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS
-        } //npm install dotenv
-    });
 
     const mailOptions = {
         from: `${req.body.name} [${req.body.email}] <zoomerinsight@gmail.com>`,
