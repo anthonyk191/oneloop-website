@@ -8,14 +8,13 @@
 	text-align : center; 
 }
 
+.oneloop-poddetails-mainphoto{
+}
+
 .oneloop-poddetails-subtitle{
 	color: #022851; 
 	font-family: 'Playfair Display', sans-serif;
 	font-size : 24; 
-
-	width: 100%;
-	padding: 12px 20px;
-	display: inline-block;
 }
 
 .oneloop-poddetails-caption{
@@ -23,17 +22,40 @@
 	font-family: "Open Sans", Arial, sans-serif;
 	font-style: italic; 
 	font-size : 11; 
-
-	width: 100%;
-	padding: 12px 20px;
-	display: inline-block;
-}
-
-.oneloop-poddetails-mainphoto{
 }
 
 .oneloop-poddetails-photo{
 }
+
+.oneloop-poddetails-heading{
+    color: #022851; 
+    font-family: 'Playfair Display', sans-serif;
+    font-size : 30; 
+    text-align : center; 
+
+    display: flex; 
+    flex-direction: column;
+    order: 1;
+}
+
+.oneloop-poddetails-section1{
+    width: 100%;
+    padding: 12px 20px;
+
+    display: flex; 
+    flex-direction: column;
+    order: 2;
+}
+
+.oneloop-poddetails-section2{
+    width: 100%;
+    padding: 12px 20px;
+
+    display: flex; 
+    flex-direction: column;
+    order: 2;
+}
+
 
 /*
 .slideshow
