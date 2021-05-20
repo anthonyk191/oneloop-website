@@ -18,10 +18,15 @@ const Home_body = () =>{
 					We seek to achieve this through cultivating an environment that fosters continuous improvement, collaboration with industry professionals, and teamwork. </p>
 				<p>	OneLoop was founded in 2016 by a group of engineering students at UC Davis in response to SpaceX's announcement of its annual hyperloop competition.
 					OneLoop became one of the top 21 teams in the 2019 Hyperloop Pod Competition and was invited to the SpaceX HQ in Hawthorne to take part in the final round of the compeition.
-					<em> Based on the number of tests passed, OneLoop placed 3rd in teh United States</em> and <em>top-ten in the world.</em>
+					<b> Based on the number of tests passed, OneLoop placed 3rd in the United States</b> and <b>top-ten in the world.</b>
 				</p>
-				
 				</div>
+
+				<div>
+					<img>
+					</img>
+				</div>
+
 				<div class="home-section3">
 				<h2>We're building a high-speed vehicle for European Hyperloop Week</h2>
 				<p>The Hyperloop is a novel form of low-cost, fast transportation, consisting of levitating pods propelled through a vacuum tube at transonic speeds. 
@@ -33,6 +38,12 @@ const Home_body = () =>{
 				<p>This year, Oneloop was one of 8 U.S. teams that passed the first round of the European Hyperloop Week competition, which will take place in Valencia, Spain in July.</p>
 				</div>
 				
+				<div>
+					<img>
+					</img>
+				</div>
+
+
 				<div class="home-section4">
 				<h2>What is European Hyperloop Week?</h2>
 				<p>EHW is an international organization bringing together the world’s best university teams developing hyperloop systems. Their goal is to foster an ecosystem of innovation 

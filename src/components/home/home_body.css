@@ -27,6 +27,14 @@
     font-size: 1.5em;
 }
 
+.oneloop-home-body a, 
+.oneloop-home-body b
+{
+    text-decoration: none;
+    color: var(--primary-clr);
+    font-weight: 700;
+}
+
 .slideshow
 {
     text-align: center;
@@ -92,5 +100,12 @@
     {
         cursor: pointer;
         background-color: var(--primary-clr);
+    }
+}
+
+@media (min-width:1024px)
+{
+    .oneloop-home-body {
+        font-size: 1.5em;
     }
 }
