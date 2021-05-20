@@ -135,7 +135,7 @@
   
   /* Container around content */
   .container {
-    padding: 10px 40px;
+    padding: 10px 20px;
     position: relative;
     background-color: inherit;
     width: 50%;
@@ -165,7 +165,7 @@
     left: 50%;
   }
   
-  /* Add arrows to the left container (pointing right) */
+  /* Add arrows to the left container (pointing right) 
   .left::before {
     content: " ";
     height: 0;
@@ -177,9 +177,9 @@
     border: medium solid #022851;
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent #022851;
-  }
+  }*/
   
-  /* Add arrows to the right container (pointing left) */
+  /* Add arrows to the right container (pointing left) 
   .right::before {
     content: " ";
     height: 0;
@@ -192,7 +192,7 @@
     border-width: 10px 10px 10px 0;
     border-color: transparent #022851 transparent transparent;
   }
-  
+  */
   /* Fix the circle for containers on the right side */
   .right::after {
     left: -16px;
@@ -207,4 +207,166 @@
     border-radius: 6px;
   }
   
+  .container button {
+    font-family: Open Sans;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+
+    /* Link Blue */
+
+    color: #0E6E9F;
+    background-color: unset;
+    padding: unset;
+    border: unset;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .collapable {
+    display: none;
+  }
+
+  .Popup2017 {
+    position: fixed;
+    left: 15%;
+    top: 30%;
+    max-width: 70%;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 7%;
+    padding-right:5%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    background-color: white;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #000000;
+    border-radius: 30px;
+  }
+
+  .Popup2017 p{
+    background-color: white;
+  }
+
+  .Popup2017 button {
+    font-family: unset;
+    font-style: unset;
+    font-weight: unset;
+    font-size: 18px;
+    line-height: 16px;
+    align-self: flex-end;
+    color: black;
+    background-color: unset;
+    padding: unset;
+    border: unset;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .Popup2017 .Title {
+    /* Mobile: Title */
+    align-self: flex-start;
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: #000000;
+    margin:unset;
+  }
+
+
+  .Popup2018 {
+    position: fixed;
+    left: 15%;
+    top: 30%;
+    max-width: 70%;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 7%;
+    padding-right:5%;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    background-color: white;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #000000;
+    border-radius: 30px;
+  }
+
+  .Popup2018 p{
+    background-color: white;
+  }
+
+  .Popup2018 button {
+    font-family: unset;
+    font-style: unset;
+    font-weight: unset;
+    font-size: 18px;
+    line-height: 16px;
+    align-self: flex-end;
+    color: black;
+    background-color: unset;
+    padding: unset;
+    border: unset;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .Popup2018 .Title {
+    /* Mobile: Title */
+    align-self: flex-start;
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: #000000;
+    margin:unset;
+  }
   
+
+  @media only screen and (min-width: 600px) {
+    .container button {
+      display: none;
+    }
+    .collapable {
+      display: flex;
+    }
+    .Upper {
+      display:flex;
+      justify-content: space-evenly;
+      flex-direction: row-reverse;
+    }
+    .OurMission {
+      width: 40%;
+    }
+    .OurFacultyAdv {
+      width: 40%;
+    }
+  }
