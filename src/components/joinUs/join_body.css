@@ -151,6 +151,18 @@ font-style: italic;
 /*desktop*/
 
 @media only screen and (min-width: 1000px) {
+
+
+
+
+
+  .oneloop-joinus-heading1 {
+    color:#022851;  
+    font-family:Playfair Display;
+    font-size: 24;
+  }
+
+
   .JoinUs_Title {
     color: #022851;
     font-family: Playfair Display;
@@ -210,4 +222,10 @@ font-style: italic;
 {
     margin-top:2em;
     margin-bottom:2em;
+}
+
+
+.apply
+{
+  color:000000;
 }

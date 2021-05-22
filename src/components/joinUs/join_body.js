@@ -1,6 +1,7 @@
 import "./join_body.css";
 import React, { useEffect } from "react";
 import join_us_img from "./DSC_0056F.jpg";
+import { Switch } from "react-router";
 
 console.log(join_us_img);
 const Join_body = () => {
@@ -13,11 +14,16 @@ const Join_body = () => {
     </div>
 
     <div className="oneloop-joinus">
-      <div className="oneloop-joinus-heading1"> Work with Us | Join Us </div>
+      <h1 className="oneloop-joinus-heading1"> Work with Us | Join Us </h1>
+      < a href="/joinUs" target="oneloop-joinus-basic-qualifications">Work with Us</a>|<a href="/joinUs" target="oneloop-joinus-contact">Join Us</a>
     </div>
-
+    < a href="/joinUs" target="oneloop-joinus-basic-qualifications">Work with Us
+<button onClick={"oneloop-joinus-basic-qualifications"} >
+  button
+</button>
+</a>
     <div className="oneloop-joinus-basic-qualifications">
-      <div className="oneloop-joinus-heading1"> Basic Qualifications </div>
+      <h2 className="oneloop-joinus-heading1"> Basic Qualifications </h2>
       <li> Currently pursuing an undergraduate or graduate degree at UC Davis </li>
       <li> $40/year dues </li>
       <li> 4hr/week minimum commitment (weekly subteam meetings and individual projects) </li>
@@ -25,7 +31,7 @@ const Join_body = () => {
     </div>
 
     <div className="oneloop-joinus-application">
-        <div className="oneloop-joinus-heading1"> OneLoop New Member Application </div>
+        <h2 className="oneloop-joinus-heading1"> OneLoop New Member Application </h2>
         <body>
           <form action="/" className="Application">
             <label for="name">Name:<br /> </label>
@@ -61,8 +67,12 @@ const Join_body = () => {
               <label for="Q1">
                 Which subteams are you interested in? For more information about
                 each subteam use this link:{" "}
+               
               </label>
-              <p className="apply">Select all that apply</p>
+              <div>
+              <label className="apply"><i>Select all that apply</i></label>
+              </div>
+           
               <input
                 type="checkbox"
                 id="subteam1"
@@ -137,7 +147,7 @@ const Join_body = () => {
 
             <div className="Question2">
               <label for="Q2">Software you are familiar with: </label>
-              <p className="apply">Select all that apply</p>
+              <p className="apply"><i>Select all that apply</i></p>
 
               <input
                 type="checkbox"
@@ -389,7 +399,7 @@ const Join_body = () => {
       </div>
 
     <div className="oneloop-joinus">
-      <div className="oneloop-joinus-heading1"> Work with Us | Join Us </div>
+      <h1 className="oneloop-joinus-heading1"> Work with Us | Join Us </h1>
     </div>
 
     <div className="oneloop-joinus-contact">
@@ -397,11 +407,11 @@ const Join_body = () => {
         <label for="name">Name:<br /></label>
         <input type="text" id="name" name="Fullname"></input><br />
 
-        <label for="email">UC Davis Email:<br /></label>
+        <label for="email"> Email:<br /></label>
         <input type="text" id="email" name="email_address"></input><br />
 
         <label for="Message">Message:<br /></label>
-        <input type="message_text" id="Message" name="Full_message"></input><br />
+        <input type="message_text" id="Message" name="Full_message" placeholder="Type message here"></input><br />
 
         <button className="JoinUs_button">Submit<br /></button>
       </form>
