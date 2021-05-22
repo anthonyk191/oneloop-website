@@ -1,16 +1,13 @@
 import "./join_body.css";
 import React, { useEffect } from "react";
-import join_us_img from "./DSC_0056F.jpg";
 import { Switch } from "react-router";
 
-console.log(join_us_img);
 const Join_body = () => {
   return (
     <React.Fragment>
 
     <div className="oneloop-joinus-topcontainer">
       <div className="oneloop-joinus-title"> Contact Us </div>
-      <img src="images/DSC_0056F.jpg" />
       <div className="oneloop-joinus-heading25"> INTERESTED IN GAINING HANDS-ON EXPERIENCE? <br /> JOIN THE TEAM! </div>
     </div>
 
@@ -35,37 +32,37 @@ const Join_body = () => {
         <h2 className="Application_title"> OneLoop New Member Application </h2>
         <body>
           <form action="/" className="Application">
-            <label for="name">Name:<br /> </label>
-            <input type="text" id="name" name="Fullname"></input><br />
+            <label for="name"><b>Name:</b><br /> </label>
+            <input type="text" id="name" name="Fullname" className="apply_input"></input><br />
 
-            <label for="year">Year:<br /> </label>
-            <input type="text" id="name" name="Fullname"></input><br />
+            <label for="year"><b>Year:</b><br /> </label>
+            <input type="text" id="name" name="Fullname" className="apply_input"></input><br />
 
-            <label for="major">Major:<br /> </label>
-            <input type="text" id="name" name="Fullname"></input><br />
+            <label for="major"><b>Major:</b><br /> </label>
+            <input type="text" id="name" name="Fullname" className="apply_input"></input><br />
 
-            <label for="email">UC Davis Email:<br /> </label>
-            <input type="text" id="email" name="email_address"></input><br />
+            <label for="email"><b>UC Davis Email:</b><br /> </label>
+            <input type="text" id="email" name="email_address" className="apply_input"></input><br />
 
-            <label for="gpa">GPA(optional):<br /> </label>
-            <input type="text" id="email" name="email_address"></input><br />
+            <label for="gpa"><b>GPA</b>    <i className="optional">(optional):</i> <br /> </label>
+            <input type="text" id="email" name="email_address" className="apply_input"></input><br />
 
             <div className="resume_letter">
-              <label for="Resume"> Resume<br /> </label>
+              <label for="Resume"><b>Resume</b><br /> </label>
               <button className="addfile_button">Add file</button><br />
-              <label for="Coverletter">Cover Letter(optional) <br /> </label>
+              <label for="Coverletter"><b>Cover Letter</b>   <i className="optional">(optional)</i> <br /> </label>
               <button className="addfile_button">Add file</button><br />
             </div>
 
-            <label for="Message" >
+            <label for="Message" className="Q_s" >
               How many hours a week will you be able to commit to OneLoop?
             </label><br />
-            <input type="message_text" id="Message" name="Full_message" className="Apply_Message"></input>
+            <textarea className="Apply_message"></textarea>
           </form><br />
 
           <form action="/" className="Questionnare">
             <div className="Question1">
-              <label for="Q1">
+              <label for="Q1" className="Q_s">
                 Which subteams are you interested in? For more information about
                 each subteam use this link:{" "}
                
@@ -139,15 +136,15 @@ const Join_body = () => {
             </div>
 
             <div className="Q1_space">
-              <label for="Q1_text">
+              <label for="Q1_text" className="Q_s">
                 If you chose multiple subteams, rank each subteam that you have
                 chosen. 1 = most interested
               </label><br />
-              <input type="message_text" id="Message" name="Full_message" className="Apply_Message"></input>
+              <textarea className="Apply_message"></textarea>
             </div>
 
             <div className="Question2">
-              <label for="Q2">Software you are familiar with: </label>
+              <label for="Q2" className="Q_s">Software you are familiar with: </label>
               <p className="apply"><i>Select all that apply</i></p>
 
               <input
@@ -262,7 +259,7 @@ const Join_body = () => {
             </div>
 
             <div className="Question3">
-              <label for="Q3">
+              <label for="Q3" className="Q_s">
                 Computer Programming Languages you are familiar with:
               </label>
               <p className="apply"><i>Select all that apply</i></p>
@@ -333,7 +330,7 @@ const Join_body = () => {
             </div>
 
             <div className="Question4">
-              <label for="Q4">Where did you hear about us?</label>
+              <label for="Q4" className="Q_s">Where did you hear about us?</label>
               <p className="apply"><i>Select all that apply</i></p>
 
               <input type="checkbox" id="hear1" name="hear1" value="Website" />
@@ -412,7 +409,7 @@ const Join_body = () => {
         <input type="text" id="email" name="email_address"></input><br />
 
         <label for="Message">Message:<br /></label>
-        <input type="message_text" id="Message" name="Full_message" placeholder="Type message here"className="Apply_Message"></input>
+        <textarea className="Apply_message" placeholder="Type message here"></textarea>
       </form>
       <button      className="JoinUs_button">Submit<br /></button>
     </div>
