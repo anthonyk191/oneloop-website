@@ -10,6 +10,7 @@ const Join_body = () => {
 
     <div className="oneloop-joinus-topcontainer">
       <div className="oneloop-joinus-title"> Contact Us </div>
+      <img src="images/DSC_0056F.jpg" />
       <div className="oneloop-joinus-heading25"> INTERESTED IN GAINING HANDS-ON EXPERIENCE? <br /> JOIN THE TEAM! </div>
     </div>
 
@@ -24,14 +25,14 @@ const Join_body = () => {
 </a>
     <div className="oneloop-joinus-basic-qualifications">
       <h2 className="oneloop-joinus-heading1"> Basic Qualifications </h2>
-      <li> Currently pursuing an undergraduate or graduate degree at UC Davis </li>
-      <li> $40/year dues </li>
-      <li> 4hr/week minimum commitment (weekly subteam meetings and individual projects) </li>
-      <li> Accountable for projects assigned by leads and willing to learn; proactive </li>
+      <li className="BasicQ"> Currently pursuing an undergraduate or graduate degree at UC Davis </li>
+      <li className="BasicQ"> $40/year dues </li>
+      <li className="BasicQ"> 4hr/week minimum commitment (weekly subteam meetings and individual projects) </li>
+      <li className="BasicQ"> Accountable for projects assigned by leads and willing to learn; proactive </li>
     </div>
 
     <div className="oneloop-joinus-application">
-        <h2 className="oneloop-joinus-heading1"> OneLoop New Member Application </h2>
+        <h2 className="Application_title"> OneLoop New Member Application </h2>
         <body>
           <form action="/" className="Application">
             <label for="name">Name:<br /> </label>
@@ -56,10 +57,10 @@ const Join_body = () => {
               <button className="addfile_button">Add file</button><br />
             </div>
 
-            <label for="Message">
+            <label for="Message" >
               How many hours a week will you be able to commit to OneLoop?
             </label><br />
-            <input type="message_text" id="Message" name="Full_message"></input>
+            <input type="message_text" id="Message" name="Full_message" className="Apply_Message"></input>
           </form><br />
 
           <form action="/" className="Questionnare">
@@ -142,7 +143,7 @@ const Join_body = () => {
                 If you chose multiple subteams, rank each subteam that you have
                 chosen. 1 = most interested
               </label><br />
-              <input type="message_text" id="Message" name="Full_message"></input>
+              <input type="message_text" id="Message" name="Full_message" className="Apply_Message"></input>
             </div>
 
             <div className="Question2">
@@ -403,7 +404,7 @@ const Join_body = () => {
     </div>
 
     <div className="oneloop-joinus-contact">
-      <form action="/">
+      <form action="/"className="joinus-contact">
         <label for="name">Name:<br /></label>
         <input type="text" id="name" name="Fullname"></input><br />
 
@@ -411,10 +412,9 @@ const Join_body = () => {
         <input type="text" id="email" name="email_address"></input><br />
 
         <label for="Message">Message:<br /></label>
-        <input type="message_text" id="Message" name="Full_message" placeholder="Type message here"></input><br />
-
-        <button className="JoinUs_button">Submit<br /></button>
+        <input type="message_text" id="Message" name="Full_message" placeholder="Type message here"className="Apply_Message"></input>
       </form>
+      <button      className="JoinUs_button">Submit<br /></button>
     </div>
     </React.Fragment>
   );

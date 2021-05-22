@@ -1,3 +1,12 @@
+/*mobile*/
+
+img
+{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
 /*text*/
 .oneloop-joinus-title {
   color:#022851;  
@@ -10,6 +19,15 @@
   font-family:Playfair Display;
   font-size: 24;
 }
+.Application_title
+{
+  color:#022851;  
+  font-family:Playfair Display;
+  font-size:20px;
+  text-align:center;
+  font-weight:bold;
+}
+
 
 .oneloop-joinus-heading25 {
   font-family: 'Open Sans', Arial, sans-serif;
@@ -22,7 +40,12 @@ li{
   font-family: 'Open Sans', Arial, sans-serif;
   padding: 12px 10px;
 }
-
+.BasicQ
+{
+  font-family:'Open Sans';
+  font-size:14px;
+  
+}
 body {
   font-family: 'Open Sans', Arial, sans-serif;
 }
@@ -58,6 +81,31 @@ fix form boxes, padding
 join us form buttons
 switch bewteen work with us/join us (with underline)*/
 
+/*Application form*/
+
+
+.Application
+{
+  display: flex;
+  flex-direction: column;
+}
+.Apply_Message
+{
+   width: 100%;
+   height:100%;
+    padding: 60px 20px;
+    display: inline-block;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+}
+
+.addfile_button
+{
+  padding: 10px 10px;
+  background-color: white;
+}
+/*for checkboxes*/
+
 .JoinUs_button {
   color:white;
   background-color:#022851;
@@ -72,6 +120,22 @@ switch bewteen work with us/join us (with underline)*/
 
 .How_to_Apply {
   margin: 0 0 0.25em 0;
+}
+
+/*Questionnare*/
+.Questionnare
+{
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*contact*/
+
+.joinus-contact
+{
+  display: flex;
+  flex-direction: column;
 }
 
 /*Mobile*/
