@@ -7,12 +7,12 @@ const Join_body = () => {
     <React.Fragment>
 
     <div className="oneloop-joinus-topcontainer">
-      <div className="oneloop-joinus-title"> Contact Us </div>
-      <div className="oneloop-joinus-heading25"> INTERESTED IN GAINING HANDS-ON EXPERIENCE? <br /> JOIN THE TEAM! </div>
+      <div className="oneloop-joinus-title"> <h1> Contact Us </h1> </div>
+      <div className="oneloop-joinus-heading25"> INTERESTED IN GAINING HANDS-ON EXPERIENCE? JOIN THE TEAM! </div>
     </div>
 
     <div className="oneloop-joinus">
-      <h1 className="oneloop-joinus-heading1"> 
+      <h2 className="oneloop-joinus-heading1"> 
         <a href='#workwithus'> 
           Work with Us 
         </a>  
@@ -20,12 +20,12 @@ const Join_body = () => {
         <a href='#joinus'> 
           Join Us  
         </a> 
-      </h1>
+      </h2>
     </div>
 
     <div className="oneloop-joinus-contact" section id = 'workwithus'>
       <form action="/"className="joinus-contact">
-        <label for="name">Name:<br /></label>
+        <label for="name"> Name:<br /></label>
         <input type="text" id="name" name="Fullname"></input><br />
 
         <label for="email"> Email:<br /></label>
@@ -47,29 +47,39 @@ const Join_body = () => {
       </div>
 
       <div className="oneloop-joinus-application">
-          <h2 className="Application_title"> OneLoop New Member Application </h2>
+          <h2 className="oneloop-joinus-applicationtitle"> OneLoop New Member Application </h2>
           <body>
             <form action="/" className="Application">
-              <label for="name"><b>Name:</b><br /> </label>
-              <input type="text" id="name" name="Fullname" className="apply_input"></input><br />
+              <div className="oneloop-joinus-application-row1">
+                <div className="oneloop-joinus-application-name">
+                  <label for="name"><b>Name:</b></label><br />
+                  <input type="text" id="name" name="Fullname" className="apply_input" ></input><br />
+                </div>
+                <div className="oneloop-joinus-application-year">
+                  <label for="year"><b>Year: </b><br /> </label>
+                  <input type="text" id="name" name="Fullname" className="apply_input"></input><br />
+                </div>
+                <div className="oneloop-joinus-application-major">
+                  <label for="major"><b>Major:</b><br /> </label>
+                  <input type="text" id="name" name="Fullname" className="apply_input"></input><br />
+                </div>
+              </div>
+              <div className="oneloop-joinus-application-row2">
+                <div className="oneloop-joinus-application-email">
+                  <label for="email"><b>UC Davis Email: </b> </label>
+                  <input type="text" id="email" name="email_address" className="apply_input"></input><br />
+                </div>
+                <div className="oneloop-joinus-application-gpa">
+                  <label for="gpa"><b>GPA</b>    <i className="optional">(optional):</i> <br /> </label>
+                  <input type="text" id="email" name="email_address" className="apply_input"></input><br />
+                </div>
+              </div>
 
-              <label for="year"><b>Year:</b><br /> </label>
-              <input type="text" id="name" name="Fullname" className="apply_input"></input><br />
-
-              <label for="major"><b>Major:</b><br /> </label>
-              <input type="text" id="name" name="Fullname" className="apply_input"></input><br />
-
-              <label for="email"><b>UC Davis Email:</b><br /> </label>
-              <input type="text" id="email" name="email_address" className="apply_input"></input><br />
-
-              <label for="gpa"><b>GPA</b>    <i className="optional">(optional):</i> <br /> </label>
-              <input type="text" id="email" name="email_address" className="apply_input"></input><br />
-
-              <div className="resume_letter">
-                <label for="Resume"><b>Resume</b><br /> </label>
-                <button className="addfile_button">Add file</button><br />
-                <label for="Coverletter"><b>Cover Letter</b>   <i className="optional">(optional)</i> <br /> </label>
-                <button className="addfile_button">Add file</button><br />
+              <div className="oneloop-joinus-application-resumecv">
+                <label for="Resume"><b>Resume</b><br /> </label><br />
+                <button className="addfile_button">Add file</button><br /><br />
+                <label for="Coverletter"><b>Cover Letter</b><i className="optional"> (optional)</i> <br /> <br /></label>
+                <button className="addfile_button">Add file</button><br /><br />
               </div>
 
               <label for="Message" className="Q_s" >
@@ -83,11 +93,11 @@ const Join_body = () => {
                 <label for="Q1" className="Q_s">
                   Which subteams are you interested in? For more information about
                   each subteam use this link:{" "}
-                 
                 </label>
-                <div>
+
+              <div>
                 <label className="apply"><i>Select all that apply</i></label>
-                </div>
+              </div>
              
                 <input
                   type="checkbox"
@@ -150,7 +160,7 @@ const Join_body = () => {
                   value="Structures"
                 />
                 <label for="subteam7">Structures</label>
-                <br></br>
+                <br></br><br />
               </div>
 
               <div className="Q1_space">
@@ -160,10 +170,10 @@ const Join_body = () => {
                 </label><br />
                 <textarea className="Apply_message"></textarea>
               </div>
-
+              <br />
               <div className="Question2">
                 <label for="Q2" className="Q_s">Software you are familiar with: </label>
-                <p className="apply"><i>Select all that apply</i></p>
+                <div className="apply"><i>Select all that apply</i></div>
 
                 <input
                   type="checkbox"
@@ -275,12 +285,12 @@ const Join_body = () => {
                 <input type="other_text" id="software12" name="software12" />
                 <br></br>
               </div>
-
+              <br />
               <div className="Question3">
                 <label for="Q3" className="Q_s">
                   Computer Programming Languages you are familiar with:
                 </label>
-                <p className="apply"><i>Select all that apply</i></p>
+                <div className="apply"><i>Select all that apply</i></div>
 
                 <input
                   type="checkbox"
@@ -346,10 +356,10 @@ const Join_body = () => {
                 <input type="other_text" id="Language8" name="Language8" />
                 <br></br>
               </div>
-
+              <br />
               <div className="Question4">
                 <label for="Q4" className="Q_s">Where did you hear about us?</label>
-                <p className="apply"><i>Select all that apply</i></p>
+                <div className="apply"><i>Select all that apply</i></div>
 
                 <input type="checkbox" id="hear1" name="hear1" value="Website" />
                 <label for="hear1">Website</label>
@@ -405,7 +415,7 @@ const Join_body = () => {
                 />
 
                 <br></br>
-
+                <br />
               </div>
               <label for="team">Select a team:</label>
               <input type="text" id="team" name="team"></input>
