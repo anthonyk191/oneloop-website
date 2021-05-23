@@ -1,4 +1,18 @@
-/*mobile*/
+#workwithus{
+  display: none;
+}
+
+#workwithus:target{
+  display: block;
+}
+
+#joinus{
+  display: none;
+}
+
+#joinus:target{
+  display: block;
+}
 
 img
 {
