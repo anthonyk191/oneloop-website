@@ -56,6 +56,51 @@
     order: 2;
 }
 
+@media only screen and (min-width: 1000px) {
+    .oneloop-poddetails-title{
+        font-size : 40; 
+        text-align : left; 
+    }
+
+    .oneloop-poddetails-mainphoto{
+    }
+
+    .oneloop-poddetails-subtitle{
+        font-size : 28; 
+    }
+
+    .oneloop-poddetails-caption{
+        font-size : 18; 
+    }
+
+    .oneloop-poddetails-photo{
+    }
+
+    .oneloop-poddetails-heading{
+        padding: 50px 100px; 
+
+        display: flex; 
+        flex-direction: column;
+        order: 1;
+    }
+
+    .oneloop-poddetails-section1{
+        width: 100%;
+        padding: 50px 100px; 
+
+        display: flex; 
+        flex-direction: column;
+        order: 2;
+    }
+    .oneloop-poddetails-section2{
+        padding: 50px 100px; 
+
+        display: flex; 
+        flex-direction: column;
+        order: 3;
+    }
+} 
+
 
 /*
 .slideshow
