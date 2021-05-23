@@ -1,6 +1,7 @@
 import "./join_body.css";
 import React, { useEffect } from "react";
 import { Switch } from "react-router";
+import contact_img from './contact_img.jpg';
 
 const Join_body = () => {
   return (
@@ -8,6 +9,7 @@ const Join_body = () => {
 
     <div className="oneloop-joinus-topcontainer">
       <div className="oneloop-joinus-title"> <h1> Contact Us </h1> </div>
+      <img src={contact_img} className="contact_images"/>
       <div className="oneloop-joinus-heading25"> INTERESTED IN GAINING HANDS-ON EXPERIENCE? JOIN THE TEAM! </div>
     </div>
 
@@ -26,10 +28,10 @@ const Join_body = () => {
     <div className="oneloop-joinus-contact" section id = 'workwithus'>
       <form action="/"className="joinus-contact">
         <label for="name"> Name:<br /></label>
-        <input type="text" id="name" name="Fullname"></input><br />
-
+        <input type="text" id="name" name="Fullname"className="contact_form"></input><br />
         <label for="email"> Email:<br /></label>
-        <input type="text" id="email" name="email_address"></input><br />
+       
+        <input type="text" id="email" name="email_address"className="contact_form"></input><br />
 
         <label for="Message">Message:<br /></label>
         <textarea className="Apply_message" placeholder="Type message here"></textarea>
@@ -76,6 +78,7 @@ const Join_body = () => {
               </div>
 
               <div className="oneloop-joinus-application-resumecv">
+                <br></br>
                 <label for="Resume"><b>Resume</b><br /> </label><br />
                 <button className="addfile_button">Add file</button><br /><br />
                 <label for="Coverletter"><b>Cover Letter</b><i className="optional"> (optional)</i> <br /> <br /></label>
@@ -85,7 +88,7 @@ const Join_body = () => {
               <label for="Message" className="Q_s" >
                 How many hours a week will you be able to commit to OneLoop?
               </label><br />
-              <textarea className="Apply_message"></textarea>
+              <textarea className="Apply_message1"></textarea>
             </form><br />
 
             <form action="/" className="Questionnare">
@@ -280,9 +283,9 @@ const Join_body = () => {
                   name="software12"
                   value="Other"
                 />
-                <label for="software12">Other: </label>
+                <label for="software12" >Other:</label>
 
-                <input type="other_text" id="software12" name="software12" />
+                <input type="other_text" id="software12" name="software12" className="Other_line"/>
                 <br></br>
               </div>
               <br />
@@ -351,9 +354,9 @@ const Join_body = () => {
                   name="Language8"
                   value="Other"
                 />
-                <label for="Language8">Other: </label>
+                <label for="Language8">Other:</label>
 
-                <input type="other_text" id="Language8" name="Language8" />
+                <input type="other_text" id="Language8" name="Language8" className="Other_line"/>
                 <br></br>
               </div>
               <br />
@@ -407,20 +410,19 @@ const Join_body = () => {
                 <label for="hear9">Tabling Event</label>
                 <br></br>
                 <input type="checkbox" id="hear10" name="hear10" value="Other" />
-                <label for="hear10">Other:</label>
+                <label for="hear10" >Other:</label>
                         <input
                   type="other_text"
                   id="hear10"
                   name="hear10"
+                  className="Other_line"
                 />
 
                 <br></br>
                 <br />
               </div>
-              <label for="team">Select a team:</label>
-              <input type="text" id="team" name="team"></input>
-    
             </form>
+            <button className="JoinUs_button">Submit<br /></button>
           </body>
         </div>
       </div>
