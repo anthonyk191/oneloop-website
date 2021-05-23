@@ -69,6 +69,7 @@ const Join_body = () => {
               <div className="oneloop-joinus-application-row2">
                 <div className="oneloop-joinus-application-email">
                   <label for="email"><b>UC Davis Email: </b> </label>
+                  <br></br>
                   <input type="text" id="email" name="email_address" className="apply_input"></input><br />
                 </div>
                 <div className="oneloop-joinus-application-gpa">
