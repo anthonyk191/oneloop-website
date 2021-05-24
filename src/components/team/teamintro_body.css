@@ -1,13 +1,69 @@
 .oneloop-teamintro-body{
+	margin-left: 20px;
+	margin-right: 20px; 
 	display: flex;
 	flex-direction: column;
 }
 
 .oneloop-team-title{
-	text-align: center;
+	align-items: center;
+	margin: auto;
+}
+
+.oneloop-team-advisor{
+	display: flex;
+	flex-direction: column;
+}
+
+.oneloop-team-title h1{
+	font-family: Playfair Display;
+	color: #022851;
+	font-size: 40px;
+}
+
+.oneloop-teamintro-body h2{
+	font-family: Playfair Display;
+	color: #022851;
+	font-size: 28px;
+}
+
+.oneloop-team-title img{
+	width: 90vw;
 }
 
 .oneloop-previous-teams{
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.oneloop-previous-teams a{
+	text-decoration: underline;
+}
+
+.Advisor-bio{
+	line-height: 1;
+}
+
+.Advisor-bio ul{
+	margin-left: -3vh;
+}
+
+@media (min-width: 887px){
+	.oneloop-teamintro-body{
+		margin-left: 100px;
+		margin-right: 100px; 
+	}
+	.oneloop-team-title img{
+		width: 80vw;
+	}
+	.oneloop-team-advisor{
+		flex-direction: row;
+	}
+	.Advisor-bio{
+		margin: auto 0;
+		margin-left: 25px;
+		line-height: 0;
+	}
 }

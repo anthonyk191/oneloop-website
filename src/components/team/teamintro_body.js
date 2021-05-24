@@ -25,15 +25,20 @@ const Teamintro_body = () =>{
 					OneLoop placed 3rd in the United States and top-ten 
 					in the world.</p>
 				</div>
+				<h2>Faculty Advisor</h2>
 				<div className="oneloop-team-advisor">
-					<h2>Faculty Advisor</h2>
-					<img id="oneloop-advisor" src="/images/profAdvisor.svg"/>
-					<h4>Professor C.P “Case” Van Dam</h4>
+					<div className="Advisor-profile">
+						<img id="oneloop-advisor" src="/images/profAdvisor.svg"/>
+					</div>
+					<div className="Advisor-bio">
+						<h4>Professor C.P “Case” Van Dam</h4>
 
-					<ul>
-						<li>Professor of Mechanical and Aerospace Engineering</li>
-						<li>University of California, Davis</li>
-					</ul>
+
+						<ul>
+							<li>Professor of Mechanical and Aerospace Engineering</li>
+							<li>University of California, Davis</li>
+						</ul>
+					</div>
 				</div>
 				<div className="oneloop-previous-teams">
 					<a href="/team2020">2020-2021</a>
