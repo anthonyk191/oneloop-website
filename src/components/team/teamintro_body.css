@@ -1,0 +1,13 @@
+.oneloop-teamintro-body{
+	display: flex;
+	flex-direction: column;
+}
+
+.oneloop-team-title{
+	text-align: center;
+}
+
+.oneloop-previous-teams{
+	display: flex;
+	flex-direction: column;
+}
