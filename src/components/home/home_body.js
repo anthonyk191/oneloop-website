@@ -12,7 +12,7 @@ const Home_body = () =>{
 
                 <Slideshow/>
 				
-				<div class="home-section2">
+				<div>
 				<h2>Our Mission</h2>
 				<p>Our mission is to further explore Hyperloop Technologies by promoting faster, cleaner, and more energy efficient solutions to the transporation sector.
 					We seek to achieve this through cultivating an environment that fosters continuous improvement, collaboration with industry professionals, and teamwork. </p>
@@ -21,38 +21,49 @@ const Home_body = () =>{
 					<b> Based on the number of tests passed, OneLoop placed 3rd in the United States</b> and <b>top-ten in the world.</b>
 				</p>
 				</div>
+				<div className= "oneloop-home-flexbox">
+					<div class = "home-row">
+						<div class = "home-column">
+							<div class = "home-section-img">
+								<img src = "https://img.buzzfeed.com/buzzfeed-static/static/2019-11/6/20/asset/d7d9eb96ab8c/sub-buzz-136-1573070516-1.jpg">
+								</img>
+							</div>
+						</div>
 
-				<div>
-					<img>
-					</img>
+						<div class = "home-column">
+							<div class="home-section-text">
+								<h2>We're building a high-speed vehicle for European Hyperloop Week</h2>
+								<p>The Hyperloop is a novel form of low-cost, fast transportation, consisting of levitating pods propelled through a vacuum tube at transonic speeds. 
+									The concept is projected to be able to transport passengers from San Francisco to Los Angeles in 30 minutes.</p>
+								<p>To further research and innovation at the university level, European Hyperloop Week provides an opportunity for student teams, startups, and companies 
+									to present their research and development in the field of Hyperloop.</p>
+								<p>UC Davis was one of the top 21 teams that competed in the final round of the 2019 SpaceX Hyperloop Pod Competition. The team remarkably passed the full functional test at 
+									SpaceX Headquarters in Hawthorne, California placing third in the United States and Top-Ten in the world. </p>
+								<p>This year, Oneloop was one of 8 U.S. teams that passed the first round of the European Hyperloop Week competition, which will take place in Valencia, Spain in July.</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class = "home-row">
+						<div class = "home-column">
+							<div class = "home-section-img">
+								<img src = "https://i.pinimg.com/originals/10/32/c4/1032c4afa5f0d44a60547f44565cefbd.jpg">
+								</img>
+							</div>
+						</div>
+						
+						<div class = "home-column">
+							<div class="home-section-text">
+								<h2>What is European Hyperloop Week?</h2>
+								<p>EHW is an international organization bringing together the world’s best university teams developing hyperloop systems. Their goal is to foster an ecosystem of innovation 
+									and challenge in the hopes of strengthening the current infrastructure for hyperloop technology.</p>
+								<p>For this competition, the 2020-2021 OneLoop Team is working to design a groundbreaking hyperloop pod, capable of traveling upwards of 350 miles per hour, featuring a propulsion system of 
+									linear induction motors, variable frequency inverter, carbon fiber chassis, as well as an advanced control system using state of the art IPC technology from Beckhoff Automations.</p>
+								<p>For more information visit <a href ="https://hyperloopweek.com/">https://hyperloopweek.com/</a></p>
+							</div>
+						</div>
+					</div>
 				</div>
-
-				<div class="home-section3">
-				<h2>We're building a high-speed vehicle for European Hyperloop Week</h2>
-				<p>The Hyperloop is a novel form of low-cost, fast transportation, consisting of levitating pods propelled through a vacuum tube at transonic speeds. 
-					The concept is projected to be able to transport passengers from San Francisco to Los Angeles in 30 minutes.</p>
-				<p>To further research and innovation at the university level, European Hyperloop Week provides an opportunity for student teams, startups, and companies 
-					to present their research and development in the field of Hyperloop.</p>
-				<p>UC Davis was one of the top 21 teams that competed in the final round of the 2019 SpaceX Hyperloop Pod Competition. The team remarkably passed the full functional test at 
-					SpaceX Headquarters in Hawthorne, California placing third in the United States and Top-Ten in the world. </p>
-				<p>This year, Oneloop was one of 8 U.S. teams that passed the first round of the European Hyperloop Week competition, which will take place in Valencia, Spain in July.</p>
-				</div>
-				
-				<div>
-					<img>
-					</img>
-				</div>
-
-
-				<div class="home-section4">
-				<h2>What is European Hyperloop Week?</h2>
-				<p>EHW is an international organization bringing together the world’s best university teams developing hyperloop systems. Their goal is to foster an ecosystem of innovation 
-					and challenge in the hopes of strengthening the current infrastructure for hyperloop technology.</p>
-				<p>For this competition, the 2020-2021 OneLoop Team is working to design a groundbreaking hyperloop pod, capable of traveling upwards of 350 miles per hour, featuring a propulsion system of 
-					linear induction motors, variable frequency inverter, carbon fiber chassis, as well as an advanced control system using state of the art IPC technology from Beckhoff Automations.</p>
-				<p>For more information visit <a href ="https://hyperloopweek.com/">https://hyperloopweek.com/</a></p>
-				</div>
-			
 			</div>
 		</React.Fragment>
 	);
