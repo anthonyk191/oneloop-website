@@ -57,6 +57,7 @@ const Join_body = () => {
                   <label for="name"><b>Name:</b></label><br />
                   <input type="text" id="name" name="Fullname" className="apply_input" ></input><br />
                 </div>
+            
                 <div className="oneloop-joinus-application-year">
                   <label for="year"><b>Year: </b><br /> </label>
                   <input type="text" id="name" name="Fullname" className="apply_input"></input><br />
