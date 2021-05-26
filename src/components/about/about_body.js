@@ -11,6 +11,7 @@ const About_body = () =>{
 	const [showResults1, setShowResults1] = React.useState(false)
   	const onClick1 = () => setShowResults1(true)
 	const [isOpen,setIsOpen] = useState(false)
+	const [isOpen1,setIsOpen1] = useState(false)
 	  return(
 		<React.Fragment>
 			<div className="oneloop-about-body">
@@ -58,9 +59,8 @@ const About_body = () =>{
 							<p>In 2017-2018 OneLoop applied to SpaceX hyperloop competition. In this year the team was highly ambitious and in preparation for that competition implemented within the pod air bearings, linear induction motor (LIM) propulsion, eddy current brakes, friction brakes, and wheels. OneLoop was able to make it to top 40 through the preliminary design.</p>
 							<p className="collapable">It is important to mention that during this time the linear induction motor had not yet been perfected. However the team wanted to test their current version of the LIM as it is a system crucial for energy efficient long distance travel. The industrial air bearings were chosen at the time to allow travel over non ideal surfaces that had small cracks such as shop floors. The bearings can lift up to 1000 lbs making its potential payload particularly effective. </p>	
 						</div>
-						<button onClick={() => setIsOpen(true)}>click here to learn more</button>
-						<Modal2 open ={isOpen} onClose = {() => setIsOpen(false)}>
-							
+						<button onClick={() => setIsOpen1(true)}>click here to learn more</button>
+						<Modal2 open ={isOpen1} onClose = {() => setIsOpen1(false)}>
 						</Modal2>
  					</div>
 
