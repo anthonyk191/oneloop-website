@@ -5,7 +5,8 @@
 {
     --primary-clr: #022851;
     font-family: 'Open Sans', sans-serif;
-    padding: 0 1.5em;
+    font-size: 12px;
+    padding: 0 20px;
 }
 
 .oneloop-home-body h1,
@@ -18,13 +19,13 @@
 
 .oneloop-home-body h1
 {
-    font-size: 2em;
+    font-size: 30px;
     text-align: center;
 }
 
 .oneloop-home-body h2
 {
-    font-size: 1.5em;
+    font-size: 24px;
 }
 
 .oneloop-home-body a, 
@@ -35,6 +36,38 @@
     font-weight: 700;
 }
 
+.oneloop-home-body img
+{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+.home-column {
+    display: flex;
+    flex-direction:column;
+    flex-basis: 100%;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.home-row {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
 .slideshow
 {
     text-align: center;
@@ -43,14 +76,13 @@
 .frame-wrapper
 {
     position: relative;
-    height: 16em;
 }
 
 .ss-image
 {
-    position: absolute;
-    height: 100%;
+    display: block;
     width: 100%;
+    height: auto;
     margin: 0;
     background-position: center;
     background-size: cover;
@@ -59,6 +91,8 @@
 
 .ss-idle
 {
+    position: absolute;
+    top: 0;
     opacity: 0;
     transition: opacity 0.5s;
 }
@@ -66,8 +100,8 @@
 .slideshow span
 {
     display: inline-block;
-    width: 0.75rem;
-    height: 0.75rem;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     margin: 0 1em;
     margin-top: 1.25em;
@@ -81,26 +115,6 @@
     background-color: var(--primary-clr);
 }
 
-@media (min-width: 48rem)
-{
-    .oneloop-home-body h1
-    {
-        text-align: left;
-        margin: 1.4em 0;
-    }
-
-    .frame-wrapper
-    {
-        height: 32.5em;
-    }
-
-    .slideshow span
-    {
-        margin-top: 1.75em;
-        margin-bottom: 2em;
-    }
-}
-
 @media (hover: hover) 
 {
     .slideshow span:hover
@@ -110,9 +124,38 @@
     }
 }
 
-@media (min-width:1024px)
+@media (min-width:768px)
 {
     .oneloop-home-body {
-        font-size: 1.5em;
+        font-size: 18px;
+        padding: 0 100px;
+    }
+
+    .oneloop-home-body h1
+    {
+        font-size: 40px;
+        text-align: left;
+        margin: 1.4em 0;
+    }
+
+    .oneloop-home-body h2
+    {
+        font-size: 28px;
+    }
+
+    .slideshow span
+    {
+        margin-top: 1.75em;
+        margin-bottom: 2em;
+        width: 18px;
+        height: 18px;
+    }
+}
+
+
+@media (max-width:1280px)
+{
+    .home-column, .home-row{
+        flex: 100%;
     }
 }

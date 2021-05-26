@@ -5,6 +5,8 @@ const port = 5000;
 const nodemailer = require('nodemailer');
 const markdown = require('nodemailer-markdown').markdown;
 const fetch = require('node-fetch');
+const multer = require('multer');
+const upload = multer();
 
 require('dotenv').config();
 
@@ -42,40 +44,101 @@ app.post('/work-with-us', (req, res) => {
     });
 });
 
-app.post('/join-us', (req, res) => {
-    
-    const mailOptions = {
-        from: `${req.body.name} [${req.body.email}] <zoomerinsight@gmail.com>`,
-        to: 'zoomerinsight@gmail.com',
-        subject: req.body.subject,
-        replyTo: req.body.email,
-        markdown: [
-            `## name: ${req.body.name}`,
-            `year: ${req.body.year}`,
-            `major: ${req.body.major}`,
-            `uc-davis-email: ${req.body.email}`,
-            `gpa: ${req.body.gpa}`,
-            `hours-to-commit: ${req.body.hours}`,
-            `subteams-interested:`,
-            `${req.body['subteams-interested'][0]}`,
-            `software-familiar: `,
-            `${req.body['software-familiar'][0]}`,
-            `programming-languages-familiar:`,
-            `${req.body['programming_languages-familiar'][0]}`,
-            `reference:`,
-            `${req.body.reference[0]}`,
-        ].join('\n')
-    };
+const fields = [
+    { name: "resume", maxCount: 1 },
+    { name: "cover_letter", maxCount: 1 }
+];
 
-    transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-            console.log(error);
+app.post('/join-us', upload.fields(fields), (req, res) => {
+    try {
+        if (!req.files.resume) {
+            res.send({ message: 'No resume uploaded' });
         } else {
-            console.log('Email sent: ' + info.response);
-            res.send("successfully sent email to " + mailOptions.to);
+            let attach = [
+                {
+                    filename: `${req.body.name} Resume.pdf`,
+                    content: req.files.resume[0].buffer
+                }
+            ]
+        
+            if (req.files.cover_letter) {
+                attach.push({
+                    filename: `${req.body.name} Cover Letter.pdf`,
+                    content: req.files.cover_letter[0].buffer
+                })
+            }
+        
+            let content = [
+                `**Name**: ${req.body.name} \n`,
+                `**Year**: ${req.body.year} \n`,
+                `**Major**: ${req.body.major} \n `,
+                `**Email**: ${req.body.email} \n`,
+                `**GPA**: ${req.body.gpa} \n`,
+                `**Hours to commit**: ${req.body.hours_to_commit} \n`
+            ];
+        
+            // Subteams they're interested in
+            let subteams = [
+                `**Subteams they're intereted in**:\n`
+            ];
+            for (const team of req.body.subteams_interested) {
+                subteams.push(`* ${team}\n`);
+            }
+            content = content.concat(subteams);
+        
+            // content = content.concat(req.body.ranking);
+        
+            console.log(content)
+        
+            // Software they're familiar with
+            let software = [
+                `**Software they're familiar with**: \n`
+            ];
+            for (const softwares of req.body.software_familiar) {
+                software.push(`* ${softwares}\n`);
+            }
+            content = content.concat(software);
+        
+            // Programming languages they're familiar with
+            let programming_languages = [
+                `**Programming languages they're familiar with**:\n`
+            ];
+            for (const languages of req.body.programming_languages_familiar) {
+                programming_languages.push(`* ${languages}\n`)
+            }
+            content = content.concat(programming_languages);
+        
+            // References
+            let references = [
+                `**References**: \n`
+            ];
+            for (const reference of req.body.reference) {
+                references.push(`* ${reference}\n`);
+            }
+            content = content.concat(references);
+        
+            const mailOptions = {
+                from: `${req.body.name}[${req.body.email}] < zoomerinsight@gmail.com> `,
+                to: 'zoomerinsight@gmail.com',
+                subject: `OneLoop Application: ${req.body.name} `,
+                replyTo: req.body.email,
+                markdown: content.join("\n"),
+                attachments: attach
+            };
+        
+            transporter.sendMail(mailOptions, function (error, info) {
+                if (error) {
+                    console.log(error);
+                } else {
+                    console.log('Email sent: ' + info.response);
+                    res.send("successfully sent email to " + mailOptions.to);
+                }
+            });
         }
-    });
-    
+    } catch (err) {
+        res.status(500).send(err);
+    }
+
 });
 
 app.post('/captcha', (req, res) => {

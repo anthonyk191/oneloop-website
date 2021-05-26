@@ -417,13 +417,23 @@ a:active{
   #joinus:target{
     display: block;
   }
+.oneloop-joinus-application
+{
+  display: flex;
+  flex-direction:column;
 
+}
   /*other stuff*/
   .Application {
     display: flex;
-    flex-direction: column;
+    flex-direction:column;
   }
-
+  .apply_input
+  {
+    margin-top:2em;
+    margin-right:3em;
+    margin-left:auto;
+  }
   .Apply_message {
     width: 100%;
     height: 150px;
