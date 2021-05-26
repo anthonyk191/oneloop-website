@@ -35,6 +35,38 @@
     font-weight: 700;
 }
 
+.oneloop-home-body img
+{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+.home-column {
+    display: flex;
+    flex-direction:column;
+    flex-basis: 100%;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.home-row {
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
 .slideshow
 {
     text-align: center;
@@ -110,9 +142,17 @@
     }
 }
 
-@media (min-width:1024px)
+@media (min-width:768px)
 {
     .oneloop-home-body {
         font-size: 1.5em;
+    }
+}
+
+
+@media (max-width:1280px)
+{
+    .home-column, .home-row{
+        flex: 100%;
     }
 }

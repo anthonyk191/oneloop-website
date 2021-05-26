@@ -1,0 +1,70 @@
+.oneloop-sponsors-body{
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+}
+
+.oneloop-sponsors-body h1{
+	font-family: Playfair Display;
+	color: #022851;
+	font-size: 40px;
+}
+
+.sponsor-logos{
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	align-items: center;
+}
+
+.sponsor-row{
+	display: flex;
+	flex-direction: column;
+}
+
+.sponsor{
+	display: flex;
+	width: 40vw;
+	height: 40vw;
+	margin-left: 1.5vw;
+	margin-right: 1.5vw;
+	margin-bottom: 3vw;
+	border: 15px solid #022851;
+	align-items: center;
+	background-color: #fff;
+}
+
+.sponsor img{
+	width: 33vw;
+	height: auto;
+	margin: auto;
+}
+
+.sponsor-row-top-half, .sponsor-row-bottom-half{
+	display: flex;
+	flex-direction: row;
+}
+
+@media (min-width: 887px){
+
+	.oneloop-sponsors-body{
+		margin: 100px;
+	}
+
+	.sponsor-row{
+		flex-direction: row;
+	}
+
+	.sponsor{
+		width: 17vw;
+		height: 17vw;
+		margin-left: 1vw;
+		margin-right: 1vw;
+		margin-bottom: 2vw;
+	}
+
+	.sponsor img{
+		width: 12vw;
+	}
+
+}
