@@ -3,6 +3,16 @@ import './sponsors_body.css';
 import React, { useEffect } from 'react';
 
 const Sponsors_body = () =>{
+	const [modalOneIsOpen, setModalOneIsOpen] = React.useState(false);
+  	const [modalTwoIsOpen, setModalTwoIsOpen] = React.useState(false);
+  	const [modalThreeIsOpen, setModalThreeIsOpen] = React.useState(false);
+	const [modalFourIsOpen, setModalFourIsOpen] = React.useState(false);
+	const [modalFiveIsOpen, setModalFiveIsOpen] = React.useState(false);
+	const [modalSixIsOpen, setModalSixIsOpen] = React.useState(false);
+	const [modalSevenIsOpen, setModalSevenIsOpen] = React.useState(false);
+	const [modalEightIsOpen, setModalEightIsOpen] = React.useState(false);
+	const [modalNineIsOpen, setModalNineIsOpen] = React.useState(false);
+  	const [modalTenIsOpen, setModalTenIsOpen] = React.useState(false);
 	return(
 		<React.Fragment>
 			<div className="oneloop-sponsors-body">
