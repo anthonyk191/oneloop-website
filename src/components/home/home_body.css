@@ -89,11 +89,7 @@
 .ss-image
 {
     display: block;
-    width: 100%;
-    height: auto;
     margin: 0;
-    background-position: center;
-    background-size: cover;
     opacity: 1;
 }
 
