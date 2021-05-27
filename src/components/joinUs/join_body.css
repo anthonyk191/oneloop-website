@@ -115,6 +115,7 @@ body {
 a {
     color:#022851;  
     text-decoration: none;
+    margin: 5px; 
 }
 
 a:active{
