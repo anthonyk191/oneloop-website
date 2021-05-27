@@ -110,6 +110,7 @@
     padding-bottom: 3px;
     padding-left: 15px;
     padding-right: 15px;
+    margin: 10px;
 }
 
 * {
@@ -170,6 +171,13 @@
     left: 50%;
   }
   
+  .left .YearNum{
+      align-self: flex-end;
+  }
+
+  .left .rightalign {
+    text-align: right;
+  }
   /* Add arrows to the left container (pointing right) 
   .left::before {
     content: " ";
@@ -205,11 +213,11 @@
   
   /* The actual content */
   .content {
-    padding-left:10px;
-    padding-right: 10px;
     background-color: white;
     position: relative;
     border-radius: 6px;
+    display: flex;
+    flex-direction: column;
   }
   
   .container button {

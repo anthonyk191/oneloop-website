@@ -68,7 +68,7 @@ const About_body = () =>{
   					<div className="container left">
     					<div className="content">
 							<p className="YearNum">2018</p>
-							<p>OneLoop produced a robust pod capable of reaching 100 mph that was designed with safety as a top priority. With the increased level of safety the team implemented in design, OneLoop managed to place 9th out of the 40 teams that entered the SpaceX competition of 2019. </p>
+							<p className="rightalign">OneLoop produced a robust pod capable of reaching 100 mph that was designed with safety as a top priority. With the increased level of safety the team implemented in design, OneLoop managed to place 9th out of the 40 teams that entered the SpaceX competition of 2019. </p>
 							<p className="collapable">Safety standards such as OSHA and ASME were adhered to with the regards to pod design, testing, and operation whenever relevant. Furthermore, the year’s propulsion system was modified to be cold gas thrusters which was primarily chosen to reduce the pod’s high voltage requirements and increase electrical safety.</p>
 							
 						</div>
