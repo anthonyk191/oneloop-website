@@ -12,12 +12,13 @@
   font-family:Playfair Display;
   font-size: 30;
   text-align : center;
+  
 }
 
 .oneloop-joinus-heading1 {
   color:#022851;  
   font-family:Playfair Display;
-  font-size: 24;
+  font-size: 24px;
 }
 
 .oneloop-joinus-applicationtitle {
@@ -112,6 +113,7 @@ body {
 }
 
 /*hiding/displaying sections*/
+
 a {
     color:#022851;  
     text-decoration: none;
@@ -122,11 +124,16 @@ a:active{
     text-decoration:underline;  
 }
 
+
 #workwithus{
   display: none;
 }
 
+
 #workwithus:target{
+  display: block;
+}
+#joinus:target{
   display: block;
 }
 
@@ -134,9 +141,8 @@ a:active{
   display: none;
 }
 
-#joinus:target{
-  display: block;
-}
+
+
 
 /*other stuff*/
 .Application {
@@ -181,6 +187,7 @@ a:active{
   padding-bottom: 0.5em;
   padding-left: 2em;
   padding-right: 2em;
+  margin-bottom: 2em;
 }
 
 .apply
@@ -227,6 +234,23 @@ a:active{
   border-color:black;
 }
 
+/*active links*/
+
+.join_link:visited
+{
+  color:#022851;
+  text-decoration:underline;
+}
+.join_link:visited{
+  color:#022851;
+  text-decoration:underline;
+}
+
+.join_link:hover
+{
+  color:#022851;
+  text-decoration:underline;
+}
 
 
 /*desktop*/
@@ -234,31 +258,32 @@ a:active{
 
   .contact_images
 {
-  display:block;
-  width: 335px;
-  height:194px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 1234px;
+  height:509px;
+  Top:241px;
+  Left:99px;
+  margin-bottom:20px;
 }
   /*titles*/
   .oneloop-joinus-title {
     color:#022851;  
     font-family:Playfair Display;
-    font-size: 40;
+    font-size: 40px;
     text-align : left;
+    
   }
 
   .oneloop-joinus-heading1 {
     color:#022851;  
     font-family:Playfair Display;
-    font-size: 28;
+    font-size: 28px;
     text-align : left;
   }
 
   .oneloop-joinus-applicationtitle {
     color:#022851;  
     font-family:Playfair Display;
-    font-size:28;
+    font-size:28px;
     text-align : left;
   }
 
@@ -266,7 +291,7 @@ a:active{
   .oneloop-joinus-heading25 {
     font-family: 'Open Sans', Arial, sans-serif;
     font-style: italic;
-    font-size: 14;
+    font-size: 26px;
     text-align : left;
   }
 
@@ -279,6 +304,13 @@ a:active{
     border-color:black;
   }
 
+
+  .BasicQ
+  {
+    font-family:'Open Sans';
+  font-size:18px;
+  font-weight:400px;
+  }
   /*text*/
   /*basic qualifications bullet points*/
   li {
@@ -383,8 +415,7 @@ a:active{
     order: 2;
   }
 
-  .oneloop-joinus-application-resumecv{
-  }
+  
 
   .oneloop-joinus-contact{
     padding: 50px 100px;
@@ -411,6 +442,7 @@ a:active{
     display: block;
   }
 
+
   #joinus{
     display: none;
   }
@@ -424,24 +456,27 @@ a:active{
   flex-direction:column;
 
 }
+
   /*other stuff*/
   .Application {
     display: flex;
     flex-direction:column;
   }
-  .apply_input
+  .form_inputs
   {
-    margin-top:2em;
-    margin-right:3em;
-    margin-left:auto;
+    margin-bottom:20px;
   }
+
+
   .Apply_message {
-    width: 100%;
-    height: 150px;
+
+    width: 1256px;
+    height: 110px;
+    Top:1757px;
+    Left:97px;
     padding: 12px 20px;
     box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
+    border: 1px solid #000000;
     font-size: 16px;
     resize: none;
   }
@@ -449,9 +484,16 @@ a:active{
 
   .addfile_button {
     padding: 10px 10px;
+    width:116px;
+    height:33px;
+    left:102px;
+    top:1548px;
     background-color: white;
   }
-
+.addfile
+{
+  font-size:18px;
+}
   /*for checkboxes*/
   .JoinUs_button {
     color:white;
@@ -463,6 +505,7 @@ a:active{
     padding-bottom: 0.5em;
     padding-left: 2em;
     padding-right: 2em;
+    margin-bottom: 2em;
   }
 
   .apply
@@ -480,8 +523,19 @@ a:active{
   .Q_s
   {
     font-weight:bold;
+    font-size:18px;
   }
 
+  .Other_line
+  {
+    width:348px;
+    height:20px;
+    Top: 2814px;
+    Left:219px;
+    border: 1px solid #000000;
+     box-sizing: border-box;
+
+  }
 
 
   /*contact*/
@@ -491,3 +545,28 @@ a:active{
     flex-direction: column;
   }
 }
+
+
+/*links*/
+/*selected link*/
+
+
+
+/*active links*/
+
+.join_link:visited
+{
+  color:#022851;
+  text-decoration:underline;
+}
+.join_link:visited{
+  color:#022851;
+  text-decoration:underline;
+}
+
+.join_link:hover
+{
+  color:#022851;
+  text-decoration:underline;
+}
+

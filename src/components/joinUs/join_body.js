@@ -1,7 +1,7 @@
 import "./join_body.css";
 import React, { useEffect } from "react";
 import { Switch } from "react-router";
-import contact_img from './contact_img.jpg';
+import contact_img from './contact_image.jpeg';
 
 const Join_body = () => {
   return (
@@ -15,11 +15,11 @@ const Join_body = () => {
 
     <div className="oneloop-joinus">
       <h2 className="oneloop-joinus-heading1"> 
-        <a href='#workwithus'> 
+        <a href='#workwithus'className="join_link"> 
           Work with Us 
         </a>  
         | 
-        <a href='#joinus'> 
+        <a href='#joinus'className="join_link"> 
           Join Us  
         </a> 
       </h2>
@@ -36,7 +36,7 @@ const Join_body = () => {
         <label for="Message">Message:<br /></label>
         <textarea className="Apply_message" placeholder="Type message here"></textarea>
       </form>
-      <button className="JoinUs_button">Submit<br /></button>
+      <button className="JoinUs_button">Submit</button>
     </div>
 
     <div className = "oneloop-joinus-section" section id = 'joinus' > 
@@ -54,43 +54,43 @@ const Join_body = () => {
             <form action="/" className="Application">
               <div className="oneloop-joinus-application-row1">
                 <div className="oneloop-joinus-application-name">
-                  <label for="name"><b>Name:</b></label><br />
+                  <label for="name" className="form_inputs"><b>Name:</b></label><br />
                   <input type="text" id="name" name="Fullname" className="apply_input" ></input><br />
                 </div>
             
                 <div className="oneloop-joinus-application-year">
-                  <label for="year"><b>Year: </b><br /> </label>
+                  <label for="year"className="form_inputs"><b>Year: </b><br /> </label>
                   <input type="text" id="name" name="Fullname" className="apply_input"></input><br />
                 </div>
                 <div className="oneloop-joinus-application-major">
-                  <label for="major"><b>Major:</b><br /> </label>
+                  <label for="major"className="form_inputs"><b>Major:</b><br /> </label>
                   <input type="text" id="name" name="Fullname" className="apply_input"></input><br />
                 </div>
               </div>
               <div className="oneloop-joinus-application-row2">
                 <div className="oneloop-joinus-application-email">
-                  <label for="email"><b>UC Davis Email: </b> </label>
+                  <label for="email"className="form_inputs"><b>UC Davis Email: </b> </label>
                   <br></br>
                   <input type="text" id="email" name="email_address" className="apply_input"></input><br />
                 </div>
                 <div className="oneloop-joinus-application-gpa">
-                  <label for="gpa"><b>GPA</b>    <i className="optional">(optional):</i> <br /> </label>
+                  <label for="gpa"className="form_inputs"><b>GPA</b>    <i className="optional">(optional):</i> <br /> </label>
                   <input type="text" id="email" name="email_address" className="apply_input"></input><br />
                 </div>
               </div>
 
               <div className="oneloop-joinus-application-resumecv">
                 <br></br>
-                <label for="Resume"><b>Resume</b><br /> </label><br />
+                <label for="Resume" className="addfile"><b>Resume</b><br /> </label><br />
                 <button className="addfile_button">Add file</button><br /><br />
-                <label for="Coverletter"><b>Cover Letter</b><i className="optional"> (optional)</i> <br /> <br /></label>
+                <label for="Coverletter"className="addfile"><b>Cover Letter</b><i className="optional"> (optional)</i> <br /> <br /></label>
                 <button className="addfile_button">Add file</button><br /><br />
               </div>
 
               <label for="Message" className="Q_s" >
                 How many hours a week will you be able to commit to OneLoop?
-              </label><br />
-              <textarea className="Apply_message1"></textarea>
+              </label>
+              <textarea className="Apply_message"></textarea>
             </form><br />
 
             <form action="/" className="Questionnare">
