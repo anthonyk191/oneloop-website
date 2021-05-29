@@ -41,7 +41,7 @@
 }
 
 .team2019-to-team2020 a{
-	font-size: 17px;
+	font-size: 3vw;
 	background-color: #022851;
 	color: #FFFFFF;
 	text-decoration: none;
@@ -53,7 +53,7 @@
 }
 
 .team2019-to-team2018 a{
-	font-size: 17px;
+	font-size: 3vw;
 	background-color: #022851;
 	color: #FFFFFF;
 	text-decoration: none;
@@ -67,6 +67,10 @@
 .team-web{
 	display: none;
 }
+
+.oneloop-team2019-title{
+	text-align: center;
+} 
 
 @media (min-width: 887px){
 	.oneloop-team2019-body{
@@ -89,6 +93,8 @@
 	} 
 	.team-member h4{
 		font-size: 1.2vw;
-	}	 
-
+	}	
+	.oneloop-team2019-title{
+		text-align: left;
+	} 
 }

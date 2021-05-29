@@ -50,6 +50,10 @@
 	margin-left: -3vh;
 }
 
+.oneloop-previous-teams h2{
+	margin-bottom: -13px;
+}
+
 @media (min-width: 887px){
 	.oneloop-teamintro-body{
 		margin-left: 100px;
@@ -65,5 +69,9 @@
 		margin: auto 0;
 		margin-left: 25px;
 		line-height: 0;
+	}
+
+	.oneloop-team-title h1{
+		text-align: center;
 	}
 }

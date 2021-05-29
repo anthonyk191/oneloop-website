@@ -18,7 +18,12 @@ export default function Modal({open, children, onClose}){
             <div className="Popup2018">
                 <button onClick={onClose}>X</button>
                 <p className="Title">2018-2019</p>
-                <p>Safety standards such as OSHA and ASME were adhered to with the regards to pod design, testing, and operation whenever relevant. Furthermore, the year’s propulsion system was modified to be cold gas thrusters which was primarily chosen to reduce the pod’s high voltage requirements and increase electrical safety.</p>
+                <p>Safety standards such as OSHA and ASME were adhered 
+                to with the regards to pod design, testing, and operation 
+                whenever relevant. Furthermore, the year’s propulsion system 
+                was modified to be cold gas thrusters which was primarily chosen 
+                to reduce the pod’s high voltage requirements and increase 
+                electrical safety.</p>
 			</div>
         </div>
     )

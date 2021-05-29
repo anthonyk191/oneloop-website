@@ -4,10 +4,12 @@
 	margin: 20px;
 }
 
-.oneloop-sponsors-body h1{
+.oneloop-sponsors-title h1{
 	font-family: Playfair Display;
 	color: #022851;
 	font-size: 40px;
+	margin-bottom: 30px;
+	text-align: center;
 }
 
 .sponsor-logos{
@@ -35,7 +37,7 @@
 }
 
 .sponsor img{
-	width: 33vw;
+	width: 25vw;
 	height: auto;
 	margin: auto;
 }
@@ -45,10 +47,105 @@
 	flex-direction: row;
 }
 
-@media (min-width: 887px){
+.sponsorPopUp {
+    position: fixed;
+    left: 15%;
+    top: 5%;
+    max-width: 70%;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+
+    height:  90vh;
+
+    padding-top: 7%;
+    padding-right:7%;
+    padding-left: 7%;
+    padding-bottom: 7%;
+    background-color: white;
+
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #000000;
+    border-radius: 15px;
+}
+
+.sponsorPopUp p{
+   	background-color: white;
+}
+
+.sponsorPopUp button {
+	position: absolute;
+    font-size: 25px;
+    align-self: flex-end;
+    color: black;
+    background-color: unset;
+    padding: unset;
+    border: unset;
+}
+
+.sponsorPopUp .Title {
+    align-self: flex-start;
+    font-family: Playfair Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    /* identical to box height */
+
+    letter-spacing: 0.03em;
+
+    color: #000000;
+    margin:unset;
+}
+
+.sponsorPopUp a{
+	text-decoration: underline;	
+}
+
+.sponsor-ratings{
+	display: flex;
+	flex-direction: column;
+}
+
+.platinum, .gold, .silver{
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+}
+
+.platinum-sponsors, .gold-sponsors, .silver-sponsors{
+	display: flex;
+	flex-direction: row;
+}
+
+.platinum-sponsors-col li, .gold-sponsors-col li, .silver-sponsors-col li{
+  	line-height: 1;
+  	font-size: 18px;
+}
+
+.platinum-sponsors-col ul, .gold-sponsors-col ul, .silver-sponsors-col ul{
+  	font-size: 1rem;
+}
+
+.col-1{
+
+}
+
+@media only screen and (min-width: 887px){
 
 	.oneloop-sponsors-body{
-		margin: 100px;
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+
+	.oneloop-sponsors-title h1{
+		text-align: left;
 	}
 
 	.sponsor-row{
@@ -65,6 +162,14 @@
 
 	.sponsor img{
 		width: 12vw;
+	}
+
+	.sponsor-ratings{
+		flex-direction: row;
+	}
+
+	.platinum h2, .gold h2, .silver h2{
+		text-align: center;
 	}
 
 }

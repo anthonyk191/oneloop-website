@@ -22,12 +22,12 @@
 .team2018-to-team2019{
 	align-items: right;
 	text-align: right;
-	margin-bottom: 25px;
-	padding-top: 20px;
+	margin-bottom: 30px;
+	margin-top: 30px;
 }
 
 .team2018-to-team2019 a{
-	font-size: 17px;
+	font-size: 3vw;
 	background-color: #022851;
 	color: #FFFFFF;
 	text-decoration: none;
@@ -52,12 +52,16 @@
 
 .team-member img{
 	width: 25vw;
-	margin-bottom: -15px;
+	margin-bottom: -5px;
 } 
 
 .team-member h4{
 	font-size: 2.3vw;
 } 
+
+.team-member h4>span{
+	font-weight: 200;
+}
 
 .oneloop-team2018-body p{
 	font-size: 3vw;
@@ -66,6 +70,10 @@
 
 .team-web{
 	display: none;
+}
+
+.oneloop-team2018-title{
+	text-align: center;
 }
 
 @media (min-width: 887px){
@@ -93,5 +101,9 @@
 
 	.oneloop-team2018-body p{
 		font-size: 1.5vw;
+	}
+
+	.oneloop-team2018-title{
+		text-align: left;
 	}
 }
