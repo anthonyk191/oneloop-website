@@ -3,6 +3,9 @@ import './about_body.css';
 import React, { useEffect, useState } from 'react';
 import Modal from './Modal'
 import Modal2 from './Modal2'
+import group_photo from './group_photo.png'
+import professor from './professor.png'
+import Image1_2017 from './2017_Image1.png'
 
 const About_body = () =>{
 	const [showResults, setShowResults] = React.useState(false)
@@ -17,6 +20,7 @@ const About_body = () =>{
 			<div className="oneloop-about-body">
 
 				<h1 className="AboutUs">About Us</h1>
+				<img src={group_photo} className = "firstImage"></img>
 				<p className="imgsub">Team 2018 - 2019</p>
 				<div className="Upper">
 				<div className="OurMission">
@@ -36,22 +40,31 @@ const About_body = () =>{
 				</div>
 				<div className="OurFacultyAdv">
 					<h2 className = "secTitle"> Our Faculty Advisor </h2>
+<<<<<<< Updated upstream
 					<img src="images/profAdvisor.svg"/>
 
 					<div className="ProfIntro">
 						<p id="bolder">Professor C.P “Case” Van Dam</p>
 						<p>Professor of Mechanical and Aerospace Engineering</p>
 						<p>University of California, Davis</p>
+=======
+					<div className = "sth">
+						<img src={professor} className = "otherImages"></img>
+						<div className="ProfIntro">
+							<p id="bolder">Professor C.P “Case” Van Dam</p>
+							<p>Professor of Mechanical and Aerospace Engineering</p>
+							<p>University of California, Davis</p>
+						</div>
+>>>>>>> Stashed changes
 					</div>
 				</div>
 				</div>
 				<div className="OurHistory">
 					<h2 className="secTitle"> Our History </h2>
 					
-
 				<div className="timeline">
 					
-					<img></img>
+					<img src={Image1_2017}></img>
 					
   					<div className="container right">
    						<div className="content">
