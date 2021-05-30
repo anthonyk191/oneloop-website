@@ -3,9 +3,7 @@ import './about_body.css';
 import React, { useEffect, useState } from 'react';
 import Modal from './Modal'
 import Modal2 from './Modal2'
-import group_photo from './group_photo.png'
-import professor from './professor.png'
-import Image1_2017 from './2017_Image1.png'
+import Modal3 from './Modal3'
 
 const About_body = () =>{
 	const [showResults, setShowResults] = React.useState(false)
@@ -15,12 +13,14 @@ const About_body = () =>{
   	const onClick1 = () => setShowResults1(true)
 	const [isOpen,setIsOpen] = useState(false)
 	const [isOpen1,setIsOpen1] = useState(false)
+	const [isOpen2,setIsOpen2] = useState(false)
 	  return(
 		<React.Fragment>
 			<div className="oneloop-about-body">
 
 				<h1 className="AboutUs">About Us</h1>
-				<img src={group_photo} className = "firstImage"></img>
+				<img className="headmob" src="images/aboutus/image_4.png"/>
+				<img className="headweb" src="images/aboutus/image_5.png"/>
 				<p className="imgsub">Team 2018 - 2019</p>
 				<div className="Upper">
 				<div className="OurMission">
@@ -40,31 +40,29 @@ const About_body = () =>{
 				</div>
 				<div className="OurFacultyAdv">
 					<h2 className = "secTitle"> Our Faculty Advisor </h2>
-<<<<<<< Updated upstream
-					<img src="images/profAdvisor.svg"/>
 
-					<div className="ProfIntro">
-						<p id="bolder">Professor C.P “Case” Van Dam</p>
-						<p>Professor of Mechanical and Aerospace Engineering</p>
-						<p>University of California, Davis</p>
-=======
-					<div className = "sth">
-						<img src={professor} className = "otherImages"></img>
+					<div className="profimgintro">
+						<img className="profimg" src="images/profAdvisor.svg"/>
+
 						<div className="ProfIntro">
 							<p id="bolder">Professor C.P “Case” Van Dam</p>
 							<p>Professor of Mechanical and Aerospace Engineering</p>
 							<p>University of California, Davis</p>
 						</div>
->>>>>>> Stashed changes
 					</div>
 				</div>
 				</div>
 				<div className="OurHistory">
 					<h2 className="secTitle"> Our History </h2>
 					
+
 				<div className="timeline">
-					
-					<img src={Image1_2017}></img>
+					<div className="sameline">
+					<div className="piccontainer left">
+						<img className="left1" src="images/aboutus/image_7.png"/>
+						<img className="left2" src="images/aboutus/image_8.png"/>
+						<img className="left3" src="images/aboutus/image_12.png"/>
+					</div>
 					
   					<div className="container right">
    						<div className="content">
@@ -76,13 +74,15 @@ const About_body = () =>{
 						<Modal2 open ={isOpen1} onClose = {() => setIsOpen1(false)}>
 						</Modal2>
  					</div>
+					 </div>
 
 
+					 <div className="sameline">
   					<div className="container left">
     					<div className="content">
 							<p className="YearNum">2018</p>
 							<p className="rightalign">OneLoop produced a robust pod capable of reaching 100 mph that was designed with safety as a top priority. With the increased level of safety the team implemented in design, OneLoop managed to place 9th out of the 40 teams that entered the SpaceX competition of 2019. </p>
-							<p className="collapable">Safety standards such as OSHA and ASME were adhered to with the regards to pod design, testing, and operation whenever relevant. Furthermore, the year’s propulsion system was modified to be cold gas thrusters which was primarily chosen to reduce the pod’s high voltage requirements and increase electrical safety.</p>
+							<p className="collapabler">Safety standards such as OSHA and ASME were adhered to with the regards to pod design, testing, and operation whenever relevant. Furthermore, the year’s propulsion system was modified to be cold gas thrusters which was primarily chosen to reduce the pod’s high voltage requirements and increase electrical safety.</p>
 							
 						</div>
 						<button onClick={() =>setIsOpen(true)}>click here to learn more</button>
@@ -90,21 +90,34 @@ const About_body = () =>{
 							
 						</Modal>
   					</div>
+					  <div className="piccontainer right">
+						<img className="right1" src="images/aboutus/image_9.png"/>
+						<img className="right2" src="images/aboutus/image_10.png"/>
+						<img className="right3" src="images/aboutus/image_13.png"/>
+			
+						</div>
 
-  					
-					<img></img>
-  					
-
-  					
-    				<img></img>
+					</div>
 					
-
+					<div className="sameline">
+					<div className="piccontainer left">
+						<img className="left4" src="images/aboutus/image_11.png"/>
+						<img className="left5" src="images/aboutus/image_14.png"/>
+			
+						</div>
   					<div className="container right">
     					<div className="content">
 							<p className="YearNum">2019</p>
-							<p>Due to the concerns created by COVID-19, there were no official announcements for SpaceX’s competition. The team switched to a two-year design cycle to adjust to these changes spending more of their time on research and simulations. The acquisition of sponsorship with ANSYS allowed the team to extensively simulate their pod models. With the help of computer aided software, the team was able to drastically improve their mathematical models as well as better ways to integrate the pod. </p>
+							<p>Due to the concerns created by COVID-19, there were no official announcements for SpaceX’s competition. The team switched to a two-year design cycle to adjust to these changes spending more of their time on research and simulations. </p>
+							<p className="collapable">The acquisition of sponsorship with ANSYS allowed the team to extensively simulate their pod models. With the help of computer aided software, the team was able to drastically improve their mathematical models as well as better ways to integrate the pod.</p>
     					</div>
+						<button onClick={() =>setIsOpen2(true)}>click here to learn more</button>
+						<Modal3 open ={isOpen2} onClose = {() => setIsOpen2(false)}>
+							
+						</Modal3>
   					</div>
+
+					  </div>
 				</div>
 				</div>
 			</div>
