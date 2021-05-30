@@ -15,7 +15,7 @@ export default function SponsorNineteen({open, children, onClose}){
     if (!open) return null
     return (
         <div style = {OVERLAY_STYLES}>
-	        <div className="PsponsorPopUp">
+	        <div className="sponsorPopUp">
 				<button onClick={onClose}>&#x2715;</button>
 				<p className="Title">Ubiquiti Networks</p>
 				<p>A provider of multi-application network operating systems 

@@ -22,7 +22,7 @@ export default function SponsorNine({open, children, onClose}){
                 valves and regulators for gas and fluid control. Products are used 
                 in wide rage of commercial firefighting, military, sports-diving, 
                 natural gas, natural gas fill stations, and other applications (shipping worldwide).</p>
-                <a href="https://www.aquaenvironmentinc.com/index.html">https://www.aquaenvironmentinc.com/index.html</a>
+                <a href="https://www.aquaenvironmentinc.com/index.html">https://www.aquaenvironmentinc.com/</a>
 			</div>
         </div>
     )

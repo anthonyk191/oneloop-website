@@ -4,6 +4,11 @@
 	margin: 20px;
 }
 
+.oneloop-sponsors-title{
+	font-family: Playfair Display;
+	text-align: center;
+}
+
 .oneloop-sponsors-title h1{
 	font-family: Playfair Display;
 	color: #022851;
@@ -79,14 +84,20 @@
    	background-color: white;
 }
 
+.sponsorPopUp a{
+	margin-left: -10px;
+}
+
 .sponsorPopUp button {
-	position: absolute;
+    font-style: unset;
+    font-weight: unset;
     font-size: 25px;
     align-self: flex-end;
     color: black;
     background-color: unset;
     padding: unset;
     border: unset;
+
 }
 
 .sponsorPopUp .Title {
@@ -111,12 +122,29 @@
 .sponsor-ratings{
 	display: flex;
 	flex-direction: column;
+	margin: auto;
 }
 
 .platinum, .gold, .silver{
 	display: flex;
 	flex-direction: column;
-	margin: 10px;
+}
+
+.platinum, .gold{
+	margin-bottom: -5px;
+}
+
+.silver{
+	margin-bottom: 50px;
+}
+
+.platinum h2, .gold h2, .silver h2{
+	margin-bottom: -10px;
+	font-size: 28px;
+	font-family: Playfair Display;
+	color: #022851;
+	text-decoration: underline;
+	text-align: center;
 }
 
 .platinum-sponsors, .gold-sponsors, .silver-sponsors{
@@ -126,15 +154,13 @@
 
 .platinum-sponsors-col li, .gold-sponsors-col li, .silver-sponsors-col li{
   	line-height: 1;
-  	font-size: 18px;
+  	font-size: 16px;
+  	margin-bottom: -20px;
+  	font-family: Open Sans;
 }
 
-.platinum-sponsors-col ul, .gold-sponsors-col ul, .silver-sponsors-col ul{
-  	font-size: 1rem;
-}
-
-.col-1{
-
+.platinum{
+	padding-right: 20px;
 }
 
 @media only screen and (min-width: 887px){
@@ -144,8 +170,17 @@
 		margin-right: 100px;
 	}
 
+	.oneloop-sponsors-title{
+		text-align: left;
+	}
+
 	.oneloop-sponsors-title h1{
 		text-align: left;
+	}
+
+	.sponsor-logos{
+		margin-left: 100px;
+		margin-right: 100px;
 	}
 
 	.sponsor-row{
@@ -160,6 +195,10 @@
 		margin-bottom: 2vw;
 	}
 
+	.sponsorPopUp a{
+		margin-left: 0px;
+	}
+
 	.sponsor img{
 		width: 12vw;
 	}
@@ -168,8 +207,27 @@
 		flex-direction: row;
 	}
 
+	.platinum, .gold, .silver{
+		margin-bottom: 30px;
+	}
+
+
 	.platinum h2, .gold h2, .silver h2{
 		text-align: center;
+	}
+
+	.platinum-sponsors, .gold-sponsors, .silver-sponsors{
+		flex-direction: column;
+	}
+
+	.col-1{
+		margin-bottom: -35px;
+	}
+
+	.sponsorPopUp{
+		padding-top: 3%;
+		top: 25%;
+		height: 40vh;
 	}
 
 }

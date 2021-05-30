@@ -32,8 +32,10 @@ const Ul = styled.ul`
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
     li {
-      padding: 18px 10px;
+      margin-right: 5vw;
+      padding: 18px 0px;
       color: #fff;
+      border-bottom: 1px solid #FFFFFF;
     }
   }
 `;

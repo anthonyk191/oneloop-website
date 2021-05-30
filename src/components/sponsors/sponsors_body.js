@@ -111,7 +111,7 @@ const Sponsors_body = () =>{
 					<h1>Sponsors</h1>
 					<h3>Meet our sponsors!</h3>
 				</div>
-				{/*<div className="sponsor-ratings">
+				<div className="sponsor-ratings">
 					<div className="platinum">
 						<h2>Platinum</h2>
 						<div className="platinum-sponsors">
@@ -178,7 +178,7 @@ const Sponsors_body = () =>{
 							</div>
 						</div>
 					</div>
-				</div>*/}
+				</div>
 				<div className="sponsor-logos">
 					<div className="sponsor-row">
 						<div className="sponsor-row-top-half">

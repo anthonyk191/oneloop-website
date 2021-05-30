@@ -36,7 +36,7 @@ const About_body = () =>{
 				</div>
 				<div className="OurFacultyAdv">
 					<h2 className = "secTitle"> Our Faculty Advisor </h2>
-					<img></img>
+					<img src="images/profAdvisor.svg"/>
 
 					<div className="ProfIntro">
 						<p id="bolder">Professor C.P “Case” Van Dam</p>
