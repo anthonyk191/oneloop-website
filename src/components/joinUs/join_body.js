@@ -9,7 +9,7 @@ const Join_body = () => {
 
     <div className="oneloop-joinus-topcontainer">
       <div className="oneloop-joinus-title"> <h1> Contact Us </h1> </div>
-      <img src={contact_img} className="contact_images"/>
+      <img src={contact_img} className="contact_images"/><br />
       <div className="oneloop-joinus-heading25"> INTERESTED IN GAINING HANDS-ON EXPERIENCE? JOIN THE TEAM! </div>
     </div>
 
@@ -28,10 +28,10 @@ const Join_body = () => {
     <div className="oneloop-joinus-contact" section id = 'workwithus'>
       <form action="/"className="joinus-contact">
         <label for="name"> Name:<br /></label>
-        <input type="text" id="name" name="Fullname"className="contact_form"></input><br />
+        <input type="text" id="name" name="Fullname"className="contact_form"></input>
         <label for="email"> Email:<br /></label>
        
-        <input type="text" id="email" name="email_address"className="contact_form"></input><br />
+        <input type="text" id="email" name="email_address"className="contact_form"></input>
 
         <label for="Message">Message:<br /></label>
         <textarea className="Apply_message" placeholder="Type message here"></textarea>
@@ -42,10 +42,10 @@ const Join_body = () => {
     <div className = "oneloop-joinus-section" section id = 'joinus' > 
       <div className="oneloop-joinus-basic-qualifications">
         <h2 className="oneloop-joinus-heading1"> Basic Qualifications </h2>
-        <li className="BasicQ"> Currently pursuing an undergraduate or graduate degree at UC Davis </li>
-        <li className="BasicQ"> $40/year dues </li>
-        <li className="BasicQ"> 4hr/week minimum commitment (weekly subteam meetings and individual projects) </li>
-        <li className="BasicQ"> Accountable for projects assigned by leads and willing to learn; proactive </li>
+        <li> Currently pursuing an undergraduate or graduate degree at UC Davis </li>
+        <li> $40/year dues </li>
+        <li> 4hr/week minimum commitment (weekly subteam meetings and individual projects) </li>
+        <li> Accountable for projects assigned by leads and willing to learn; proactive </li>
       </div>
 
       <div className="oneloop-joinus-application">
@@ -53,29 +53,42 @@ const Join_body = () => {
           <body>
             <form action="/" className="Application">
               <div className="oneloop-joinus-application-row1">
+
                 <div className="oneloop-joinus-application-name">
-                  <label for="name" className="form_inputs"><b>Name:</b></label><br />
-                  <input type="text" id="name" name="Fullname" className="apply_input" ></input><br />
+                  <label for="name" className="form_inputs"><b>Name:</b></label>
+                  <div className="oneloop-joinus-application-namebox">
+                    <input type="text" id="name" name="Fullname" className="apply_input" ></input><br />
+                  </div>
                 </div>
             
                 <div className="oneloop-joinus-application-year">
-                  <label for="year"className="form_inputs"><b>Year: </b><br /> </label>
-                  <input type="text" id="name" name="Fullname" className="apply_input"></input><br />
+                  <label for="year"className="form_inputs"><b>Year: </b></label>
+                  <div className="oneloop-joinus-application-yearbox">
+                    <input type="text" id="name" name="Fullname" className="apply_input2"></input><br />
+                  </div>
                 </div>
+
                 <div className="oneloop-joinus-application-major">
-                  <label for="major"className="form_inputs"><b>Major:</b><br /> </label>
-                  <input type="text" id="name" name="Fullname" className="apply_input"></input><br />
+                  <label for="major"className="form_inputs"><b>Major:</b></label>
+                  <div className="oneloop-joinus-application-majorbox">
+                    <input type="text" id="name" name="Fullname" className="apply_input"></input><br />
+                  </div>
                 </div>
               </div>
+
               <div className="oneloop-joinus-application-row2">
                 <div className="oneloop-joinus-application-email">
                   <label for="email"className="form_inputs"><b>UC Davis Email: </b> </label>
-                  <br></br>
-                  <input type="text" id="email" name="email_address" className="apply_input"></input><br />
-                </div>
+                  <div className="oneloop-joinus-application-emailbox">
+                    <input type="text" id="email" name="email_address" className="apply_input"></input><br />
+                  </div>
+                </div> 
+
                 <div className="oneloop-joinus-application-gpa">
-                  <label for="gpa"className="form_inputs"><b>GPA</b>    <i className="optional">(optional):</i> <br /> </label>
-                  <input type="text" id="email" name="email_address" className="apply_input"></input><br />
+                    <label for="gpa"className="form_inputs"><b>GPA</b>    <i className="optional">(optional):</i><br /></label>
+                  <div className="oneloop-joinus-application-gpabox">
+                    <input type="text" id="email" name="email_address" className="apply_input"></input>
+                  </div>
                 </div>
               </div>
 

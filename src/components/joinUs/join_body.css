@@ -1,18 +1,17 @@
-.contact_images
-{
+.contact_images {
   display:block;
   width: 335px;
   height:194px;
   margin-left: auto;
   margin-right: auto;
 }
+
 /*titles*/
 .oneloop-joinus-title {
   color:#022851;  
   font-family:Playfair Display;
-  font-size: 30;
+  font-size: 30px;
   text-align : center;
-  
 }
 
 .oneloop-joinus-heading1 {
@@ -36,8 +35,15 @@
   text-align : center;
 }
 
-.apply_input
-{
+.apply_input {
+  width:273px;
+  height:33px;
+  border-width:1px;
+  border-style: solid;
+  border-color:black;
+}
+
+.apply_input2 {
   width:273px;
   height:33px;
   border-width:1px;
@@ -50,12 +56,6 @@
 li {
   font-family: 'Open Sans', Arial, sans-serif;
   padding: 12px 10px;
-  font-size:14px;
-}
-
-/*does this do anything? lol */
-.BasicQ {
-  font-family:'Open Sans';
   font-size:14px;
 }
 
@@ -84,7 +84,7 @@ body {
   order: 2;
 }
 
-.oneloop-joinus{
+.oneloop-joinus {
   padding: 12px 20px;
   display: flex; 
   flex-direction: column;
@@ -105,7 +105,23 @@ body {
   order: 5;
 }
 
-.oneloop-joinus-contact{
+.oneloop-joinus-application-name{
+  padding-bottom: 20px;
+}
+
+.oneloop-joinus-application-year{
+  padding-bottom: 20px;
+}
+
+.oneloop-joinus-application-major{
+  padding-bottom: 20px;
+}
+
+.oneloop-joinus-application-email{
+  padding-bottom: 20px;
+}
+
+.oneloop-joinus-contact {
   padding: 12px 20px;
   display: flex; 
   flex-direction: column;
@@ -120,20 +136,15 @@ a {
     margin: 5px; 
 }
 
-a:active{
+a:active {
     text-decoration:underline;  
 }
-
 
 #workwithus{
   display: none;
 }
 
-
 #workwithus:target{
-  display: block;
-}
-#joinus:target{
   display: block;
 }
 
@@ -142,6 +153,24 @@ a:active{
 }
 
 
+#joinus:target{
+  display: block;
+}
+
+.join_link:visited {
+  color:#022851;
+  text-decoration:underline;
+}
+
+.join_link:visited {
+  color:#022851;
+  text-decoration:underline;
+}
+
+.join_link:hover {
+  color:#022851;
+  text-decoration:underline;
+}
 
 
 /*other stuff*/
@@ -161,8 +190,7 @@ a:active{
   margin-top: 1em;
 }
 
-.Apply_message1
-{
+.Apply_message1 {
   width: 273px;
   height: 100px;
   padding: 12px 20px;
@@ -171,6 +199,7 @@ a:active{
   border-width:1px;
   border-color:black;
 }
+
 .addfile_button {
   padding: 10px 10px;
   background-color: white;
@@ -190,28 +219,24 @@ a:active{
   margin-bottom: 2em;
 }
 
-.apply
-{
+.apply {
   color:#686868
 }
 
-/*Questionnare*/
-.Questionnare
-{
+
+.Questionnare {
   display: flex;
   flex-direction: column;
 }
 
-.Q_s
-{
+.Q_s {
   font-weight:bold;
   font-family: 'Open Sans', Arial, sans-serif;
   font-size:14px;
 
 }
 
-.Other_line
-{
+.Other_line {
   
   width:178px;
   height:15px;
@@ -220,14 +245,13 @@ a:active{
   margin-left:0.5em;
 }
 
-/*contact*/
-.joinus-contact
-{
+
+.joinus-contact {
   display: flex;
   flex-direction: column;
 }
-.contact_form
-{
+
+.contact_form {
   width:273px;
   height:33px;
   border-width:1px;
@@ -256,47 +280,38 @@ a:active{
 /*desktop*/
 @media only screen and (min-width: 1000px) {
 
-  .contact_images
-{
-  width: 1234px;
-  height:509px;
-  Top:241px;
-  Left:99px;
-  margin-bottom:20px;
-}
+  .contact_images {
+    width: 1234px;
+    height:509px;
+    Top:241px;
+    Left:99px;
+    text-align: left;
+    margin-bottom:20px;
+  }
+
   /*titles*/
   .oneloop-joinus-title {
-    color:#022851;  
-    font-family:Playfair Display;
     font-size: 40px;
     text-align : left;
-    
   }
 
   .oneloop-joinus-heading1 {
-    color:#022851;  
-    font-family:Playfair Display;
     font-size: 28px;
     text-align : left;
   }
 
   .oneloop-joinus-applicationtitle {
-    color:#022851;  
-    font-family:Playfair Display;
     font-size:28px;
     text-align : left;
   }
 
 
   .oneloop-joinus-heading25 {
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-style: italic;
     font-size: 26px;
     text-align : left;
   }
 
-  .apply_input
-  {
+  .apply_input {
     width:273px;
     height:33px;
     border-width:1px;
@@ -304,23 +319,14 @@ a:active{
     border-color:black;
   }
 
-
-  .BasicQ
-  {
-    font-family:'Open Sans';
-  font-size:18px;
-  font-weight:400px;
-  }
   /*text*/
   /*basic qualifications bullet points*/
   li {
-    font-family: 'Open Sans', Arial, sans-serif;
     padding: 12px 12px;
-    font-size:14px;
+    font-size:18px;
   }
 
   body {
-    font-family: 'Open Sans', Arial, sans-serif;
     font-size:18px;
   }
 
@@ -376,24 +382,45 @@ a:active{
     flex-direction: row;
   }
 
+
   .oneloop-joinus-application-name {
     display: flex; 
-    flex-direction: row;
-    flex-basis: 20%;
+    flex-direction: column;
     order: 1;
+  }
+
+  .oneloop-joinus-application-namebox {
+    display: flex; 
+    flex-direction: column;
+    padding-right: 30px;
+    order: 2;
   }
 
   .oneloop-joinus-application-year {
     display: flex; 
-    flex-direction: row;
+    flex-direction: column;
+    order: 2;
+  }
+
+  .oneloop-joinus-application-yearbox {
+    display: flex; 
+    flex-direction: column;
+    padding-right: 30px;
     order: 2;
   }
 
   .oneloop-joinus-application-major {
     display: flex; 
-    flex-direction: row;
-    flex-grow: 2; 
+    flex-direction: column;
+    flex-basis: 20%;
     order: 3;
+  }
+
+  .oneloop-joinus-application-majorbox {
+    display: flex; 
+    flex-direction: column;
+    flex-grow: 2; 
+    order: 2;
   }
 
   .oneloop-joinus-application-row2 {
@@ -404,17 +431,28 @@ a:active{
 
   .oneloop-joinus-application-email {
     display: flex; 
-    flex-direction: row;
-    flex-basis: 20%;
+    flex-direction: column;
     order: 1;
+  }
+
+  .oneloop-joinus-application-emailbox {
+    display: flex; 
+    flex-direction: column;
+    padding-right: 30px;
+    order: 2;
   }
 
   .oneloop-joinus-application-gpa {
     display: flex; 
-    flex-direction: row;
+    flex-direction: column;
     order: 2;
   }
 
+  .oneloop-joinus-application-gpabox {
+    display: flex; 
+    flex-direction: column;
+    order: 2;
+  }
   
 
   .oneloop-joinus-contact{
@@ -434,43 +472,26 @@ a:active{
       text-decoration:underline;  
   }
 
-  #workwithus{
-    display: none;
-  }
-
-  #workwithus:target{
-    display: block;
-  }
-
-
-  #joinus{
-    display: none;
-  }
-
-  #joinus:target{
-    display: block;
-  }
-.oneloop-joinus-application
-{
-  display: flex;
-  flex-direction:column;
-
-}
-
   /*other stuff*/
-  .Application {
-    display: flex;
-    flex-direction:column;
+
+  .apply_input{
+    width: 500px;
+    height: 30px;
   }
-  .form_inputs
-  {
+
+
+  .apply_input2{
+    width: 250px;
+    height: 30px;
+  }
+
+  .form_inputs {
     margin-bottom:20px;
   }
 
 
   .Apply_message {
-
-    width: 1256px;
+    width: 1300px;
     height: 110px;
     Top:1757px;
     Left:97px;
@@ -490,83 +511,36 @@ a:active{
     top:1548px;
     background-color: white;
   }
-.addfile
-{
-  font-size:18px;
-}
+
+  .addfile {
+    font-size:18px;
+  }
+
   /*for checkboxes*/
   .JoinUs_button {
     color:white;
     background-color:#022851;
     font-family:open sans;
     border-radius:10px;
-    margin-top: 2em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     padding-left: 2em;
     padding-right: 2em;
+    margin-top: 2em;
     margin-bottom: 2em;
   }
 
-  .apply
-  {
-    color:#686868
-  }
-
-  /*Questionnare*/
-  .Questionnare
-  {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .Q_s
-  {
-    font-weight:bold;
+  .Q_s {
     font-size:18px;
   }
 
-  .Other_line
-  {
+  .Other_line {
     width:348px;
     height:20px;
     Top: 2814px;
     Left:219px;
     border: 1px solid #000000;
-     box-sizing: border-box;
+    box-sizing: border-box;
 
   }
-
-
-  /*contact*/
-  .joinus-contact
-  {
-    display: flex;
-    flex-direction: column;
-  }
 }
-
-
-/*links*/
-/*selected link*/
-
-
-
-/*active links*/
-
-.join_link:visited
-{
-  color:#022851;
-  text-decoration:underline;
-}
-.join_link:visited{
-  color:#022851;
-  text-decoration:underline;
-}
-
-.join_link:hover
-{
-  color:#022851;
-  text-decoration:underline;
-}
-
