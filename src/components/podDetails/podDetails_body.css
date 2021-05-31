@@ -33,17 +33,17 @@
 }
 
 .frame-wrapper {
-    height: 700;
-    width: 750;
     position: relative;
 }
 
 .ss-image {
-    height: 700;
-    width: 750;
     display: block;
-    margin: 0;
-    opacity: 1;
+    width: 100%;
+    width: 335px;
+    height: 267px;
+    max-width: 100%;
+    object-fit: cover;
+    margin: 0 auto;
 }
 
 .ss-idle {
@@ -67,6 +67,21 @@
 
 .slideshow span.active {
     background-color: #E5E5E5;
+}
+
+.dot-wrapper {
+    margin-top: 20px;
+}
+
+.dot-wrapper span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 12px;
+    background-color: white;
+    transition: background-color 0.3s;
+    border: 1px solid #022851
 }
 
 @media (hover: hover) {

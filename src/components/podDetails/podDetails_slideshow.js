@@ -10,14 +10,14 @@ function Preloaded(props) {
 
 function Dots(props) {
     return (
-        <React.Fragment>
+        <div className="dot-wrapper">
             {
                 props.images.map((_, offset) => (
                     <span key={ offset } className={ offset === props.imageOffset ? 'active' : '' } onClick={ () => props.setImageOffset(offset) }>
                     </span>
                 ))
             }
-        </React.Fragment>
+        </div>
     )
 }
 
