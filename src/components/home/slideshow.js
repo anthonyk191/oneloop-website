@@ -12,34 +12,23 @@ function Preloaded(props) {
 
 function Dots(props) {
     return (
-        <React.Fragment>
+        <div className="dot-wrapper">
             {
                 props.images.map((_, offset) => (
                     <span key={ offset } className={ offset === props.imageOffset ? 'active' : '' } onClick={ () => props.setImageOffset(offset) }>
                     </span>
                 ))
             }
-        </React.Fragment>
+        </div>
     )
 }
 
-function Slideshow() {
-
-    // changes images once they're available
-    const Images = [
-        'https://placekitten.com/500/200',
-        'https://placekitten.com/500/201',
-        'https://placekitten.com/500/202',
-        'https://placekitten.com/500/203',
-        'https://placekitten.com/500/204',
-        'https://placekitten.com/500/205',
-        'https://placekitten.com/500/206'
-    ];
+function Slideshow(props) {
 
     const [ imageOffset, setImageOffset ] = useState(0);
 
     useEffect(() => {
-        const timer = setTimeout(() => setImageOffset((imageOffset + 1) % Images.length), 3000);
+        const timer = setTimeout(() => setImageOffset((imageOffset + 1) % props.images.length), 3000);
 
         return function cleanup() {
             clearTimeout(timer);
@@ -51,13 +40,13 @@ function Slideshow() {
             <div className="frame-wrapper">                
                 <img key={ imageOffset } 
                     className="ss-image"
-                    src={ Images[imageOffset] } />
-                <img key={ (imageOffset - 1 + Images.length) % Images.length } 
-                    className="ss-image ss-idle" 
-                    src={ Images[(imageOffset - 1 + Images.length) % Images.length]} />
+                    src={ props.images[imageOffset] } />
+                <img key={ (imageOffset - 1 + props.images.length) % props.images.length } 
+                    className="ss-image idle" 
+                    src={ props.images[(imageOffset - 1 + props.images.length) % props.images.length]} />
             </div>
-            <Dots imageOffset={ imageOffset } setImageOffset={ setImageOffset } images={ Images } />
-            <Preloaded images={ Images } />
+            <Dots imageOffset={ imageOffset } setImageOffset={ setImageOffset } images={ props.images } />
+            <Preloaded images={ props.images } />
         </div>
     );
 }
