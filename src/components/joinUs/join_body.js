@@ -28,12 +28,12 @@ const Join_body = () => {
     <div className="oneloop-joinus-contact" section id = 'workwithus'>
       <form action="/"className="joinus-contact">
         <label for="name"> Name:<br /></label>
-        <input type="text" id="name" name="Fullname"className="contact_form"></input>
-        <label for="email"> Email:<br /></label>
+        <br /><input type="text" id="name" name="Fullname"className="contact_form"></input>
+        <br /><label for="email"> Email:<br /></label>
        
-        <input type="text" id="email" name="email_address"className="contact_form"></input>
+        <br /><input type="text" id="email" name="email_address"className="contact_form"></input>
 
-        <label for="Message">Message:<br /></label>
+        <br /><label for="Message">Message:<br /></label>
         <textarea className="Apply_message" placeholder="Type message here"></textarea>
       </form>
       <button className="JoinUs_button">Submit</button>

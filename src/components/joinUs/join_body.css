@@ -237,7 +237,6 @@ a:active {
 }
 
 .Other_line {
-  
   width:178px;
   height:15px;
   border-width:1px;
@@ -247,6 +246,7 @@ a:active {
 
 
 .joinus-contact {
+  font-weight:bold;
   display: flex;
   flex-direction: column;
 }
@@ -423,8 +423,7 @@ a:active {
     order: 2;
   }
 
-  .oneloop-joinus-application-row2 {
-    padding-bottom: 20px; 
+  .oneloop-joinus-application-row2 { 
     display: flex; 
     flex-direction: row;
   }
