@@ -106,4 +106,13 @@
 	.oneloop-team2018-title{
 		text-align: left;
 	}
+
+	.team2018-to-team2019 a{
+		font-size: 1.2vw;
+		padding-right: 35px;
+		padding-left: 35px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-radius: 15px; 
+	}
 }

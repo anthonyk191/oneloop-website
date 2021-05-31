@@ -97,4 +97,8 @@
 	.oneloop-team2019-title{
 		text-align: left;
 	} 
+
+	.team2019-to-team2020 a, .team2019-to-team2018 a{
+		font-size: 1.2vw;
+	}
 }
