@@ -1,7 +1,7 @@
 import './podDetails_body.css';
 
-import React, { useEffect } from 'react';
-//import Slideshow from '../home/slideshow'
+import React, { useState, useEffect } from 'react';
+import Slideshow from './podDetails_slideshow'
 
 const PodDetails_body = () =>{
 	return(
@@ -10,27 +10,8 @@ const PodDetails_body = () =>{
 				<div className="oneloop-poddetails-title"> 
 					<h1> Pod Details </h1> 
 				</div> 
-				<div className="oneloop-poddetails-mainphoto"> 
-				</div>
-			</div>
-
-			<div className="oneloop-poddetails-section1"> 
-				<div className="oneloop-poddetails-subtitle"> 
-					<h2> Photo Title </h2>
-				</div>
-
-				<div className="oneloop-poddetails-caption">
-					<h3>Caption here</h3>
-				</div>
-			</div>
-
-			<div className="oneloop-poddetails-section2"> 
-				<div className="oneloop-poddetails-subtitle"> 
-					<h2> Photo Title </h2>
-				</div>
-
-				<div className="oneloop-poddetails-caption">
-					<h3>Caption here</h3>
+				<div className="oneloop-poddetails-slideshow"> 
+					<Slideshow/>
 				</div>
 			</div>
 

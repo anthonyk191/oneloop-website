@@ -12,7 +12,18 @@ const Home_body = () =>{
 
                 <h1>What is OneLoop?</h1>
 
-                <Slideshow/>
+                <Slideshow images={
+                    // change images once available
+                    [
+                        './images/home_slideshow/image_1.jpg',
+                        'https://placekitten.com/500/201',
+                        'https://placekitten.com/500/202',
+                        'https://placekitten.com/500/203',
+                        'https://placekitten.com/500/204',
+                        'https://placekitten.com/500/205',
+                        'https://placekitten.com/500/206'
+                    ]
+                }/>
 				
 				<div>
 					<h2>Our Mission</h2>
