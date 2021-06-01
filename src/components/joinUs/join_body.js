@@ -3,6 +3,14 @@ import React, { useState, useRef } from "react";
 import contact_img from './contact_image.jpeg';
 
 const Join_body = () => {
+  const softwareOtherRef = useRef(null);
+  const langOtherRef = useRef(null);
+  const refOtherRef = useRef(null);
+  const joinFormRef = useRef(null);
+  const [softwareOther, setSoftwareOther] = useState('');
+  const [langOther, setLangOther] = useState('');
+  const [refOther, setRefOther] = useState('');
+
   const [workFormData, setWorkFormData] = useState({
     name: "",
     email: "",
@@ -23,13 +31,8 @@ const Join_body = () => {
     programming_languages_familiar: [],
     reference: [],
     resume: "",
-    cover_letter: "",
     subject: "OneLoop Application"
   });
-
-  const [softwareOther, setSoftwareOther] = useState('');
-  const [langOther, setLangOther] = useState('');
-  const [refOther, setRefOther] = useState('');
 
   const workHandleChange = (e) => {
     setWorkFormData({
@@ -118,9 +121,6 @@ const Join_body = () => {
     console.log(joinFormData);
   }
 
-  const softwareOtherRef = useRef(null);
-  const langOtherRef = useRef(null);
-  const refOtherRef = useRef(null);
   const joinHandleOtherChange = (e) => {
     console.log(e.target.name);
     if (e.target.value) {
@@ -128,12 +128,15 @@ const Join_body = () => {
       switch(e.target.name) {
         case "software_familiar":
           softwareOtherRef.current.checked = true;
+          setSoftwareOther(e.target.value);
           break;
         case "programming_languages_familiar":
           langOtherRef.current.checked = true;
+          setLangOther(e.target.value);
           break;
         case "reference":
           refOtherRef.current.checked = true;
+          setRefOther(e.target.value);
           break;
       }
       setSoftwareOther(e.target.value);
@@ -141,15 +144,17 @@ const Join_body = () => {
       switch(e.target.name) {
         case "software_familiar":
           softwareOtherRef.current.checked = false;
+          setSoftwareOther('');
           break;
         case "programming_languages_familiar":
           langOtherRef.current.checked = false;
+          setLangOther('');
           break;
         case "reference":
           refOtherRef.current.checked = false;
+          setRefOther('');
           break;
       }
-      setSoftwareOther('');
     }
   }
 
@@ -166,6 +171,50 @@ const Join_body = () => {
   const joinHandleSubmit = async(e) => {
     e.preventDefault();
 
+    if (softwareOtherRef.current.checked) {
+      let arr = joinFormData.software_familiar;
+      arr.push(softwareOther);
+      setJoinFormData({
+        ...joinFormData,
+
+        software_familiar: arr,
+      })
+    }
+    if (langOtherRef.current.checked) {
+      let arr = joinFormData.programming_languages_familiar;
+      arr.push(langOther);
+      setJoinFormData({
+        ...joinFormData,
+
+        software_familiar: arr,
+      })
+    }
+    if (refOtherRef.current.checked) {
+      let arr = joinFormData.reference;
+      arr.push(refOther);
+      setJoinFormData({
+        ...joinFormData,
+
+        software_familiar: arr,
+      })
+    }
+    
+    let form = new FormData();
+    for (const prop in joinFormData) {
+      if (Array.isArray(joinFormData[prop])) {
+        // for (const item in joinFormData[prop]) {
+        //   console.log(joinFormData[prop][item]);
+        //   form.append(prop, item);
+        // }
+        joinFormData[prop].forEach(val => {
+          console.log(val);
+          form.append(prop, val);
+        })
+      } else {
+        form.append(prop, joinFormData[prop]);
+      }
+    }
+
     // if(!executeRecaptcha) {
     //   console.log("Execute recaptcha not yet available");
     // }
@@ -173,8 +222,7 @@ const Join_body = () => {
     // POST request to server:
     await fetch('/join-us', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(joinFormData)
+      body: form
     });
     setJoinFormData({
       name: "",
@@ -189,9 +237,9 @@ const Join_body = () => {
       programming_languages_familiar: [],
       reference: [],
       resume: "",
-      cover_letter: "",
       subject: "OneLoop Application"
     });
+    joinFormRef.current.reset();
   };
 
   return (
@@ -247,7 +295,7 @@ const Join_body = () => {
       <div className="oneloop-joinus-application">
           <h2 className="oneloop-joinus-applicationtitle"> OneLoop New Member Application </h2>
           <body>
-            <form onSubmit={joinHandleSubmit}>
+            <form onSubmit={joinHandleSubmit} ref={joinFormRef}>
               <div className="Application">
                 <div className="oneloop-joinus-application-row1">
 
@@ -392,7 +440,7 @@ const Join_body = () => {
                     chosen. 1 = most interested
                   </label><br />
                   <br></br>
-                  <textarea className="Apply_message"></textarea>
+                  <textarea className="Apply_message" name="ranking" value={joinFormData.ranking} onChange={joinHandleChange}></textarea>
                 </div>
                 <br />
                 <div className="Question2">

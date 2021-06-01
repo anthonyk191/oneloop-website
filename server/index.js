@@ -52,6 +52,7 @@ const fields = [
 ];
 
 app.post('/join-us', upload.fields(fields), (req, res) => {
+    console.log(req.body);
     try {
         if (!req.files.resume) {
             res.send({ message: 'No resume uploaded' });
@@ -83,10 +84,19 @@ app.post('/join-us', upload.fields(fields), (req, res) => {
             let subteams = [
                 `**Subteams they're intereted in**:\n`
             ];
-            for (const team of req.body.subteams_interested) {
-                subteams.push(`* ${team}\n`);
+            if (Array.isArray(req.body.subteams_interested)) {
+                for (const team of req.body.subteams_interested) {
+                    subteams.push(`* ${team}\n`);
+                }
+            } else {
+                subteams.push(`* ${req.body.subteams_interested}\n`)
             }
             content = content.concat(subteams);
+
+            let ranking = [
+                `**Subteams ranking (if any)**: ${req.body.ranking}\n`
+            ];
+            content = content.concat(ranking);
         
             // content = content.concat(req.body.ranking);
         
@@ -96,8 +106,12 @@ app.post('/join-us', upload.fields(fields), (req, res) => {
             let software = [
                 `**Software they're familiar with**: \n`
             ];
-            for (const softwares of req.body.software_familiar) {
-                software.push(`* ${softwares}\n`);
+            if (Array.isArray(req.body.software_familiar)) {
+                for (const softwares of req.body.software_familiar) {
+                    software.push(`* ${softwares}\n`);
+                }
+            } else {
+                subteams.push(`* ${req.body.software_familiar}\n`)
             }
             content = content.concat(software);
         
@@ -105,8 +119,12 @@ app.post('/join-us', upload.fields(fields), (req, res) => {
             let programming_languages = [
                 `**Programming languages they're familiar with**:\n`
             ];
-            for (const languages of req.body.programming_languages_familiar) {
-                programming_languages.push(`* ${languages}\n`)
+            if (Array.isArray(req.body.programming_languages_familiar)) {
+                for (const languages of req.body.programming_languages_familiar) {
+                    programming_languages.push(`* ${languages}\n`)
+                }
+            } else {
+                programming_languages.push(`* ${req.body.programming_languages_familiar}\n`)
             }
             content = content.concat(programming_languages);
         
@@ -114,13 +132,17 @@ app.post('/join-us', upload.fields(fields), (req, res) => {
             let references = [
                 `**References**: \n`
             ];
-            for (const reference of req.body.reference) {
-                references.push(`* ${reference}\n`);
+            if (Array.isArray(req.body.reference)) {
+                for (const reference of req.body.reference) {
+                    references.push(`* ${reference}\n`);
+                }
+            } else {
+                references.push(`* ${req.body.reference}\n`);
             }
             content = content.concat(references);
         
             const mailOptions = {
-                from: `${req.body.name}[${req.body.email}] < zoomerinsight@gmail.com> `,
+                from: `${req.body.name} [${req.body.email}] < zoomerinsight@gmail.com> `,
                 to: 'zoomerinsight@gmail.com',
                 subject: `OneLoop Application: ${req.body.name} `,
                 replyTo: req.body.email,
