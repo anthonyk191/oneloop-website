@@ -16,7 +16,7 @@
     justify-content: center;
     letter-spacing: 0.03em;
 
-    color: #000000;
+    color: #022851;
 }
 
 .secTitle {
@@ -46,8 +46,7 @@
     font-weight: 600;
     font-size: 11px;
     line-height: 15px;
-    /* identical to box height */
-
+    text-align: right;
 
     color: #000000;
 
@@ -257,7 +256,7 @@
   .Popup2017 {
     position: fixed;
     left: 15%;
-    top: 30%;
+    top: 25%;
     max-width: 70%;
     z-index: 2;
 
@@ -267,7 +266,7 @@
     padding-top: 7%;
     padding-right:5%;
     padding-left: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 7%;
     background-color: white;
 
     font-family: Open Sans;
@@ -329,7 +328,7 @@
     padding-top: 7%;
     padding-right:5%;
     padding-left: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 7%;
     background-color: white;
 
     font-family: Open Sans;
@@ -391,7 +390,7 @@
     padding-top: 7%;
     padding-right:5%;
     padding-left: 5%;
-    padding-bottom: 5%;
+    padding-bottom: 7%;
     background-color: white;
 
     font-family: Open Sans;
