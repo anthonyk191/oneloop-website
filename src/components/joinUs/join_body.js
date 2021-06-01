@@ -247,429 +247,431 @@ const Join_body = () => {
       <div className="oneloop-joinus-application">
           <h2 className="oneloop-joinus-applicationtitle"> OneLoop New Member Application </h2>
           <body>
-            <form className="Application">
-              <div className="oneloop-joinus-application-row1">
+            <form onSubmit={joinHandleSubmit}>
+              <div className="Application">
+                <div className="oneloop-joinus-application-row1">
 
-                <div className="oneloop-joinus-application-name">
-                  <label for="name" className="form_inputs"><b>Name:</b></label>
-                  <div className="oneloop-joinus-application-namebox">
-                    <input type="text" id="name" name="name" className="apply_input" value={joinFormData.name} onChange={joinHandleChange} ></input><br />
+                  <div className="oneloop-joinus-application-name">
+                    <label for="name" className="form_inputs"><b>Name:</b></label>
+                    <div className="oneloop-joinus-application-namebox">
+                      <input type="text" id="name" name="name" className="apply_input" value={joinFormData.name} onChange={joinHandleChange} required></input><br />
+                    </div>
                   </div>
-                </div>
-            
-                <div className="oneloop-joinus-application-year">
-                  <label for="year"className="form_inputs"><b>Year: </b></label>
-                  <div className="oneloop-joinus-application-yearbox">
-                    <input type="text" id="name" name="year" className="apply_input2" value={joinFormData.year} onChange={joinHandleChange}></input><br />
-                  </div>
-                </div>
-
-                <div className="oneloop-joinus-application-major">
-                  <label for="major"className="form_inputs"><b>Major:</b></label>
-                  <div className="oneloop-joinus-application-majorbox">
-                    <input type="text" id="name" name="major" className="apply_input" value={joinFormData.major} onChange={joinHandleChange}></input><br />
-                  </div>
-                </div>
-              </div>
-
-              <div className="oneloop-joinus-application-row2">
-                <div className="oneloop-joinus-application-email">
-                  <label for="email"className="form_inputs"><b>UC Davis Email: </b> </label>
-                  <div className="oneloop-joinus-application-emailbox">
-                    <input type="text" id="email" name="email" className="apply_input" value={joinFormData.email} onChange={joinHandleChange}></input><br />
-                  </div>
-                </div> 
-
-                <div className="oneloop-joinus-application-gpa">
-                    <label for="gpa"className="form_inputs"><b>GPA</b>    <i className="optional">(optional):</i><br /></label>
-                  <div className="oneloop-joinus-application-gpabox">
-                    <input type="text" id="email" name="gpa" className="apply_input" value={joinFormData.gpa} onChange={joinHandleChange}></input>
-                  </div>
-                </div>
-              </div>
-
-              <div className="oneloop-joinus-application-resumecv">
-                <br></br>
-                <label for="resume" className="addfile"><b>Resume</b><br /> </label><br />
-                {/* <button className="addfile_button">Add file</button> */}
-                <input type="file" name="resume" accept=".pdf" onChange={joinHandleFileChange} class="addfile_button"/>
-                <br /><br />
-                <label for="cover_letter"className="addfile"><b>Cover Letter</b><i className="optional"> (optional)</i> <br /> <br /></label>
-                {/* <button className="addfile_button">Add file</button><br /><br /> */}
-                <input type="file" name="cover_letter" accept=".pdf" onChange={joinHandleFileChange} class="addfile_button"/>
-                <br /><br />
-              </div>
-
-              <label for="Message" className="Q_s" >
-                How many hours a week will you be able to commit to OneLoop?
-              </label>
-              <br></br>
-              <textarea className="Apply_message" name="hours_to_commit" value={joinFormData.hours_to_commit} onChange={joinHandleChange}></textarea>
-              <br></br>
-              <div className="Question1">
-                <label for="Q1" className="Q_s">
-                  Which subteams are you interested in? For more information about
-                  each subteam use this link:{" "}
-                </label>
-
-              <div>
-                <label className="apply"><i>Select all that apply</i></label>
-              </div>
               
-                <input
-                  type="checkbox"
-                  id="subteam1"
-                  name="subteams_interested"
-                  value="Brakes"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="subteam1">Brakes</label>
-                <br></br>
+                  <div className="oneloop-joinus-application-year">
+                    <label for="year"className="form_inputs"><b>Year: </b></label>
+                    <div className="oneloop-joinus-application-yearbox">
+                      <input type="text" id="name" name="year" className="apply_input2" value={joinFormData.year} onChange={joinHandleChange} required></input><br />
+                    </div>
+                  </div>
 
-                <input
-                  type="checkbox"
-                  id="subteam2"
-                  name="subteams_interested"
-                  value="Business"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="subteam2">Business</label>
-                <br></br>
+                  <div className="oneloop-joinus-application-major">
+                    <label for="major"className="form_inputs"><b>Major:</b></label>
+                    <div className="oneloop-joinus-application-majorbox">
+                      <input type="text" id="name" name="major" className="apply_input" value={joinFormData.major} onChange={joinHandleChange} required></input><br />
+                    </div>
+                  </div>
+                </div>
 
-                <input
-                  type="checkbox"
-                  id="subteam3"
-                  name="subteams_interested"
-                  value="Controls"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="subteam3">Controls</label>
-                <br></br>
+                <div className="oneloop-joinus-application-row2">
+                  <div className="oneloop-joinus-application-email">
+                    <label for="email"className="form_inputs"><b>UC Davis Email: </b> </label>
+                    <div className="oneloop-joinus-application-emailbox">
+                      <input type="text" id="email" name="email" className="apply_input" value={joinFormData.email} onChange={joinHandleChange} required></input><br />
+                    </div>
+                  </div> 
 
-                <input
-                  type="checkbox"
-                  id="subteam4"
-                  name="subteams_interested"
-                  value="Power"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="subteam4">Power</label>
-                <br></br>
+                  <div className="oneloop-joinus-application-gpa">
+                      <label for="gpa"className="form_inputs"><b>GPA</b>    <i className="optional">(optional):</i><br /></label>
+                    <div className="oneloop-joinus-application-gpabox">
+                      <input type="text" id="email" name="gpa" className="apply_input" value={joinFormData.gpa} onChange={joinHandleChange}></input>
+                    </div>
+                  </div>
+                </div>
 
-                <input
-                  type="checkbox"
-                  id="subteam5"
-                  name="subteams_interested"
-                  value="Propulsion"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="subteam5">Propulsion</label>
-                <br></br>
+                <div className="oneloop-joinus-application-resumecv">
+                  <br></br>
+                  <label for="resume" className="addfile"><b>Resume</b><br /> </label><br />
+                  <input type="file" name="resume" accept=".pdf" onChange={joinHandleFileChange} class="addfile_button" required/>
+                  <br /><br />
+                  <label for="cover_letter"className="addfile"><b>Cover Letter</b><i className="optional"> (optional)</i> <br /> <br /></label>
+                  <input type="file" name="cover_letter" accept=".pdf" onChange={joinHandleFileChange} class="addfile_button"/>
+                  <br /><br />
+                </div>
 
-                <input
-                  type="checkbox"
-                  id="subteam6"
-                  name="subteams_interested"
-                  value="Stability"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="subteam6">Stability</label>
-                <br></br>
-
-                <input
-                  type="checkbox"
-                  id="subteam7"
-                  name="subteams_interested"
-                  value="Structures"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="subteam7">Structures</label>
-                <br></br><br />
-              </div>
-
-              <div className="Q1_space">
-                <label for="Q1_text" className="Q_s">
-                  If you chose multiple subteams, rank each subteam that you have
-                  chosen. 1 = most interested
-                </label><br />
-                <br></br>
-                <textarea className="Apply_message"></textarea>
-              </div>
-              <br />
-              <div className="Question2">
-                <label for="Q2" className="Q_s">Software you are familiar with: </label>
-                <div className="apply"><i>Select all that apply</i></div>
-
-                <input
-                  type="checkbox"
-                  id="software1"
-                  name="software_familiar"
-                  value="Adobe Program"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="software1">Adobe Program</label>
-                <br></br>
-
-                <input
-                  type="checkbox"
-                  id="software2"
-                  name="software_familiar"
-                  value="Ansys Electromagnetic"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="software2">Ansys Electromagnetic</label>
-                <br></br>
-
-                <input
-                  type="checkbox"
-                  id="software3"
-                  name="software_familiar"
-                  value="Ansys Mechanical"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="software3">Ansys Mechanical</label>
-                <br></br>
-
-                <input
-                  type="checkbox"
-                  id="software4"
-                  name="software_familiar"
-                  value="Ansys Thermal"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="software4">Ansys Thermal</label>
-                <br></br>
-
-                <input
-                  type="checkbox"
-                  id="software5"
-                  name="software_familiar"
-                  value="HTML"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="software5">HTML</label>
-                <br></br>
-
-                <input
-                  type="checkbox"
-                  id="software6"
-                  name="software_familiar"
-                  value="MATLAB"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="software6">MATLAB</label>
-                <br></br>
-
-                <input
-                  type="checkbox"
-                  id="software7"
-                  name="software_familiar"
-                  value="MATLAB Simulink"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="software7">MATLAB Simulink</label>
-                <br></br>
-
-                <input
-                  type="checkbox"
-                  id="software8"
-                  name="software_familiar"
-                  value="Simens NX"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="software8">Simens NX</label>
-                <br></br>
-
-                <input
-                  type="checkbox"
-                  id="software9"
-                  name="software_familiar"
-                  value="Solidworks"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="software9">Solidworks</label>
-                <br></br>
-
-                <input
-                  type="checkbox"
-                  id="software10"
-                  name="software_familiar"
-                  value="Twincat3"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="software10">Twincat3</label>
-                <br></br>
-
-                <input
-                  type="checkbox"
-                  id="software11"
-                  name="software_familiar"
-                  value="N/A"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="software11">N/A</label>
-                <br></br>
-
-                <input
-                  type="checkbox"
-                  id="software12"
-                  name="software_familiar"
-                  value="other"
-                  // onChange={joinHandleCheckboxChange}
-                  ref={softwareOtherRef}
-                  disabled={true}
-                />
-                <label for="software12" >Other:</label>
-
-                <input type="text" id="software12" name="software_familiar" className="Other_line" onChange={joinHandleOtherChange} />
-                <br></br>
-              </div>
-              <br />
-              <div className="Question3">
-                <label for="Q3" className="Q_s">
-                  Computer Programming Languages you are familiar with:
+                <label for="Message" className="Q_s" >
+                  How many hours a week will you be able to commit to OneLoop?
                 </label>
-                <div className="apply"><i>Select all that apply</i></div>
+                <br></br>
+                <textarea className="Apply_message" name="hours_to_commit" value={joinFormData.hours_to_commit} onChange={joinHandleChange} required></textarea>
+                <br></br>
+                <div className="Question1">
+                  <label for="Q1" className="Q_s">
+                    Which subteams are you interested in? For more information about
+                    each subteam use this link:{" "}
+                  </label>
 
-                <input
-                  type="checkbox"
-                  id="Language1"
-                  name="programming_languages_familiar"
-                  value="Python"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="Language1">Python </label>
-                <br></br>
+                <div>
+                  <label className="apply"><i>Select all that apply</i></label>
+                </div>
+                
+                  <input
+                    type="checkbox"
+                    id="subteam1"
+                    name="subteams_interested"
+                    value="Brakes"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="subteam1">Brakes</label>
+                  <br></br>
 
-                <input
-                  type="checkbox"
-                  id="Language2"
-                  name="programming_languages_familiar"
-                  value="JavaScript"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="Language2">JavaScript </label>
-                <br></br>
+                  <input
+                    type="checkbox"
+                    id="subteam2"
+                    name="subteams_interested"
+                    value="Business"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="subteam2">Business</label>
+                  <br></br>
 
-                <input
-                  type="checkbox"
-                  id="Language3"
-                  name="programming_languages_familiar"
-                  value="Java"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="Language3">Java</label>
-                <br></br>
+                  <input
+                    type="checkbox"
+                    id="subteam3"
+                    name="subteams_interested"
+                    value="Controls"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="subteam3">Controls</label>
+                  <br></br>
 
-                <input type="checkbox" id="Language4" name="programming_languages_familiar" value="C#" onClick={joinHandleCheckboxChange}/>
-                <label for="Language4">C#</label>
-                <br></br>
+                  <input
+                    type="checkbox"
+                    id="subteam4"
+                    name="subteams_interested"
+                    value="Power"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="subteam4">Power</label>
+                  <br></br>
 
-                <input type="checkbox" id="Language5" name="programming_languages_familiar" value="C" onClick={joinHandleCheckboxChange} />
-                <label for="Language5">C</label>
-                <br></br>
+                  <input
+                    type="checkbox"
+                    id="subteam5"
+                    name="subteams_interested"
+                    value="Propulsion"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="subteam5">Propulsion</label>
+                  <br></br>
 
-                <input
-                  type="checkbox"
-                  id="Language6"
-                  name="programming_languages_familiar"
-                  value="C++"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="Language6">C++</label>
-                <br></br>
+                  <input
+                    type="checkbox"
+                    id="subteam6"
+                    name="subteams_interested"
+                    value="Stability"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="subteam6">Stability</label>
+                  <br></br>
 
-                <input
-                  type="checkbox"
-                  id="Language7"
-                  name="programming_languages_familiar"
-                  value="N/A"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="Language7">N/A</label>
-                <br></br>
+                  <input
+                    type="checkbox"
+                    id="subteam7"
+                    name="subteams_interested"
+                    value="Structures"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="subteam7">Structures</label>
+                  <br></br><br />
+                </div>
 
-                <input
-                  type="checkbox"
-                  id="Language8"
-                  name="programming_languages_familiar"
-                  value="Other"
-                  ref={langOtherRef}
-                  disabled={true}
-                />
-                <label for="Language8">Other:</label>
-
-                <input type="other_text" id="Language8" name="programming_languages_familiar" className="Other_line" onChange={joinHandleOtherChange} />
-                <br></br>
-              </div>
-              <br />
-              <div className="Question4">
-                <label for="Q4" className="Q_s">Where did you hear about us?</label>
-                <div className="apply"><i>Select all that apply</i></div>
-
-                <input type="checkbox" id="hear1" name="reference" value="Website" onClick={joinHandleCheckboxChange}/>
-                <label for="hear1">Website</label>
-                <br></br>
-                <input type="checkbox" id="hear2" name="reference" value="Instagram" onClick={joinHandleCheckboxChange}/>
-                <label for="hear2">Instagram</label>
-                <br></br>
-                <input type="checkbox" id="hear3" name="reference" value="Facebook" onClick={joinHandleCheckboxChange}/>
-                <label for="hear3">Facebook</label>
-                <br></br>
-                <input type="checkbox" id="hear4" name="reference" value="LinkedIn" onClick={joinHandleCheckboxChange}/>
-                <label for="hear4">LinkedIn</label>
-                <br></br>
-                <input
-                  type="checkbox"
-                  id="hear5"
-                  name="reference"
-                  value="From another member"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="hear5">From another member</label>
-                <br></br>
-                <input type="checkbox" id="hear6" name="reference" value="Professor" />
-                <label for="hear6">Professor</label>
-                <br></br>
-
-                <input
-                  type="checkbox"
-                  id="hear7"
-                  name="reference"
-                  value="Recruitment Flyer"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="hear7">Recruitment Flyer</label>
-                <br></br>
-
-                <input type="checkbox" id="hear8" name="reference" value="Discord" />
-                <label for="hear8">Discord</label>
-                <br></br>
-
-                <input
-                  type="checkbox"
-                  id="hear9"
-                  name="reference"
-                  value="Tabling Event"
-                  onClick={joinHandleCheckboxChange}
-                />
-                <label for="hear9">Tabling Event</label>
-                <br></br>
-                <input type="checkbox" id="hear10" name="reference" value="Other" ref={refOtherRef} disabled={true} />
-                <label for="hear10" >Other:</label>
-                        <input
-                  type="other_text"
-                  id="hear10"
-                  name="reference"
-                  className="Other_line"
-                  onChange={joinHandleOtherChange}
-                />
-
-                <br></br>
+                <div className="Q1_space">
+                  <label for="Q1_text" className="Q_s">
+                    If you chose multiple subteams, rank each subteam that you have
+                    chosen. 1 = most interested
+                  </label><br />
+                  <br></br>
+                  <textarea className="Apply_message"></textarea>
+                </div>
                 <br />
+                <div className="Question2">
+                  <label for="Q2" className="Q_s">Software you are familiar with: </label>
+                  <div className="apply"><i>Select all that apply</i></div>
+
+                  <input
+                    type="checkbox"
+                    id="software1"
+                    name="software_familiar"
+                    value="Adobe Program"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="software1">Adobe Program</label>
+                  <br></br>
+
+                  <input
+                    type="checkbox"
+                    id="software2"
+                    name="software_familiar"
+                    value="Ansys Electromagnetic"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="software2">Ansys Electromagnetic</label>
+                  <br></br>
+
+                  <input
+                    type="checkbox"
+                    id="software3"
+                    name="software_familiar"
+                    value="Ansys Mechanical"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="software3">Ansys Mechanical</label>
+                  <br></br>
+
+                  <input
+                    type="checkbox"
+                    id="software4"
+                    name="software_familiar"
+                    value="Ansys Thermal"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="software4">Ansys Thermal</label>
+                  <br></br>
+
+                  <input
+                    type="checkbox"
+                    id="software5"
+                    name="software_familiar"
+                    value="HTML"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="software5">HTML</label>
+                  <br></br>
+
+                  <input
+                    type="checkbox"
+                    id="software6"
+                    name="software_familiar"
+                    value="MATLAB"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="software6">MATLAB</label>
+                  <br></br>
+
+                  <input
+                    type="checkbox"
+                    id="software7"
+                    name="software_familiar"
+                    value="MATLAB Simulink"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="software7">MATLAB Simulink</label>
+                  <br></br>
+
+                  <input
+                    type="checkbox"
+                    id="software8"
+                    name="software_familiar"
+                    value="Simens NX"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="software8">Simens NX</label>
+                  <br></br>
+
+                  <input
+                    type="checkbox"
+                    id="software9"
+                    name="software_familiar"
+                    value="Solidworks"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="software9">Solidworks</label>
+                  <br></br>
+
+                  <input
+                    type="checkbox"
+                    id="software10"
+                    name="software_familiar"
+                    value="Twincat3"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="software10">Twincat3</label>
+                  <br></br>
+
+                  <input
+                    type="checkbox"
+                    id="software11"
+                    name="software_familiar"
+                    value="N/A"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="software11">N/A</label>
+                  <br></br>
+
+                  <input
+                    type="checkbox"
+                    id="software12"
+                    name="software_familiar"
+                    value="other"
+                    // onChange={joinHandleCheckboxChange}
+                    ref={softwareOtherRef}
+                    disabled={true}
+                  />
+                  <label for="software12" >Other:</label>
+
+                  <input type="text" id="software12" name="software_familiar" className="Other_line" onChange={joinHandleOtherChange} />
+                  <br></br>
+                </div>
+                <br />
+                <div className="Question3">
+                  <label for="Q3" className="Q_s">
+                    Computer Programming Languages you are familiar with:
+                  </label>
+                  <div className="apply"><i>Select all that apply</i></div>
+
+                  <input
+                    type="checkbox"
+                    id="Language1"
+                    name="programming_languages_familiar"
+                    value="Python"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="Language1">Python </label>
+                  <br></br>
+
+                  <input
+                    type="checkbox"
+                    id="Language2"
+                    name="programming_languages_familiar"
+                    value="JavaScript"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="Language2">JavaScript </label>
+                  <br></br>
+
+                  <input
+                    type="checkbox"
+                    id="Language3"
+                    name="programming_languages_familiar"
+                    value="Java"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="Language3">Java</label>
+                  <br></br>
+
+                  <input type="checkbox" id="Language4" name="programming_languages_familiar" value="C#" onClick={joinHandleCheckboxChange}/>
+                  <label for="Language4">C#</label>
+                  <br></br>
+
+                  <input type="checkbox" id="Language5" name="programming_languages_familiar" value="C" onClick={joinHandleCheckboxChange} />
+                  <label for="Language5">C</label>
+                  <br></br>
+
+                  <input
+                    type="checkbox"
+                    id="Language6"
+                    name="programming_languages_familiar"
+                    value="C++"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="Language6">C++</label>
+                  <br></br>
+
+                  <input
+                    type="checkbox"
+                    id="Language7"
+                    name="programming_languages_familiar"
+                    value="N/A"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="Language7">N/A</label>
+                  <br></br>
+
+                  <input
+                    type="checkbox"
+                    id="Language8"
+                    name="programming_languages_familiar"
+                    value="Other"
+                    ref={langOtherRef}
+                    disabled={true}
+                  />
+                  <label for="Language8">Other:</label>
+
+                  <input type="other_text" id="Language8" name="programming_languages_familiar" className="Other_line" onChange={joinHandleOtherChange} />
+                  <br></br>
+                </div>
+                <br />
+                <div className="Question4">
+                  <label for="Q4" className="Q_s">Where did you hear about us?</label>
+                  <div className="apply"><i>Select all that apply</i></div>
+
+                  <input type="checkbox" id="hear1" name="reference" value="Website" onClick={joinHandleCheckboxChange}/>
+                  <label for="hear1">Website</label>
+                  <br></br>
+                  <input type="checkbox" id="hear2" name="reference" value="Instagram" onClick={joinHandleCheckboxChange}/>
+                  <label for="hear2">Instagram</label>
+                  <br></br>
+                  <input type="checkbox" id="hear3" name="reference" value="Facebook" onClick={joinHandleCheckboxChange}/>
+                  <label for="hear3">Facebook</label>
+                  <br></br>
+                  <input type="checkbox" id="hear4" name="reference" value="LinkedIn" onClick={joinHandleCheckboxChange}/>
+                  <label for="hear4">LinkedIn</label>
+                  <br></br>
+                  <input
+                    type="checkbox"
+                    id="hear5"
+                    name="reference"
+                    value="From another member"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="hear5">From another member</label>
+                  <br></br>
+                  <input type="checkbox" id="hear6" name="reference" value="Professor" />
+                  <label for="hear6">Professor</label>
+                  <br></br>
+
+                  <input
+                    type="checkbox"
+                    id="hear7"
+                    name="reference"
+                    value="Recruitment Flyer"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="hear7">Recruitment Flyer</label>
+                  <br></br>
+
+                  <input type="checkbox" id="hear8" name="reference" value="Discord" />
+                  <label for="hear8">Discord</label>
+                  <br></br>
+
+                  <input
+                    type="checkbox"
+                    id="hear9"
+                    name="reference"
+                    value="Tabling Event"
+                    onClick={joinHandleCheckboxChange}
+                  />
+                  <label for="hear9">Tabling Event</label>
+                  <br></br>
+                  <input type="checkbox" id="hear10" name="reference" value="Other" ref={refOtherRef} disabled={true} />
+                  <label for="hear10" >Other:</label>
+                          <input
+                    type="other_text"
+                    id="hear10"
+                    name="reference"
+                    className="Other_line"
+                    onChange={joinHandleOtherChange}
+                  />
+
+                  <br></br>
+                  <br />
+                </div>
               </div>
+              <input type="submit" value="Submit" className="JoinUs_button"/>
+              <br />
             </form>
-            <button className="JoinUs_button">Submit<br /></button>
+            
           </body>
         </div>
       </div>
