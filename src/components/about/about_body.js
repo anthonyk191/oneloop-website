@@ -42,7 +42,7 @@ const About_body = () =>{
 					<h2 className = "secTitle"> Our Faculty Advisor </h2>
 
 					<div className="profimgintro">
-						<img className="profimg" src="images/profAdvisor.svg"/>
+						<img className="profimg" src="images/aboutus/advisor_2.png"/>
 
 						<div className="ProfIntro">
 							<p id="bolder">Professor C.P “Case” Van Dam</p>
