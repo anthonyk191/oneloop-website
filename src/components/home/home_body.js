@@ -2,10 +2,21 @@ import './home_body.css';
 import home_img1 from './home-img1.jpg';
 import home_img2 from './home-img2.jpg';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Slideshow from './slideshow'
 
 const Home_body = () =>{
+
+    const [vwidth, setVWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const resizeHandler = () => setVWidth(window.innerWidth);
+        window.addEventListener("resize", resizeHandler);
+        return function cleanup() {
+            window.removeEventListener("resize", resizeHandler);
+        };
+    }, []);
+
 	return(
 		<React.Fragment>
 			<div className="oneloop-home-body">
@@ -13,15 +24,18 @@ const Home_body = () =>{
                 <h1>What is OneLoop?</h1>
 
                 <Slideshow images={
-                    // change images once available
+                    vwidth >= 768 ?
                     [
-                        './images/home_slideshow/image_1.jpg',
-                        'https://placekitten.com/500/201',
-                        'https://placekitten.com/500/202',
-                        'https://placekitten.com/500/203',
-                        'https://placekitten.com/500/204',
-                        'https://placekitten.com/500/205',
-                        'https://placekitten.com/500/206'
+                        './images/home_slideshow/web_1.png',
+                        './images/home_slideshow/web_2.png',
+                        './images/home_slideshow/web_3.png',
+                        './images/home_slideshow/web_4.png',
+                    ] :
+                    [
+                        './images/home_slideshow/mobile_1.png',
+                        './images/home_slideshow/mobile_2.png',
+                        './images/home_slideshow/mobile_3.png',
+                        './images/home_slideshow/mobile_4.png',
                     ]
                 }/>
 				
