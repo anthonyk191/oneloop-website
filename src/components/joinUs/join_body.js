@@ -248,7 +248,7 @@ const Join_body = () => {
           <br /><input value={workFormData.name} type="text" id="name" name="name"className="contact_form" onChange={workHandleChange} required></input>
           <br /><label for="email"> Email:<br /></label>
       
-          <br /><input value={workFormData.email} type="email" id="email" name="email"className="contact_form" onChange={workHandleChange} required></input>
+          <br /><input value={workFormData.email} type="email" id="email" name="email"className="contact_form" pattern='^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$' onChange={workHandleChange} required></input>
 
           <br /><label for="Message">Message:<br /></label>
           <br></br>
@@ -301,7 +301,7 @@ const Join_body = () => {
                   <div className="oneloop-joinus-application-email">
                     <label for="email"className="form_inputs"><b>UC Davis Email: </b> </label>
                     <div className="oneloop-joinus-application-emailbox">
-                      <input type="text" id="email" name="email" className="apply_input" value={joinFormData.email} onChange={joinHandleChange} required></input><br />
+                      <input type="text" id="email" name="email" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@ucdavis.edu" className="apply_input" value={joinFormData.email} onChange={joinHandleChange} required></input><br />
                     </div>
                   </div> 
 
