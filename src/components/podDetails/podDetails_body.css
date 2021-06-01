@@ -28,33 +28,30 @@
 } 
 
 /*slideshow*/
-.slideshow {
+.poddetails-slideshow {
     text-align: center;
 }
 
-.frame-wrapper {
+.poddetails-rame-wrapper {
     position: relative;
 }
 
-.ss-image {
-    display: block;
-    width: 100%;
-    width: 335px;
-    height: 267px;
-    max-width: 100%;
-    object-fit: cover;
-    margin: 0 auto;
+.poddetails-ss-image {
+    width: 1240px;
+    height: 520px;
 }
 
-.ss-idle {
+.poddetails-ss-idle {
     position: absolute;
     top: 0;
+    left: 50%;
+    transform: translateX(-500%);
     opacity: 0;
     transition: opacity 0.5s;
 }
 
 /*the dots at the bottom*/
-.slideshow span {
+.poddetails-slideshow span {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -65,15 +62,15 @@
     border: 1px solid #022851
 }
 
-.slideshow span.active {
+.poddetails-slideshow span.active {
     background-color: #E5E5E5;
 }
 
-.dot-wrapper {
+.poddetails-dot-wrapper {
     margin-top: 20px;
 }
 
-.dot-wrapper span {
+.poddetails-dot-wrapper span {
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -85,17 +82,16 @@
 }
 
 @media (hover: hover) {
-    .slideshow span:hover {
+    .poddetails-slideshow span:hover {
         cursor: pointer;
         background-color: #E5E5E5;
     }
 } 
 
 @media (min-width:768px) {
-    .slideshow span {
-        margin-top: 1.75em;
-        margin-bottom: 2em;
-        width: 18px;
-        height: 18px;
+    .poddetails-slideshow span {
+        width: 20px;
+        height: 20px;
+        margin: 0 17.5px;
     }
 }
