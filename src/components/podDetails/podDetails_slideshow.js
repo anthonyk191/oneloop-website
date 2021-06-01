@@ -10,7 +10,7 @@ function Preloaded(props) {
 
 function Dots(props) {
     return (
-        <div className="dot-wrapper">
+        <div className="poddetails-dot-wrapper">
             {
                 props.images.map((_, offset) => (
                     <span key={ offset } className={ offset === props.imageOffset ? 'active' : '' } onClick={ () => props.setImageOffset(offset) }>
@@ -44,13 +44,13 @@ function Slideshow() {
     })
 
     return (
-        <div className="slideshow">
-            <div className="frame-wrapper">                
+        <div className="poddetails-slideshow">
+            <div className="poddetails-frame-wrapper">                
                 <img key={ imageOffset } 
-                    className="ss-image"
+                    className="poddetails-ss-image"
                     src={ Images[imageOffset] } />
                 <img key={ (imageOffset - 1 + Images.length) % Images.length } 
-                    className="ss-image ss-idle" 
+                    className="poddetails-ss-image poddetails-ss-idle" 
                     src={ Images[(imageOffset - 1 + Images.length) % Images.length]} />
             </div>
             <Dots imageOffset={ imageOffset } setImageOffset={ setImageOffset } images={ Images } />

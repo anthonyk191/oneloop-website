@@ -28,7 +28,7 @@ function Slideshow(props) {
     const [ imageOffset, setImageOffset ] = useState(0);
 
     useEffect(() => {
-        const timer = setTimeout(() => setImageOffset((imageOffset + 1) % props.images.length), 3000);
+        const timer = setTimeout(() => setImageOffset((imageOffset + 1) % props.images.length), 5000);
 
         return function cleanup() {
             clearTimeout(timer);
