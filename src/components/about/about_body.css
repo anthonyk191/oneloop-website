@@ -81,7 +81,7 @@
 
 }
 .profimg {
-  max-width: 300px;
+  max-width: 150px;
 }
 
 .OurFacultyAdv p {
@@ -461,6 +461,10 @@
     .collapabler {
       display: flex;
       text-align: right;
+    }
+
+    #bolder {
+      color: #022851;
     }
 
     
