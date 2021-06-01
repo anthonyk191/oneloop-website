@@ -225,7 +225,8 @@ const Join_body = () => {
           <br /><input value={workFormData.email} type="email" id="email" name="email"className="contact_form" onChange={workHandleChange} required></input>
 
           <br /><label for="Message">Message:<br /></label>
-          <textarea value={workFormData.message} name="message" className="Apply_message" placeholder="Type message here" onChange={workHandleChange} required></textarea>
+          <br></br>
+          <textarea value={workFormData.message} name="message" className="Apply_message1" placeholder="Type message here" onChange={workHandleChange} required></textarea>
         </div>
         <input type="submit" value="Submit" className="JoinUs_button" />
       </form>
@@ -289,11 +290,11 @@ const Join_body = () => {
                 <br></br>
                 <label for="resume" className="addfile"><b>Resume</b><br /> </label><br />
                 {/* <button className="addfile_button">Add file</button> */}
-                <input type="file" name="resume" accept=".pdf" onChange={joinHandleFileChange}/>
+                <input type="file" name="resume" accept=".pdf" onChange={joinHandleFileChange} class="addfile_button"/>
                 <br /><br />
                 <label for="cover_letter"className="addfile"><b>Cover Letter</b><i className="optional"> (optional)</i> <br /> <br /></label>
                 {/* <button className="addfile_button">Add file</button><br /><br /> */}
-                <input type="file" name="cover_letter" accept=".pdf" onChange={joinHandleFileChange}/>
+                <input type="file" name="cover_letter" accept=".pdf" onChange={joinHandleFileChange} class="addfile_button"/>
                 <br /><br />
               </div>
 
