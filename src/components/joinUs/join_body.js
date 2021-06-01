@@ -198,7 +198,7 @@ const Join_body = () => {
     <React.Fragment>
 
     <div className="oneloop-joinus-topcontainer">
-      <div className="oneloop-joinus-title"> <h1> Contact Us </h1> </div>
+      <div className="oneloop-joinus-title"> <h1 className="contact_title"> Contact Us </h1> </div>
       <div className="Con_image">
             <img src={contact_img} className="contact_images"/><br />
       </div>

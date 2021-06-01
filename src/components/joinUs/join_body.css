@@ -22,7 +22,7 @@
 .oneloop-joinus-title {
   color:#022851;  
   font-family:Playfair Display;
-  font-size: 24px;
+  font-size: 20px;
   text-align : center;
 }
 
@@ -43,7 +43,7 @@
 .oneloop-joinus-heading25 {
   font-family: 'Open Sans', Arial, sans-serif;
   font-style: italic;
-  font-size: 28px;
+  font-size: 14px;
   text-align : center;
   font-weight:bold;
 }
@@ -214,21 +214,21 @@ a:active {
 
 
 .addfile_button::-webkit-file-upload-button {
-  visibility: hidden;
+  visibility:hidden;
+
 }
 .addfile_button::before{
 
   content: 'Add File';
   display: inline-block;
-  background: linear-gradient(top, #f9f9f9, #e3e3e3);
-  border: 1px solid #999;
-  border-radius: 3px;
+  
+  
+  background: linear-gradient(bottom, blue, red);
+  border: 1px solid gray;
   padding: 5px 8px;
-  outline: none;
   white-space: nowrap;
   -webkit-user-select: none;
   cursor: pointer;
-
   font-weight: 700;
   font-size: 10pt;
 }
@@ -329,6 +329,10 @@ a:active {
     padding-right:20px;
   }
 
+  h1.contact_title
+  {
+    text-align:left;
+  }
   .oneloop-joinus-heading1 {
     font-size: 28px;
     text-align : left;
@@ -548,15 +552,16 @@ padding: 12px 20px;
     resize: none;
 
   }
-
+/*
   .addfile_button {
-    padding: 10px 10px;
+    padding:10px 10px;
     width:116px;
     height:33px;
     left:102px;
     top:1548px;
     background-color: white;
   }
+  */
 
   .addfile {
     font-size:18px;
