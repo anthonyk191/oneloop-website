@@ -39,7 +39,7 @@ const Home_body = () =>{
                     ]
                 }/>
 				
-				<div>
+				<div className = "oneloop-home-section1">
 					<h2>Our Mission</h2>
 						<p>Our mission is to further explore Hyperloop Technologies by promoting faster, cleaner, and more energy efficient solutions to the transporation sector.
 							We seek to achieve this through cultivating an environment that fosters continuous improvement, collaboration with industry professionals, and teamwork. </p>

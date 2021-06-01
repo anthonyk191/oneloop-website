@@ -3,7 +3,7 @@
 .oneloop-poddetails-title{
 	color: #022851; 
 	font-family: 'Playfair Display', sans-serif;
-	font-size : 30; 
+	font-size : 30px; 
 	text-align : center; 
     padding: 12px 20px;
 }
@@ -16,7 +16,7 @@
 
 @media only screen and (min-width: 1000px) {
     .oneloop-poddetails-title{
-        font-size : 40; 
+        font-size : 40px; 
         text-align : left; 
         padding: 50px 100px;
     }
@@ -37,7 +37,7 @@
 }
 
 .poddetails-ss-image {
-    width: 1240px;
+    width: 60%;
     height: 520px;
 }
 

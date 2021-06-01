@@ -199,7 +199,9 @@ const Join_body = () => {
 
     <div className="oneloop-joinus-topcontainer">
       <div className="oneloop-joinus-title"> <h1> Contact Us </h1> </div>
-      <img src={contact_img} className="contact_images"/><br />
+      <div className="Con_image">
+            <img src={contact_img} className="contact_images"/><br />
+      </div>
       <div className="oneloop-joinus-heading25"> INTERESTED IN GAINING HANDS-ON EXPERIENCE? JOIN THE TEAM! </div>
     </div>
 
@@ -225,7 +227,8 @@ const Join_body = () => {
           <br /><input value={workFormData.email} type="email" id="email" name="email"className="contact_form" onChange={workHandleChange} required></input>
 
           <br /><label for="Message">Message:<br /></label>
-          <textarea value={workFormData.message} name="message" className="Apply_message" placeholder="Type message here" onChange={workHandleChange} required></textarea>
+          <br></br>
+          <textarea value={workFormData.message} name="message" className="Apply_message1" placeholder="Type message here" onChange={workHandleChange} required></textarea>
         </div>
         <input type="submit" value="Submit" className="JoinUs_button" />
       </form>
@@ -289,19 +292,20 @@ const Join_body = () => {
                 <br></br>
                 <label for="resume" className="addfile"><b>Resume</b><br /> </label><br />
                 {/* <button className="addfile_button">Add file</button> */}
-                <input type="file" name="resume" accept=".pdf" onChange={joinHandleFileChange}/>
+                <input type="file" name="resume" accept=".pdf" onChange={joinHandleFileChange} class="addfile_button"/>
                 <br /><br />
                 <label for="cover_letter"className="addfile"><b>Cover Letter</b><i className="optional"> (optional)</i> <br /> <br /></label>
                 {/* <button className="addfile_button">Add file</button><br /><br /> */}
-                <input type="file" name="cover_letter" accept=".pdf" onChange={joinHandleFileChange}/>
+                <input type="file" name="cover_letter" accept=".pdf" onChange={joinHandleFileChange} class="addfile_button"/>
                 <br /><br />
               </div>
 
               <label for="Message" className="Q_s" >
                 How many hours a week will you be able to commit to OneLoop?
               </label>
+              <br></br>
               <textarea className="Apply_message" name="hours_to_commit" value={joinFormData.hours_to_commit} onChange={joinHandleChange}></textarea>
-
+              <br></br>
               <div className="Question1">
                 <label for="Q1" className="Q_s">
                   Which subteams are you interested in? For more information about
@@ -388,6 +392,7 @@ const Join_body = () => {
                   If you chose multiple subteams, rank each subteam that you have
                   chosen. 1 = most interested
                 </label><br />
+                <br></br>
                 <textarea className="Apply_message"></textarea>
               </div>
               <br />

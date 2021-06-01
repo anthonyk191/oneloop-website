@@ -24,12 +24,12 @@ function Dots(props) {
 function Slideshow() {
 
     const Images = [
-        './images/poddetails-slideshow/poddetails1.jpg',
-        './images/poddetails-slideshow/poddetails2.jpg',
-        './images/poddetails-slideshow/poddetails3.jpg',
-        './images/poddetails-slideshow/poddetails4.jpg',
-        './images/poddetails-slideshow/poddetails5.jpg',
-        './images/poddetails-slideshow/poddetails6.jpg',
+        './images/poddetails_slideshow/poddetails1.jpg',
+        './images/poddetails_slideshow/poddetails2.jpg',
+        './images/poddetails_slideshow/poddetails3.jpg',
+        './images/poddetails_slideshow/poddetails4.jpg',
+        './images/poddetails_slideshow/poddetails5.jpg',
+        './images/poddetails_slideshow/poddetails6.jpg',
     ];
 
     const [ imageOffset, setImageOffset ] = useState(0);
