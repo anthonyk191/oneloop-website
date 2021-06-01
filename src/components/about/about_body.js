@@ -25,18 +25,12 @@ const About_body = () =>{
 				<div className="Upper">
 				<div className="OurMission">
 					<h2 className="secTitle"> Our Mission </h2>
-					<li>
-					Our mission is to further explore hyperloop technologies by promoting faster, cleaner, and more energy-efficient solutions to the transportation sector.
-					</li>
-					<li>
-					We seek to achieve this through cultivating an environment that fosters continuous improvement, collaboration with industry professionals, and teamwork.
-					</li>
-					<li>
-					OneLoop was founded in 2016 by a group of engineering students at UC Davis in response to SpaceX's announcement of its annual hyperloop competition. 
-					</li>
-					<li>
-					OneLoop became one of the top 21 teams in the 2019 hyperloop pod competition and was invited to the SpaceX HQ in Hawthorne to take part in the final round of the competition. Based on the number of tests passed, OneLoop placed 3rd in the united states and top ten in the world.
-					</li>
+					<p>Our mission is to further explore Hyperloop Technologies by promoting faster, cleaner, and more energy efficient solutions to the transporation sector.
+							We seek to achieve this through cultivating an environment that fosters continuous improvement, collaboration with industry professionals, and teamwork. </p>
+						<p>	OneLoop was founded in 2016 by a group of engineering students at UC Davis in response to SpaceX's announcement of its annual hyperloop competition.
+							OneLoop became one of the top 21 teams in the 2019 Hyperloop Pod Competition and was invited to the SpaceX HQ in Hawthorne to take part in the final round of the compeition.
+							<b> Based on the number of tests passed, OneLoop placed 3rd in the United States</b> and <b>top-ten in the world</b>.
+						</p>
 				</div>
 				<div className="OurFacultyAdv">
 					<h2 className = "secTitle"> Our Faculty Advisor </h2>
@@ -67,10 +61,13 @@ const About_body = () =>{
   					<div className="container right">
    						<div className="content">
 							<p className="YearNum">2017</p>
-							<p>In 2017-2018 OneLoop applied to SpaceX hyperloop competition. In this year the team was highly ambitious and in preparation for that competition implemented within the pod air bearings, linear induction motor (LIM) propulsion, eddy current brakes, friction brakes, and wheels. OneLoop was able to make it to top 40 through the preliminary design.</p>
-							<p className="collapable">It is important to mention that during this time the linear induction motor had not yet been perfected. However the team wanted to test their current version of the LIM as it is a system crucial for energy efficient long distance travel. The industrial air bearings were chosen at the time to allow travel over non ideal surfaces that had small cracks such as shop floors. The bearings can lift up to 1000 lbs making its potential payload particularly effective. </p>	
+							
+							<p>In 2017-2018 OneLoop applied to SpaceX hyperloop competition. In this year the team was highly ambitious and in preparation for that competition implemented within the pod air bearings, linear induction motor (LIM) propulsion, eddy current brakes, friction brakes, and wheels.<a className="extraline">OneLoop was able to make it to top 40 through the preliminary design.</a></p>
+							<p className = "collapable">OneLoop was able to make it to top 40 through the preliminary design. It is important to mention that during this time the linear induction motor had not yet been perfected. However the team wanted to test their current version of the LIM as it is a system crucial for energy efficient long distance travel. </p>
+							<p className = "collapable">The industrial air bearings were chosen at the time to allow travel over non ideal surfaces that had small cracks such as shop floors. The bearings can lift up to 1000 lbs making its potential payload particularly effective.</p>
+							
 						</div>
-						<button onClick={() => setIsOpen1(true)}>click here to learn more</button>
+						<button onClick={() => setIsOpen1(true)}>Click here to learn more</button>
 						<Modal2 open ={isOpen1} onClose = {() => setIsOpen1(false)}>
 						</Modal2>
  					</div>
@@ -85,12 +82,12 @@ const About_body = () =>{
 							<p className="collapabler">Safety standards such as OSHA and ASME were adhered to with the regards to pod design, testing, and operation whenever relevant. Furthermore, the year’s propulsion system was modified to be cold gas thrusters which was primarily chosen to reduce the pod’s high voltage requirements and increase electrical safety.</p>
 							
 						</div>
-						<button onClick={() =>setIsOpen(true)}>click here to learn more</button>
+						<button className="rightalign" onClick={() =>setIsOpen(true)}>Click here to learn more</button>
 						<Modal open ={isOpen} onClose = {() => setIsOpen(false)}>
 							
 						</Modal>
   					</div>
-					  <div className="piccontainer right">
+					  <div className="piccontainerright">
 						<img className="right1" src="images/aboutus/image_9.png"/>
 						<img className="right2" src="images/aboutus/image_10.png"/>
 						<img className="right3" src="images/aboutus/image_13.png"/>
@@ -111,7 +108,7 @@ const About_body = () =>{
 							<p>Due to the concerns created by COVID-19, there were no official announcements for SpaceX’s competition. The team switched to a two-year design cycle to adjust to these changes spending more of their time on research and simulations. </p>
 							<p className="collapable">The acquisition of sponsorship with ANSYS allowed the team to extensively simulate their pod models. With the help of computer aided software, the team was able to drastically improve their mathematical models as well as better ways to integrate the pod.</p>
     					</div>
-						<button onClick={() =>setIsOpen2(true)}>click here to learn more</button>
+						<button onClick={() =>setIsOpen2(true)}>Click here to learn more</button>
 						<Modal3 open ={isOpen2} onClose = {() => setIsOpen2(false)}>
 							
 						</Modal3>
