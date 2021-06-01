@@ -24,13 +24,12 @@ function Dots(props) {
 function Slideshow() {
 
     const Images = [
-        'https://placekitten.com/500/200',
-        'https://placekitten.com/500/201',
-        'https://placekitten.com/500/202',
-        'https://placekitten.com/500/203',
-        'https://placekitten.com/500/204',
-        'https://placekitten.com/500/205',
-        'https://placekitten.com/500/206'
+        './images/poddetails_slideshow/poddetails1.jpg',
+        './images/poddetails_slideshow/poddetails2.jpg',
+        './images/poddetails_slideshow/poddetails3.jpg',
+        './images/poddetails_slideshow/poddetails4.jpg',
+        './images/poddetails_slideshow/poddetails5.jpg',
+        './images/poddetails_slideshow/poddetails6.jpg',
     ];
 
     const [ imageOffset, setImageOffset ] = useState(0);
