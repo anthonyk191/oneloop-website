@@ -301,8 +301,9 @@ const Join_body = () => {
               <label for="Message" className="Q_s" >
                 How many hours a week will you be able to commit to OneLoop?
               </label>
+              <br></br>
               <textarea className="Apply_message" name="hours_to_commit" value={joinFormData.hours_to_commit} onChange={joinHandleChange}></textarea>
-
+              <br></br>
               <div className="Question1">
                 <label for="Q1" className="Q_s">
                   Which subteams are you interested in? For more information about
@@ -389,6 +390,7 @@ const Join_body = () => {
                   If you chose multiple subteams, rank each subteam that you have
                   chosen. 1 = most interested
                 </label><br />
+                <br></br>
                 <textarea className="Apply_message"></textarea>
               </div>
               <br />
