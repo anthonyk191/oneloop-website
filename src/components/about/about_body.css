@@ -59,13 +59,14 @@
     font-weight: normal;
     font-size: 12px;
     line-height: 16px;
-
+    width: 100%;
     color: #000000;
 }
 
 .OurFacultyAdv {
     display:flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .ProfIntro {
@@ -164,7 +165,19 @@
     width: 50%;
   }
 
+  .piccontainerright {
+    display: block;
+    padding: 10px 20px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+
   .piccontainer img{
+    width: 100%;
+  }
+
+  .piccontainerright img{
     width: 100%;
   }
 
@@ -243,6 +256,11 @@
     padding: unset;
     border: unset;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-align: left;
+  }
+
+  .rightalign {
+    text-align: right;
   }
 
   .collapable {
@@ -438,7 +456,31 @@
     margin:unset;
   }
 
-  @media only screen and (min-width: 600px) {
+  .extraline {
+    color: black;
+  }
+
+  @media only screen and (min-width: 768px) {
+
+    .OurHistory .YearNum {
+      font-family: "Open Sans";
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 19px;
+      text-align: center;
+      color: #E8E8E8;
+      background-color: #022851;
+      border-radius: 5px;
+      width: -moz-fit-content;
+      width: fit-content;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      padding-left: 50px;
+      padding-right: 50px;
+      margin: 10px;
+    }
+
     .AboutUs {
       justify-content: flex-start;
     }
@@ -451,6 +493,11 @@
       display: block;
       width: 100%;
     }
+
+    .container {
+      padding: 30px 80px;
+    }
+
     .container button {
       display: none;
     }
@@ -467,22 +514,19 @@
       color: #022851;
     }
 
+    .extraline {
+      display: none;
+    }
+
     
     .Upper {
       display:flex;
       justify-content: space-between;
       flex-direction: row-reverse;
     }
-    .OurMission {
-      width: 40%;
-    }
     .profimgintro {
       flex-direction: row;
     }
-    .OurFacultyAdv {
-      width: 40%;
-    }
-
     .left3 , .left5, .right3{
       display: none;
     }
@@ -490,17 +534,35 @@
     .piccontainer {
       display: flex;
       flex-direction: column;
+      padding: 0px 80px;
+    }
+
+    .piccontainerright {
+      display: flex;
+      flex-direction: column;
+      display: block;
+      padding: 0px 80px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
     }
 
     .piccontainer img{
       padding: 10px;
+      max-width: 480px;
+    }
+
+    .piccontainerright img{
+      margin-top: unset;
+      padding: 10px;
+      max-width: 480px;
     }
 
     .oneloop-about-body {
       padding-left: 5%;
       padding-right: 5%;
     }
-  }
+  
 
   .firstImage {
     display: flex;
@@ -519,3 +581,66 @@
     display: flex;
     justify-content: center;
   }
+
+  .OurHistory p {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    color: #000000;
+  }
+
+  .OurFacultyAdv {
+    width: 50%;
+  }
+
+  .OurFacultyAdv p{
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .OurMission {
+    width: 50%;
+  }
+  .profimg {
+    max-width: 200px;
+  }
+  .ProfIntro {
+    max-width: 300px;
+  }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px){
+  .left3 , .left5, .right3{
+    display: unset;
+  }
+
+}
+
+@media only screen and (min-width: 500px) and (max-width: 768px){
+  .left3 , .left5, .right3{
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1000px){
+  .left3 , .left5, .right3{
+    display: unset;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .piccontainer{
+    padding: unset;
+  }
+
+
+  .piccontainerright{
+    padding: unset;
+  }
+}
