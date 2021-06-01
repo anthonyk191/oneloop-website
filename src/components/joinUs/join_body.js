@@ -1,8 +1,10 @@
 import "./join_body.css";
 import React, { useState, useRef } from "react";
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import contact_img from './contact_image.jpeg';
 
 const Join_body = () => {
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const softwareOtherRef = useRef(null);
   const langOtherRef = useRef(null);
   const refOtherRef = useRef(null);
@@ -45,38 +47,11 @@ const Join_body = () => {
   const workHandleSubmit = async(e) => {
     e.preventDefault();
 
-    if (softwareOther) {
-      let arr = joinFormData['software_familiar'];
-      arr.push(softwareOther);
-      setJoinFormData({
-        ...joinFormData,
-  
-        software_familiar: arr,
-      });
+    if(!executeRecaptcha) {
+      console.log("Execute recaptcha not yet available");
     }
-    if (langOther) {
-      let arr = joinFormData['programming_languages_familiar'];
-      arr.push(langOther);
-      setJoinFormData({
-        ...joinFormData,
-  
-        programming_languages_familiar: arr,
-      });
-    }
-    if (refOther) {
-      let arr = joinFormData['reference']
-      arr.push(refOther);
-      setJoinFormData({
-        ...joinFormData,
-  
-        reference: arr,
-      });
-    }
+    workFormData.token = await executeRecaptcha();
 
-    // if(!executeRecaptcha) {
-    //   console.log("Execute recaptcha not yet available");
-    // }
-    // formData.token = await executeRecaptcha();
     // POST request to server:
     await fetch('/work-with-us', {
       method: 'POST',
@@ -171,6 +146,11 @@ const Join_body = () => {
   const joinHandleSubmit = async(e) => {
     e.preventDefault();
 
+    if(!executeRecaptcha) {
+      console.log("Execute recaptcha not yet available");
+    }
+    joinFormData.token = await executeRecaptcha();
+
     if (softwareOtherRef.current.checked) {
       let arr = joinFormData.software_familiar;
       arr.push(softwareOther);
@@ -214,11 +194,7 @@ const Join_body = () => {
         form.append(prop, joinFormData[prop]);
       }
     }
-
-    // if(!executeRecaptcha) {
-    //   console.log("Execute recaptcha not yet available");
-    // }
-    // formData.token = await executeRecaptcha();
+    
     // POST request to server:
     await fetch('/join-us', {
       method: 'POST',

@@ -26,24 +26,48 @@ const transporter = nodemailer.createTransport({
 transporter.use('compile', markdown());
 
 app.post('/work-with-us', (req, res) => {
-    console.log(req.body);
+    fetch(`https://www.google.com/recaptcha/api/siteverify?secret=${process.env.CAPTCHA_SECRET}&response=${req.body.token}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+    }).then(response => response.json()).then(data => {
+        const mailOptions = {
+            from: `${req.body.name} [${req.body.email}] <zoomerinsight@gmail.com>`,
+            to: process.env.EMAIL_USER,
+            subject: req.body.subject,
+            text: `Use an HTML enabled client to view this email.`,
+            replyTo: req.body.email
+        };
 
-    const mailOptions = {
-        from: `${req.body.name} [${req.body.email}] <zoomerinsight@gmail.com>`,
-        to: process.env.EMAIL_USER,
-        subject: req.body.subject,
-        text: req.body.message,
-        replyTo: req.body.email
-    };
+        if (data.score <= 0.3) {
+            res.status(406).send({ message: "Captcha could not be verified, score too low" });
+        } else if (data.score <= 0.7) {
+            mailOptions.html = `<h3>Warning: Potential spam</h3><p>${req.body.message}</p>`;
 
-    transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-            console.log(error);
+            transporter.sendMail(mailOptions, function (error, info) {
+                if (error) {
+                    console.log(error);
+                    res.json(error);
+                }
+                else {
+                    console.log('sent ' + info.response);
+                    res.json("Successfully sent email to " + mailOptions.to);
+                }
+            });
         } else {
-            console.log('Email sent: ' + info.response);
-            res.send("successfully sent email to " + mailOptions.to);
+            mailOptions.html = `<p>${req.body.message}</p>`;
+
+            transporter.sendMail(mailOptions, function (error, info) {
+                if (error) {
+                    console.log(error);
+                    res.json(error);
+                }
+                else {
+                    console.log('sent ' + info.response);
+                    res.json("Successfully sent email to " + mailOptions.to);
+                }
+            });
         }
-    });
+    })
 });
 
 const fields = [
@@ -52,117 +76,127 @@ const fields = [
 ];
 
 app.post('/join-us', upload.fields(fields), (req, res) => {
-    console.log(req.body);
-    try {
-        if (!req.files.resume) {
-            res.send({ message: 'No resume uploaded' });
-        } else {
-            let attach = [
-                {
-                    filename: `${req.body.name} Resume.pdf`,
-                    content: req.files.resume[0].buffer
-                }
-            ]
-        
-            if (req.files.cover_letter) {
-                attach.push({
-                    filename: `${req.body.name} Cover Letter.pdf`,
-                    content: req.files.cover_letter[0].buffer
-                })
-            }
-        
-            let content = [
-                `**Name**: ${req.body.name} \n`,
-                `**Year**: ${req.body.year} \n`,
-                `**Major**: ${req.body.major} \n `,
-                `**Email**: ${req.body.email} \n`,
-                `**GPA**: ${req.body.gpa} \n`,
-                `**Hours to commit**: ${req.body.hours_to_commit} \n`
-            ];
-        
-            // Subteams they're interested in
-            let subteams = [
-                `**Subteams they're intereted in**:\n`
-            ];
-            if (Array.isArray(req.body.subteams_interested)) {
-                for (const team of req.body.subteams_interested) {
-                    subteams.push(`* ${team}\n`);
-                }
-            } else {
-                subteams.push(`* ${req.body.subteams_interested}\n`)
-            }
-            content = content.concat(subteams);
-
-            let ranking = [
-                `**Subteams ranking (if any)**: ${req.body.ranking}\n`
-            ];
-            content = content.concat(ranking);
-        
-            // content = content.concat(req.body.ranking);
-        
-            console.log(content)
-        
-            // Software they're familiar with
-            let software = [
-                `**Software they're familiar with**: \n`
-            ];
-            if (Array.isArray(req.body.software_familiar)) {
-                for (const softwares of req.body.software_familiar) {
-                    software.push(`* ${softwares}\n`);
-                }
-            } else {
-                subteams.push(`* ${req.body.software_familiar}\n`)
-            }
-            content = content.concat(software);
-        
-            // Programming languages they're familiar with
-            let programming_languages = [
-                `**Programming languages they're familiar with**:\n`
-            ];
-            if (Array.isArray(req.body.programming_languages_familiar)) {
-                for (const languages of req.body.programming_languages_familiar) {
-                    programming_languages.push(`* ${languages}\n`)
-                }
-            } else {
-                programming_languages.push(`* ${req.body.programming_languages_familiar}\n`)
-            }
-            content = content.concat(programming_languages);
-        
-            // References
-            let references = [
-                `**References**: \n`
-            ];
-            if (Array.isArray(req.body.reference)) {
-                for (const reference of req.body.reference) {
-                    references.push(`* ${reference}\n`);
-                }
-            } else {
-                references.push(`* ${req.body.reference}\n`);
-            }
-            content = content.concat(references);
-        
-            const mailOptions = {
-                from: `${req.body.name} [${req.body.email}] < zoomerinsight@gmail.com> `,
-                to: 'zoomerinsight@gmail.com',
-                subject: `OneLoop Application: ${req.body.name} `,
-                replyTo: req.body.email,
-                markdown: content.join("\n"),
-                attachments: attach
-            };
-        
-            transporter.sendMail(mailOptions, function (error, info) {
-                if (error) {
-                    console.log(error);
-                } else {
-                    console.log('Email sent: ' + info.response);
-                    res.send("successfully sent email to " + mailOptions.to);
-                }
-            });
+    fetch(`https://www.google.com/recaptcha/api/siteverify?secret=${process.env.CAPTCHA_SECRET}&response=${req.body.token}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' }
+    }).then(response => response.json()).then(data => {
+        if (data.score <= 0.3) {
+            res.status(406).send({ message: "Captcha could not be verified, score too low" });
         }
-    } catch (err) {
-        res.status(500).send(err);
-    }
+        console.log(req.body);
+        try {
+            if (!req.files.resume) {
+                res.send({ message: 'No resume uploaded' });
+            } else {
+                let attach = [
+                    {
+                        filename: `${req.body.name} Resume.pdf`,
+                        content: req.files.resume[0].buffer
+                    }
+                ]
 
+                if (req.files.cover_letter) {
+                    attach.push({
+                        filename: `${req.body.name} Cover Letter.pdf`,
+                        content: req.files.cover_letter[0].buffer
+                    })
+                }
+
+                let content = [
+                    `**Name**: ${req.body.name} \n`,
+                    `**Year**: ${req.body.year} \n`,
+                    `**Major**: ${req.body.major} \n `,
+                    `**Email**: ${req.body.email} \n`,
+                    `**GPA**: ${req.body.gpa} \n`,
+                    `**Hours to commit**: ${req.body.hours_to_commit} \n`
+                ];
+                if (data.score <= 0.7) {
+                    content.unshift(`## WARNING: user did not get a high reCAPTCHA score; the following could be spam\n`);
+                };
+
+                // Subteams they're interested in
+                let subteams = [
+                    `**Subteams they're intereted in**:\n`
+                ];
+                if (Array.isArray(req.body.subteams_interested)) {
+                    for (const team of req.body.subteams_interested) {
+                        subteams.push(`* ${team}\n`);
+                    }
+                } else {
+                    subteams.push(`* ${req.body.subteams_interested}\n`)
+                }
+                content = content.concat(subteams);
+
+                let ranking = [
+                    `**Subteams ranking (if any)**: ${req.body.ranking}\n`
+                ];
+                content = content.concat(ranking);
+
+                // content = content.concat(req.body.ranking);
+
+                console.log(content)
+
+                // Software they're familiar with
+                let software = [
+                    `**Software they're familiar with**: \n`
+                ];
+                if (Array.isArray(req.body.software_familiar)) {
+                    for (const softwares of req.body.software_familiar) {
+                        software.push(`* ${softwares}\n`);
+                    }
+                } else {
+                    subteams.push(`* ${req.body.software_familiar}\n`)
+                }
+                content = content.concat(software);
+
+                // Programming languages they're familiar with
+                let programming_languages = [
+                    `**Programming languages they're familiar with**:\n`
+                ];
+                if (Array.isArray(req.body.programming_languages_familiar)) {
+                    for (const languages of req.body.programming_languages_familiar) {
+                        programming_languages.push(`* ${languages}\n`)
+                    }
+                } else {
+                    programming_languages.push(`* ${req.body.programming_languages_familiar}\n`)
+                }
+                content = content.concat(programming_languages);
+
+                // References
+                let references = [
+                    `**References**: \n`
+                ];
+                if (Array.isArray(req.body.reference)) {
+                    for (const reference of req.body.reference) {
+                        references.push(`* ${reference}\n`);
+                    }
+                } else {
+                    references.push(`* ${req.body.reference}\n`);
+                }
+                content = content.concat(references);
+
+                const mailOptions = {
+                    from: `${req.body.name} [${req.body.email}] < zoomerinsight@gmail.com> `,
+                    to: 'zoomerinsight@gmail.com',
+                    subject: `OneLoop Application: ${req.body.name} `,
+                    replyTo: req.body.email,
+                    markdown: content.join("\n"),
+                    attachments: attach
+                };
+
+                transporter.sendMail(mailOptions, function (error, info) {
+                    if (error) {
+                        console.log(error);
+                    } else {
+                        console.log('Email sent: ' + info.response);
+                        res.send("successfully sent email to " + mailOptions.to);
+                    }
+                });
+            }
+        } catch (err) {
+            res.status(500).send(err);
+        }
+    });
 });
 
 app.post('/captcha', (req, res) => {

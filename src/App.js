@@ -3,7 +3,8 @@ import './App.css';
 
 import React, { useEffect } from 'react';
 
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 import About from './pages/about/about';
 import Home from './pages/home/home';
@@ -19,45 +20,47 @@ import Aos from 'aos';
 
 function App() {
 
-	useEffect( () => {
-    	Aos.init( { duration: 1200 } );
-  	} );
+	useEffect(() => {
+		Aos.init({ duration: 1200 });
+	});
 
 	return (
-	    <Router>
-	    	<div className="App">
-		        <Switch>
-		          	<Route path="/about">
-		          		<About />
-		          	</Route>
-		          	<Route path="/joinus">
-		          		<Join />
-		          	</Route>
-		          	<Route path="/poddetails">
-		          		<PodDetails />
-		          	</Route>
-		          	<Route path="/teamintro">
-		          		<Teamintro />
-		          	</Route>
-		          	<Route path="/team2018">
-		          		<Team2018 />
-		          	</Route>
-		          	<Route path="/team2019">
-		          		<Team2019 />
-		          	</Route>
-		          	<Route path="/team2020">
-		          		<Team2020 />
-		          	</Route>
-		          	<Route path="/sponsors">
-		          		<Sponsors />
-		          	</Route>
-		          	<Route path="/">
-		          		<Home />
-		          	</Route>
-		        </Switch>
-		    </div>
-	    </Router>
-  );
+		<Router>
+			<div className="App">
+				<Switch>
+					<Route path="/about">
+						<About />
+					</Route>
+					<Route path="/joinus">
+						<GoogleReCaptchaProvider reCaptchaKey="6LcdNwUbAAAAACp-eJx6PrXTshtyfexJWE9yP4rG">
+							<Join />
+						</GoogleReCaptchaProvider>
+					</Route>
+					<Route path="/poddetails">
+						<PodDetails />
+					</Route>
+					<Route path="/teamintro">
+						<Teamintro />
+					</Route>
+					<Route path="/team2018">
+						<Team2018 />
+					</Route>
+					<Route path="/team2019">
+						<Team2019 />
+					</Route>
+					<Route path="/team2020">
+						<Team2020 />
+					</Route>
+					<Route path="/sponsors">
+						<Sponsors />
+					</Route>
+					<Route path="/">
+						<Home />
+					</Route>
+				</Switch>
+			</div>
+		</Router>
+	);
 }
 
 export default App;
