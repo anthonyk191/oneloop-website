@@ -199,7 +199,9 @@ const Join_body = () => {
 
     <div className="oneloop-joinus-topcontainer">
       <div className="oneloop-joinus-title"> <h1> Contact Us </h1> </div>
-      <img src={contact_img} className="contact_images"/><br />
+      <div className="Con_image">
+            <img src={contact_img} className="contact_images"/><br />
+      </div>
       <div className="oneloop-joinus-heading25"> INTERESTED IN GAINING HANDS-ON EXPERIENCE? JOIN THE TEAM! </div>
     </div>
 
