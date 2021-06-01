@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 5000;
+const path = require('path');
 
 const nodemailer = require('nodemailer');
 const markdown = require('nodemailer-markdown').markdown;
@@ -10,7 +11,8 @@ const upload = multer();
 
 require('dotenv').config();
 
-app.use(express.static(__dirname + '/public'));
+// app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, "..", "build")));
 
 app.use(express.json());
 
@@ -152,6 +154,10 @@ app.post('/captcha', (req, res) => {
     })
 
     res.send('ok');
+});
+
+app.use((req, res, next) => {
+    res.sendFile(path.join(__dirname, "..", "build", "index.html"));
 });
 
 app.listen(port, () => {
