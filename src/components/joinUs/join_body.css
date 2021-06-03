@@ -11,7 +11,7 @@
 }
 .contact_images {
   display:block;
-  width: 100%;
+  width:70vw;
   height:auto;
   margin-left: 20px;
   margin-right: 20px;
@@ -304,17 +304,25 @@ a:active {
   text-decoration:underline;
 }
 
-
+.disclaimer
+{
+  color:grey;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:18px;
+}
 /*desktop*/
 @media only screen and (min-width: 800px) {
 
+  
   .oneloop-joinus-topcontainer
 {
   display:flex;
   flex-direction:column;
 }
+
   .contact_images {
-    width: 100vw;
+    display:block;
+    width:70vw;
     height:auto;
     float: left;
     margin-left:100px;
@@ -324,12 +332,12 @@ a:active {
 
   /*titles*/
   .oneloop-joinus-title {
-    font-size: 20px;
+    font-size: 24px;
     text-align: left;
     padding-right:20px;
   }
 
-  h1.contact_title
+  .contact_title
   {
     text-align:left;
   }
@@ -345,7 +353,7 @@ a:active {
 
 
   .oneloop-joinus-heading25 {
-    font-size: 26px;
+    font-size: vw;
     text-align : left;
   }
 

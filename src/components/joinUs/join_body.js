@@ -227,8 +227,9 @@ const Join_body = () => {
             <img src={contact_img} className="contact_images"/><br />
       </div>
       <div className="oneloop-joinus-heading25"> INTERESTED IN GAINING HANDS-ON EXPERIENCE? JOIN THE TEAM! </div>
+      <p className="disclaimer"><i>(Click on options below to fill out appropriate form)</i></p>
     </div>
-
+    
     <div className="oneloop-joinus">
       <h2 className="oneloop-joinus-heading1"> 
         <a href='#workwithus'className="join_link"> 
