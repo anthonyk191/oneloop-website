@@ -1,37 +1,37 @@
+const functions = require("firebase-functions");
+
 const express = require('express');
 const app = express();
-const port = 5000;
-const path = require('path');
 
 const nodemailer = require('nodemailer');
 const markdown = require('nodemailer-markdown').markdown;
 const fetch = require('node-fetch');
-const multer = require('multer');
-const upload = multer();
+const upload = require('multer')();
 
 require('dotenv').config();
 
-app.use(express.static(path.join(__dirname, "..", "build")));
+// app.use(express.static(path.join(__dirname, "..", "build")));
 
 app.use(express.json());
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS
+        user: 'zoomerinsight@gmail.com',
+        pass: 'avzawvzntupckxju'
     } //npm install dotenv
 });
 transporter.use('compile', markdown());
 
-app.post('/work-with-us', (req, res) => {
+app.post('/api/work-with-us', (req, res) => {
     fetch(`https://www.google.com/recaptcha/api/siteverify?secret=${process.env.CAPTCHA_SECRET}&response=${req.body.token}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' }
     }).then(response => response.json()).then(data => {
+        console.log(req.body);
         const mailOptions = {
             from: `${req.body.name} [${req.body.email}] <zoomerinsight@gmail.com>`,
-            to: process.env.EMAIL_USER,
+            to: 'afatienza@ucdavis.edu',
             subject: req.body.subject,
             text: `Use an HTML enabled client to view this email.`,
             replyTo: req.body.email
@@ -74,7 +74,8 @@ const fields = [
     { name: "cover_letter", maxCount: 1 }
 ];
 
-app.post('/join-us', upload.fields(fields), (req, res) => {
+app.post('/api/join-us', upload.fields(fields), (req, res) => {
+    console.log(req.body);
     fetch(`https://www.google.com/recaptcha/api/siteverify?secret=${process.env.CAPTCHA_SECRET}&response=${req.body.token}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' }
@@ -198,23 +199,12 @@ app.post('/join-us', upload.fields(fields), (req, res) => {
     });
 });
 
-app.post('/captcha', (req, res) => {
-    console.log(req.body.code);
+// app.use((req, res, next) => {
+//     res.sendFile(path.join(__dirname, "..", "build", "index.html"));
+// });
 
-    fetch(`https://www.google.com/recaptcha/api/siteverify?secret=${process.env.CAPTCHA_KEY}&response=${req.body.code}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' }
-    }).then(response => response.json()).then(data => {
-        console.log(data);
-    })
+// app.listen(port, () => {
+//     console.log('Currently listening on port ' + port);
+// });
 
-    res.send('ok');
-});
-
-app.use((req, res, next) => {
-    res.sendFile(path.join(__dirname, "..", "build", "index.html"));
-});
-
-app.listen(port, () => {
-    console.log('Currently listening on port ' + port);
-});
+exports.app = functions.https.onRequest(app);

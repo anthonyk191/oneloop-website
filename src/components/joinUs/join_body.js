@@ -53,7 +53,7 @@ const Join_body = () => {
     workFormData.token = await executeRecaptcha();
 
     // POST request to server:
-    await fetch('/work-with-us', {
+    await fetch('/api/work-with-us', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(workFormData)
@@ -196,7 +196,7 @@ const Join_body = () => {
     }
     
     // POST request to server:
-    await fetch('/join-us', {
+    await fetch('/api/join-us', {
       method: 'POST',
       body: form
     });
