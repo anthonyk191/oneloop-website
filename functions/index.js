@@ -1,7 +1,6 @@
 const functions = require("firebase-functions");
 
-const express = require('express');
-const app = express();
+const app = require('express')();
 
 const nodemailer = require('nodemailer');
 const markdown = require('nodemailer-markdown').markdown;
@@ -10,28 +9,26 @@ const upload = require('multer')();
 
 require('dotenv').config();
 
-// app.use(express.static(path.join(__dirname, "..", "build")));
-
 app.use(express.json());
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'zoomerinsight@gmail.com',
-        pass: 'avzawvzntupckxju'
-    } //npm install dotenv
+        user: functions.config().email.user,
+        pass: functions.config().email.pass
+    }
 });
 transporter.use('compile', markdown());
 
 app.post('/api/work-with-us', (req, res) => {
-    fetch(`https://www.google.com/recaptcha/api/siteverify?secret=${process.env.CAPTCHA_SECRET}&response=${req.body.token}`, {
+    fetch(`https://www.google.com/recaptcha/api/siteverify?secret=${functions.config().recaptcha.secret}&response=${req.body.token}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' }
     }).then(response => response.json()).then(data => {
         console.log(req.body);
         const mailOptions = {
             from: `${req.body.name} [${req.body.email}] <zoomerinsight@gmail.com>`,
-            to: 'afatienza@ucdavis.edu',
+            to: functions.config().email.user,
             subject: req.body.subject,
             text: `Use an HTML enabled client to view this email.`,
             replyTo: req.body.email
@@ -82,6 +79,7 @@ app.post('/api/join-us', upload.fields(fields), (req, res) => {
     }).then(response => response.json()).then(data => {
         if (data.score <= 0.3) {
             res.status(406).send({ message: "Captcha could not be verified, score too low" });
+            return;
         }
         console.log(req.body);
         try {
