@@ -1,10 +1,17 @@
 const functions = require("firebase-functions");
 const express = require('express');
-const app = express();
 const nodemailer = require('nodemailer');
 const markdown = require('nodemailer-markdown').markdown;
 const fetch = require('node-fetch');
 const upload = require('multer-firebase')();
+const cors = require('cors');
+
+const app = express();
+
+// app.use(cors({
+//     origin: 'http://127.0.0.1:5500',
+//     methods: ['GET', 'POST']
+// }));
 
 app.use(express.json());
 
@@ -200,7 +207,7 @@ app.post('/api/join-us', upload.fields(fields), async (req, res) => {
                 console.log(error);
             } else {
                 console.log('Email sent: ' + info.response);
-                res.send("successfully sent email to " + mailOptions.to);
+                res.send({ message: "success" });
             }
         });
     } catch (err) {
