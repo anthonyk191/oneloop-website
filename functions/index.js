@@ -8,12 +8,21 @@ const cors = require('cors');
 
 const app = express();
 
-// app.use(cors({
-//     origin: 'http://127.0.0.1:5500',
-//     methods: ['GET', 'POST']
-// }));
+app.use(cors({
+    origin: 'https://oneloop-website.web.app',
+    methods: ['GET', 'POST']
+}));
 
 app.use(express.json());
+
+// in case CORS gets bypassed
+app.use(async (req, res, next) => {
+    if (req.get('host') != 'https://oneloop-website.web.app') {
+        res.status(401).send('Not authorized.');
+        return;
+    }
+    next();
+});
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
