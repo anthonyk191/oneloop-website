@@ -32,7 +32,7 @@ app.post('/api/work-with-us', async (req, res) => {
             headers: { 'Content-Type': 'application/json' }
         });
     } catch(err) {
-        res.send({ message: "could not verify reCAPTCHA with google; please try again"});
+        res.send({ message: "could not verify reCAPTCHA with Google; please try again in a few moments."});
         return;
     }
     const data = await response.json();
@@ -50,7 +50,7 @@ app.post('/api/work-with-us', async (req, res) => {
     message = message.map(msg => `<p>${msg}</p>`);
 
     if (data.score <= 0.3) {
-        res.status(406).send({ message: "reCAPTCHA could not be verified, score too low" });
+        res.status(406).send({ message: "reCAPTCHA could not be verified, score too low; if you are a human, try submitting again." });
         return;
     } else if (data.score <= 0.7) {
         mailOptions.html = [
@@ -69,12 +69,12 @@ app.post('/api/work-with-us', async (req, res) => {
             }
             else {
                 console.log('sent ' + info.response);
-                res.json("Successfully sent email to " + mailOptions.to);
+                res.send({ message: "Email sent!" });
             }
         });
     } catch (err) {
         console.log(err);
-        res.send({ message: "couldn't send email; try again" });
+        res.send({ message: "Couldn't send email; try again in a few moments." });
     }
 });
 
@@ -94,18 +94,18 @@ app.post('/api/join-us', upload.fields(fields), async (req, res) => {
             headers: { 'Content-Type': 'application/json' }
         });
     } catch(err) {
-        res.send({ message: "could not verify reCAPTCHA with google; please try again"});
+        res.send({ message: "could not verify reCAPTCHA with Google; please try again in a few moments."});
         return;
     }
     const data = await response.json();
 
     if (data.score <= 0.3) {
-        res.status(406).send({ message: "reCAPTCHA score was too low to send email" });
+        res.status(406).send({ message: "reCAPTCHA could not be verified, score too low; if you are a human, try submitting again." });
         return;
     }
 
     if (!req.files.resume) {
-        res.send({ message: "no resume file was sent" });
+        res.send({ message: "No resume file was sent; upload one before submitting." });
         return;
     }
 
@@ -207,12 +207,12 @@ app.post('/api/join-us', upload.fields(fields), async (req, res) => {
                 console.log(error);
             } else {
                 console.log('Email sent: ' + info.response);
-                res.send({ message: "success" });
+                res.send({ message: "Application sent!" });
             }
         });
     } catch (err) {
         console.log(err);
-        res.send({ message: "application could not be sent, try again" })
+        res.send({ message: "Couldn't send application; try again in a few moments." });
     }
 });
 

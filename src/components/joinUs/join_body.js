@@ -12,6 +12,10 @@ const Join_body = () => {
   const [softwareOther, setSoftwareOther] = useState('');
   const [langOther, setLangOther] = useState('');
   const [refOther, setRefOther] = useState('');
+  const [workPostResponse, setWorkPostResponse] = useState('');
+  const [joinPostResponse, setJoinPostResponse] = useState('');
+  const [workSubmitted, setWorkSubmitted] = useState(true);
+  const [joinSubmitted, setJoinSubmitted] = useState(false);
 
   const [workFormData, setWorkFormData] = useState({
     name: "",
@@ -48,32 +52,41 @@ const Join_body = () => {
     e.preventDefault();
 
     if(!executeRecaptcha) {
-      console.log("Execute recaptcha not yet available");
+      // console.log("Execute recaptcha not yet available");
+      setWorkPostResponse('reCAPTCHA has not finished initializing; please wait a few moments before submitting');
+      setWorkSubmitted(true);
+      return;
     }
     workFormData.token = await executeRecaptcha();
 
     // POST request to server:
-    await fetch('/api/work-with-us', {
+    const res = await fetch('/api/work-with-us', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(workFormData)
     });
-    setWorkFormData({
-      name: "",
-      email: "",
-      message: "",
-      subject: "OneLoop Work With Us Inquiry"
-    });
+    const response = await res.json();
+    const message = response.message;
+    setWorkPostResponse(message);
+    setWorkSubmitted(true);
+    if (message == 'Email sent!') {
+      setWorkFormData({
+        name: "",
+        email: "",
+        message: "",
+        subject: "OneLoop Work With Us Inquiry"
+      });
+    }
   };
 
   const joinHandleChange = (e) => {
-    console.log(e.target.name);
+    // console.log(e.target.name);
     setJoinFormData({
       ...joinFormData,
 
       [e.target.name]: e.target.value,
     });
-    console.log(joinFormData);
+    // console.log(joinFormData);
   };
 
   const joinHandleCheckboxChange = (e) => {
@@ -93,13 +106,13 @@ const Join_body = () => {
 
       [e.target.name]: arr,
     });
-    console.log(joinFormData);
+    // console.log(joinFormData);
   }
 
   const joinHandleOtherChange = (e) => {
-    console.log(e.target.name);
+    // console.log(e.target.name);
     if (e.target.value) {
-      console.log(softwareOtherRef.current.checked);
+      // console.log(softwareOtherRef.current.checked);
       switch(e.target.name) {
         case "software_familiar":
           softwareOtherRef.current.checked = true;
@@ -134,20 +147,23 @@ const Join_body = () => {
   }
 
   const joinHandleFileChange = (e) => {
-    console.log(e.target.files[0]);
+    // console.log(e.target.files[0]);
     setJoinFormData({
       ...joinFormData,
 
       [e.target.name]: e.target.files[0],
     });
-    console.log(joinFormData);
+    // console.log(joinFormData);
   }
 
   const joinHandleSubmit = async(e) => {
     e.preventDefault();
 
     if(!executeRecaptcha) {
-      console.log("Execute recaptcha not yet available");
+      // console.log("Execute recaptcha not yet available");
+      setJoinPostResponse('reCAPTCHA has not finished initializing; please wait a few moments before submitting');
+      setJoinSubmitted(true);
+      return;
     }
     joinFormData.token = await executeRecaptcha();
 
@@ -187,7 +203,7 @@ const Join_body = () => {
         //   form.append(prop, item);
         // }
         joinFormData[prop].forEach(val => {
-          console.log(val);
+          // console.log(val);
           form.append(prop, val);
         })
       } else {
@@ -196,26 +212,32 @@ const Join_body = () => {
     }
     
     // POST request to server:
-    await fetch('/api/join-us', {
+    const res = await fetch('/api/join-us', {
       method: 'POST',
       body: form
     });
-    setJoinFormData({
-      name: "",
-      email: "",
-      year: "",
-      major: "",
-      gpa: "",
-      hours_to_commit: "",
-      subteams_interested: [],
-      ranking: "",
-      software_familiar: [],
-      programming_languages_familiar: [],
-      reference: [],
-      resume: "",
-      subject: "OneLoop Application"
-    });
-    joinFormRef.current.reset();
+    const response = await res.json();
+    const message = response.message;
+    setJoinPostResponse(message);
+    setJoinSubmitted(true);
+    if (message == 'Application sent!') {
+      setJoinFormData({
+        name: "",
+        email: "",
+        year: "",
+        major: "",
+        gpa: "",
+        hours_to_commit: "",
+        subteams_interested: [],
+        ranking: "",
+        software_familiar: [],
+        programming_languages_familiar: [],
+        reference: [],
+        resume: "",
+        subject: "OneLoop Application"
+      });
+      joinFormRef.current.reset();
+    }
   };
 
   return (
@@ -257,7 +279,7 @@ const Join_body = () => {
         </div>
         <input type="submit" value="Submit" className="JoinUs_button" />
       </form>
-      
+      <p style={{ display: workSubmitted ? "block" : "none" }}>{ workPostResponse }</p>
     </div>
 
     <div className = "oneloop-joinus-section" section id = 'joinus' > 
@@ -696,7 +718,7 @@ const Join_body = () => {
               <input type="submit" value="Submit" className="JoinUs_button"/>
               <br />
             </form>
-            
+            <p style={{ display: joinSubmitted ? "block" : "none" }}>{ joinPostResponse }</p>
           </body>
         </div>
       </div>
