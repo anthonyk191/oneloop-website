@@ -6,6 +6,8 @@
 
 ## How to test changes
 
+Make sure to use Git Bash to run these commands.
+
 ### Testing only the frontend (email functions won't work)
 
 * `cd <path_to_directory>`
@@ -14,7 +16,6 @@
 
 ### Testing both the frontend and backend together (emails will work)
 
-* open Git Bash
 * `cd <path_to_directory>`
 * `npm run build`
 * `firebase functions:config:get > .runtimeconfig.json`
