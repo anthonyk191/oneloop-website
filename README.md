@@ -33,6 +33,7 @@ Make sure to use Git Bash to run these commands.
 * `cd <path_to_directory>`
 * `npm run build`
 * `firebase deploy`
+* Note: try to not deploy more than three times a day, as there are bandwidth restrictions on Firebase, and exceeding 1GB in a day will incur charges (a single deploy uses ~300MB bandwidth)
 
 ## Stuck?
 
