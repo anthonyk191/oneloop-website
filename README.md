@@ -1,70 +1,152 @@
-# Getting Started with Create React App
+# Making changes to your website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How to make changes
 
-## Available Scripts
+### Where to find the files for each page
 
-In the project directory, you can run:
+`src -> components` if you are searching for particular components such as the navigation bar, the footer, the content in between.
+`src -> pages` if you are searching for the entire page.
 
-### `npm start`
+### How to create new page/component
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Format for creating new page/component.js. All you have to do is change `FunctionName`. **Make sure that the FunctionNames are ALWAYS capital. Do not change anything else unless absolutely required. Directories of the files you are calling may defer.**
+````
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+import './FunctionName.css'; # for both component and page creation
 
-### `npm test`
+import React, { useEffect } from 'react';
+import YourComponent from '../../components/YourComponent'; for page creation
+import Navbar from '../../components/navbar/navbar';
+import Footer from '../../components/footer/footer';
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+const FunctionName = () =>{
+	return(
+		<React.Fragment>
+			<div className=""></div> for component creation
+			<Navbar /> # for page creation
+			<YourComponent /> # for page creation
+			<Footer /> # for page creation
+		</React.Fragment>
+	);
+}
 
-### `npm run build`
+export default FunctionName;
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+````
+#### Creating new page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To create new page, add a new file with a `.css` and `.js` extension to the pages folder. You may create a new folder and add the new files into that folder or add the new files to an existing folder or just add them to the pages folder. **As long as they are in `src -> pages`.** Refer to the above format to create the new page. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Once you create the page, you can add a link to it in the `src->navbar->navbar.js`, and add the routing extension to the `App.js`.
 
-### `npm run eject`
+##### How to add routing extension to App.js
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+For eg.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+import Home from './pages/home/home';
+import About from './pages/about/about';
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+function App() {
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+	useEffect(() => {
+		Aos.init({ duration: 1200 });
+	});
 
-## Learn More
+	return (
+		<Router>
+			<div className="App">
+				<Switch>
+					<Route path="/about">
+						<About />
+					</Route>
+					<Route path="/joinus">
+						<GoogleReCaptchaProvider reCaptchaKey="6LcdNwUbAAAAACp-eJx6PrXTshtyfexJWE9yP4rG">
+							<Join />
+						</GoogleReCaptchaProvider>
+					</Route>
+					<Route path="/">
+						<Home />
+					</Route>
+				</Switch>
+			</div>
+		</Router>
+	);
+}
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+export default App;
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Creating new component
 
-### Code Splitting
+To create new component, add a new file with a `.css` and `.js` extension to the component folder. You may create a new folder and add the new files into that folder or add the new files to an existing folder or just add them to the component folder. **As long as they are in `src -> component`.** Refer to the above format to create the new component. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### How to change images
 
-### Analyzing the Bundle Size
+Upload the image in this folder
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+`public -> images`
 
-### Making a Progressive Web App
+Go to the folder for the page you want to modify (Step 1) and open the file with suffix .js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Scroll to wherever you see the image that you want to change
 
-### Advanced Configuration
+Example:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Uploaded a new image called UpdatedLogo.png
 
-### Deployment
+Before: `<img src="images/OneLoopLogo.png"/>`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+After: `<img src="images/UpdatedLogo.png"/>`
 
-### `npm run build` fails to minify
+### How to add team members to roster
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Upload the image in this folder depending on which year the member is joining in the same directory. 
+
+`public -> images -> {prevyearcurryear} for eg. 2018-2019 = 20182019`
+
+**Make sure that the images are square shaped, otherwise the picture will not come out right on the website**
+
+In the file path `src -> components -> team`, there are `.js` files where you see can all the teams for the respective years. 
+
+Follow instructions carefully:
+	1. You will notice that `<div>` tags with `classNames`. These classNames will be in the format: `oneloop-team{year} {team} team-{mobile/web}`.
+	2. The `<div>` tags ending with `team-mobile` will appear in the mobile version, and the `<div>` tags ending with `team-web` will appear in the web version.
+	3. You will notive some `<div>` tags with `classNames`, `team-member`. Create a new div in the same format depending on whichever team and row you want to add the member **twice** - once in the `team-mobile <div>` and once in the `team-web <div>`.
+	4. If all goes well, you should see member along with their name and position on the website after you push it to the repo. 
+
+
+## How to test changes
+
+Make sure to use Git Bash to run these commands (unless you're on Mac).
+
+### Testing only the frontend (email functions won't work)
+
+* `cd <path_to_directory>`
+* `npm install`
+* `npm start`
+* website will open at `http://localhost:3000/`
+
+### Testing both the frontend and backend together (emails will work)
+
+* `cd <path_to_directory>`
+* `npm install`
+* `npm run build`
+* `firebase functions:config:get > .runtimeconfig.json`
+* `firebase serve`
+* website is usually available at `http://localhost:5000/`
+
+## When done testing
+* CTRL + C to end the process
+* terminal might prompt with `Terminate batch job? (Y/n)`
+	* type `Y` and enter
+
+## Deploying your changes
+* `cd <path_to_directory>`
+* `npm run build`
+* `firebase deploy`
+* Note: try to not deploy more than three times a day, as there are bandwidth restrictions on Firebase, and exceeding 1GB in a day will incur charges (a single deploy uses ~300MB bandwidth)
+
+## Stuck?
+
+Fill out our bug fix form if you're ever stuck on fixing your website: https://forms.gle/gz6dxTwCKDDhw5xw6
