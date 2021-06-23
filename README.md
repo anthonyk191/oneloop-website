@@ -6,7 +6,7 @@
 
 ## How to test changes
 
-Make sure to use Git Bash to run these commands.
+Make sure to use Git Bash to run these commands (unless you're on Mac).
 
 ### Testing only the frontend (email functions won't work)
 
