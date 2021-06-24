@@ -18,7 +18,7 @@ app.use(express.json());
 // in case CORS gets bypassed
 app.use(async (req, res, next) => {
     console.log(req.get('origin'));
-    if (req.get('origin') != 'https://oneloop-website.web.app') {
+    if (req.get('origin') != 'https://oneloop-website.web.app' && req.get('origin') != 'http://localhost:5000') {
         res.status(401).send('Not authorized.');
         return;
     }
