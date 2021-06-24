@@ -50,7 +50,7 @@ app.post('/api/work-with-us', async (req, res) => {
 
     const mailOptions = {
         from: `${req.body.name} [${req.body.email}] <${functions.config().email.user}>`,
-        to: functions.config().email.user,
+        to: functions.config().email.receiver,
         subject: req.body.subject,
         text: `Use an HTML enabled client to view this email.`,
         replyTo: req.body.email
@@ -75,7 +75,7 @@ app.post('/api/work-with-us', async (req, res) => {
         transporter.sendMail(mailOptions, function (error, info) {
             if (error) {
                 console.log(error);
-                res.json(error);
+                res.send({ message: "Couldn't send email; try again in a few moments." });
             }
             else {
                 console.log('sent ' + info.response);
@@ -204,7 +204,7 @@ app.post('/api/join-us', upload.fields(fields), async (req, res) => {
 
     const mailOptions = {
         from: `${req.body.name} [${req.body.email}] <${functions.config().email.user}> `,
-        to: functions.config().email.user,
+        to: functions.config().email.receiver,
         subject: `OneLoop Application: ${req.body.name} `,
         replyTo: req.body.email,
         markdown: content.join("\n"),
@@ -215,6 +215,7 @@ app.post('/api/join-us', upload.fields(fields), async (req, res) => {
         transporter.sendMail(mailOptions, function (error, info) {
             if (error) {
                 console.log(error);
+                res.send({ message: "Couldn't send application; try again in a few moments." });
             } else {
                 console.log('Email sent: ' + info.response);
                 res.send({ message: "Application sent!" });
