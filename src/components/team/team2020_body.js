@@ -233,6 +233,11 @@ const Team2020_body = () =>{
 							<span>Power Lead</span></h4>
 						</div>
 						<div className="team-member">
+							<img className="team-member" src="/images/team/20202021/Forrest_Fankhauser.jpg"/>
+							<h4>FORREST FANKHAUSER<br/>
+							<span>Power Lead</span></h4	>
+						</div>
+						<div className="team-member">
 							<img className="team-member" src="/images/team/20202021/Akam_Sihota.jpeg"/>
 							<h4>AKAM SIHOTA<br/>
 							<span>Power Member</span></h4>
