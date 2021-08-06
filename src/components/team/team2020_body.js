@@ -225,8 +225,8 @@ const Team2020_body = () =>{
 
 
 				<h2>Power</h2>
-				<div className="oneloop-team2019 manufacturing team-mobile-1">
-					<div className="manufacturing-row row row-1">
+				<div className="oneloop-team2019 power team-web">
+					<div className="power-row row row-1">
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20202021/Ryan_Parker.jpg"/>
 							<h4>RYAN PARKER<br/>
@@ -242,6 +242,32 @@ const Team2020_body = () =>{
 							<h4>AKAM SIHOTA<br/>
 							<span>Power Member</span></h4>
 						</div>
+						<div className="team-member">
+							<img className="team-member" src="/images/team/20202021/Matthew_Benson.jpeg"/>
+							<h4>MATTHEW BENSON<br/>
+							<span>Power Member</span></h4>
+						</div>
+					</div>
+				</div>
+				<div className="oneloop-team2019 power team-mobile">
+					<div className="power-row row row-1">
+						<div className="team-member">
+							<img className="team-member" src="/images/team/20202021/Ryan_Parker.jpg"/>
+							<h4>RYAN PARKER<br/>
+							<span>Power Lead</span></h4>
+						</div>
+						<div className="team-member">
+							<img className="team-member" src="/images/team/20202021/Forrest_Fankhauser.jpg"/>
+							<h4>FORREST FANKHAUSER<br/>
+							<span>Power Lead</span></h4	>
+						</div>
+						<div className="team-member">
+							<img className="team-member" src="/images/team/20202021/Akam_Sihota.jpeg"/>
+							<h4>AKAM SIHOTA<br/>
+							<span>Power Member</span></h4>
+						</div>
+					</div>
+					<div className="power-row row row-2">
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20202021/Matthew_Benson.jpeg"/>
 							<h4>MATTHEW BENSON<br/>
