@@ -1,13 +1,13 @@
-import './team2020_body.css';
+import './team2021_body.css';
 
 import React, { useEffect } from 'react';
 
-const Team2020_body = () =>{
+const Team2021_body = () =>{
 	return(
 		<React.Fragment>
-			<div className="oneloop-team2020-body">
+			<div className="oneloop-team2021-body">
 				<div className="oneloop-team2019-title">
-					<h1>2020-2021 Team</h1>
+					<h1>2021-2022 Team</h1>
 				</div>
 				<h2>Executive Commitee</h2>
 				<div className="oneloop-team2019 executive team-mobile-1">
@@ -605,4 +605,4 @@ const Team2020_body = () =>{
 	);
 }
 
-export default Team2020_body;
+export default Team2021_body;
