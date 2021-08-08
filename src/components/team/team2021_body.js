@@ -239,12 +239,29 @@ const Team2020_body = () =>{
 						</div>
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20202021/Akam_Sihota.jpeg"/>
-							<h4>AKAM SIHOTA<br/>
+							<h4>MEGAN ZHANG<br/>
 							<span>Power Member</span></h4>
 						</div>
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20202021/Matthew_Benson.jpeg"/>
-							<h4>MATTHEW BENSON<br/>
+							<h4>CONNOR LEWIS<br/>
+							<span>Power Member</span></h4>
+						</div>
+						<div className="team-member">
+							<img className="team-member" src="/images/team/20202021/Matthew_Benson.jpeg"/>
+							<h4>CHRISTIAN MOLINA<br/>
+							<span>Power Member</span></h4>
+						</div>
+					</div>
+					<div className="power-row row row-2">
+						<div className="team-member">
+							<img className="team-member" src="/images/team/20202021/Matthew_Benson.jpeg"/>
+							<h4>JAN TRUONG<br/>
+							<span>Power Member</span></h4>
+						</div>
+						<div className="team-member">
+							<img className="team-member" src="/images/team/20202021/Matthew_Benson.jpeg"/>
+							<h4>ISABELLA DOHERTY<br/>
 							<span>Power Member</span></h4>
 						</div>
 					</div>
@@ -252,25 +269,42 @@ const Team2020_body = () =>{
 				<div className="oneloop-team2019 power team-mobile">
 					<div className="power-row row row-1">
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20202021/Ryan_Parker.jpg"/>
-							<h4>RYAN PARKER<br/>
-							<span>Power Lead</span></h4>
-						</div>
-						<div className="team-member">
 							<img className="team-member" src="/images/team/20202021/Forrest_Fankhauser.jpg"/>
 							<h4>FORREST FANKHAUSER<br/>
-							<span>Power Lead</span></h4	>
+							<span>Power Co-Lead</span></h4	>
+						</div>
+						<div className="team-member">
+							<img className="team-member" src="/images/team/20202021/Omri_Steinberg-Tatman.png"/>
+							<h4>OMRI<br/>STEINBERG-TATMAN<br/>
+							<span>Power Co-Lead</span></h4>
 						</div>
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20202021/Akam_Sihota.jpeg"/>
-							<h4>AKAM SIHOTA<br/>
+							<h4>MEGAN ZHANG<br/>
 							<span>Power Member</span></h4>
 						</div>
 					</div>
 					<div className="power-row row row-2">
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20202021/Matthew_Benson.jpeg"/>
-							<h4>MATTHEW BENSON<br/>
+							<h4>CONNOR LEWIS<br/>
+							<span>Power Member</span></h4>
+						</div>
+						<div className="team-member">
+							<img className="team-member" src="/images/team/20202021/Matthew_Benson.jpeg"/>
+							<h4>CHRISTIAN MOLINA<br/>
+							<span>Power Member</span></h4>
+						</div>
+						<div className="team-member">
+							<img className="team-member" src="/images/team/20202021/Matthew_Benson.jpeg"/>
+							<h4>JAN TRUONG<br/>
+							<span>Power Member</span></h4>
+						</div>
+					</div>
+					<div className="power-row row row-3">
+						<div className="team-member">
+							<img className="team-member" src="/images/team/20202021/Matthew_Benson.jpeg"/>
+							<h4>ISABELLA DOHERTY<br/>
 							<span>Power Member</span></h4>
 						</div>
 					</div>
