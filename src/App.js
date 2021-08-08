@@ -13,6 +13,7 @@ import PodDetails from './pages/podDetails/podDetails';
 import Team2018 from './pages/team/team2018';
 import Team2019 from './pages/team/team2019';
 import Team2020 from './pages/team/team2020';
+import Team2021 from './pages/team/team2021';
 import Teamintro from './pages/team/teamintro';
 import Sponsors from './pages/sponsors/sponsors';
 
@@ -50,6 +51,9 @@ function App() {
 					</Route>
 					<Route path="/team2020">
 						<Team2020 />
+					</Route>
+					<Route path="/team2021">
+						<Team2021 />
 					</Route>
 					<Route path="/sponsors">
 						<Sponsors />
