@@ -36,28 +36,23 @@ const Team2021_body = () =>{
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20202021/Jordan_Hall.jpg"/>
 							<h4>JORDAN HALL<br/>
-							<span>Brakes Lead</span></h4>
-						</div>
-						<div className="team-member">
-							<img className="team-member" src="/images/team/20202021/Timothy_Groshev.jpeg"/>
-							<h4>TIMOTHY GROSHEV<br/>
-							<span>Brakes Member</span></h4>
+							<span>Brakes Co-Lead</span></h4>
 						</div>
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20202021/Gaurav_Dhirar.jpg"/>
 							<h4>GAURAV DHIRAR<br/>
-							<span>Brakes Member</span></h4>
+							<span>Brakes Co-Lead</span></h4>
+						</div>
+						<div className="team-member">
+							<img className="team-member" src="/images/team/20192020/Ashir+Bhalla-Levine.jpeg"/>
+							<h4>ASHIR<br/>BHALLA-LEVINE<br/>
+							<span>Brakes Co-Lead</span></h4>
 						</div>
 					</div>
 					<div className="brakes-row row row-2">
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20202021/Preseton_Vanderpan.jpeg"/>
 							<h4>PRESTON<br/>VANDERPAN<br/>
-							<span>Brakes Member</span></h4>
-						</div>
-						<div className="team-member">
-							<img className="team-member" src="/images/team/20192020/Ashir+Bhalla-Levine.jpeg"/>
-							<h4>ASHIR<br/>BHALLA-LEVINE<br/>
 							<span>Brakes Member</span></h4>
 						</div>
 					</div>
