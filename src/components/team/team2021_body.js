@@ -592,7 +592,7 @@ const Team2021_body = () =>{
 
 				<div className="team2019-buttons">
 					<div className="team2019-to-team2018">
-						<a href="/team2019">Previous Year</a>
+						<a href="/team2020">Previous Year</a>
 					</div>
 				</div>
 			</div>
