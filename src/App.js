@@ -33,7 +33,7 @@ function App() {
 						<About />
 					</Route>
 					<Route path="/joinus">
-						<GoogleReCaptchaProvider reCaptchaKey="6Lea004bAAAAADrzGSu1G0j94611UG7DXo3SPI_2">
+						<GoogleReCaptchaProvider reCaptchaKey="6Lczs4gcAAAAABOkJB7dXACNfPOaYZksEi5HTpAD">
 							<Join />
 						</GoogleReCaptchaProvider>
 					</Route>
