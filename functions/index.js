@@ -4,26 +4,26 @@ const nodemailer = require('nodemailer');
 const markdown = require('nodemailer-markdown').markdown;
 const fetch = require('node-fetch');
 const upload = require('multer-firebase')();
-const cors = require('cors');
+// const cors = require('cors');
 
 const app = express();
 
-app.use(cors({
-    origin: 'https://oneloop-website.web.app',
-    methods: ['GET', 'POST']
-}));
+// app.use(cors({
+//     origin: 'https://davishyper',
+//     methods: ['GET', 'POST']
+// }));
 
 app.use(express.json());
 
 // in case CORS gets bypassed
-app.use(async (req, res, next) => {
-    console.log(req.get('origin'));
-    if (req.get('origin') != 'https://oneloop-website.web.app' && req.get('origin') != 'http://localhost:5000') {
-        res.status(401).send('Not authorized.');
-        return;
-    }
-    next();
-});
+// app.use(async (req, res, next) => {
+//     console.log(req.get('origin'));
+//     if (req.get('origin') != 'https://oneloop-website.web.app' && req.get('origin') != 'http://localhost:5000') {
+//         res.status(401).send('Not authorized.');
+//         return;
+//     }
+//     next();
+// });
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
