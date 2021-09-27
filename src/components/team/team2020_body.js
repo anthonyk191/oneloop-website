@@ -565,6 +565,9 @@ const Team2020_body = () =>{
 					<div className="team2019-to-team2018">
 						<a href="/team2019">Previous Year</a>
 					</div>
+					<div className="team2019-to-team2018">
+						<a href="/team2021">Next Year</a>
+					</div>
 				</div>
 			</div>
 		</React.Fragment>
