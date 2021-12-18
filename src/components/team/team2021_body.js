@@ -103,7 +103,7 @@ const Team2021_body = () =>{
 						</div>
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20202021/Pratham_Goradia.jpeg"/>
-							<h4>PRATHAM<br/>
+							<h4>PRATHAM GORADIA<br/>
 							<span>Business Co-Lead</span></h4>
 						</div>
 					</div>
