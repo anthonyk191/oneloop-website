@@ -1,4 +1,4 @@
-.oneloop-team2021-body{
+.oneloop-team2020-body{
 	margin-right: 20px;
 	margin-left: 20px;
 	align-items: center;
@@ -8,7 +8,7 @@
 	display: none;
 }
 
-.oneloop-team2021-body h2{
+.oneloop-team2020-body h2{
 	font-family: Playfair Display;
 	color: #022851;
 	font-size: 28px;
@@ -19,7 +19,7 @@
 }	
 
 @media (min-width: 887px){
-	.oneloop-team2021-body{
+	.oneloop-team2020-body{
 		margin-right: 100px;
 		margin-left: 100px;
 	}
