@@ -19,7 +19,7 @@ const Team2021_body = () =>{
 							<span>President</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20192020/Omri_Steinberg.jpeg"/>
+							<img className="team-member" src="/images/team/20202021/Omri_Steinberg.jpeg"/>
 							<h4>OMRI STEINBERG<br/>
 							<span>Project Manager</span></h4>
 						</div>
@@ -36,7 +36,7 @@ const Team2021_body = () =>{
 							<span>Senior Engineer</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20202021/Louk_Goldberg.png"/>
+							<img className="team-member" src="/images/team/20192020/Louk_Goldberg.png"/>
 							<h4>LOUK GOLDBERG<br/>
 							<span>Senior Engineer</span></h4>
 						</div>
@@ -51,7 +51,7 @@ const Team2021_body = () =>{
 							<span>President</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20192020/Omri_Steinberg.jpeg"/>
+							<img className="team-member" src="/images/team/20202021/Omri_Steinberg.jpeg"/>
 							<h4>OMRI STEINBERG<br/>
 							<span>Project Manager</span></h4>
 						</div>
@@ -66,7 +66,7 @@ const Team2021_body = () =>{
 							<span>Senior Engineer</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20202021/Louk_Goldberg.png"/>
+							<img className="team-member" src="/images/team/20192020/Louk_Goldberg.png"/>
 							<h4>LOUK GOLDBERG<br/>
 							<span>Senior Engineer</span></h4>
 						</div>
@@ -227,14 +227,14 @@ const Team2021_body = () =>{
 							<span>Controls Co-Lead</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20202021/Andrew_Gunlock.jpg"/>
+							<img className="team-member" src="/images/team/20192020/Andrew_Gunlock.jpg"/>
 							<h4>ANDREW<br/>GUNLOCK<br/>
 							<span>Controls Member</span></h4>
 						</div>
 					</div>
 					<div className="controls-row row row-2">
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20202021/Annanya_Tyagi.jpeg"/>
+							<img className="team-member" src="/images/team/20192020/Annanya_Tyagi.jpeg"/>
 							<h4>ANNANYA TYAGI<br/>
 							<span>Controls Member</span></h4>
 						</div>
