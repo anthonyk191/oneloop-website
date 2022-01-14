@@ -51,7 +51,7 @@ const Team2020_body = () =>{
 							<span>Project Manager</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Jodan_Hall.jpg"/>
+							<img className="team-member" src="/images/team/20212022/Jordan_Hall.jpg"/>
 							<h4>JORDAN<br/>HALL<br/>
 							<span>Chief Engineer</span></h4>
 						</div>
@@ -93,7 +93,7 @@ const Team2020_body = () =>{
 							<span>Brakes Co-Lead</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Henry_Lin.png"/>
+							<img className="team-member" src="/images/team/20212022/Henry_Lin.jpg"/>
 							<h4>HENRY LIN<br/>
 							<span>Brakes Member</span></h4>
 						</div>
@@ -126,7 +126,7 @@ const Team2020_body = () =>{
 					</div>
 					<div className="stability-row row row-2">
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Jinguang_Chai.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Jinguang_Chai.jpg"/>
 							<h4>JINGUANG CHAI<br/>
 							<span>Business Member</span></h4>
 						</div>
@@ -173,7 +173,7 @@ const Team2020_body = () =>{
 							<span>Business Member</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Jinguang_Chai.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Jinguang_Chai.jpg"/>
 							<h4>JINGUANG CHAI<br/>
 							<span>Business Member</span></h4>
 						</div>
@@ -185,7 +185,7 @@ const Team2020_body = () =>{
 					</div>
 					<div className="stability-row row row-2">
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Revekah_Friedman.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Rebekah_Friedman.jpeg"/>
 							<h4>REBEKAH FRIEDMAN<br/>
 							<span>Business Member</span></h4>
 						</div>
@@ -213,12 +213,12 @@ const Team2020_body = () =>{
 							<span>Controls Co-Lead</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Rithik_Sachdeva.jpg"/>
+							<img className="team-member" src="/images/team/20212022/Rithik_Sachdeva.jpeg"/>
 							<h4>RITHIK SACHDEVA<br/>
 							<span>Controls Co-Lead</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Andrew_Gunlock.jpg"/>
+							<img className="team-member" src="/images/team/20212022/Andrew_Gunlock.jepg"/>
 							<h4>ANDREW<br/>GUNLOCK<br/>
 							<span>Controls Member</span></h4>
 						</div>
@@ -240,12 +240,12 @@ const Team2020_body = () =>{
 							<span>Controls Co-Lead</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Rithik_Sachdeva.jpg"/>
+							<img className="team-member" src="/images/team/20212022/Rithik_Sachdeva.jpeg"/>
 							<h4>RITHIK SACHDEVA<br/>
 							<span>Controls Co-Lead</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Andrew_Gunlock.jpg"/>
+							<img className="team-member" src="/images/team/20212022/Andrew_Gunlock.jpeg"/>
 							<h4>ANDREW<br/>GUNLOCK<br/>
 							<span>Controls Member</span></h4>
 						</div>
@@ -279,7 +279,7 @@ const Team2020_body = () =>{
 					</div>
 					<div className="stability-row row row-2">
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Connor_Lewis.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Connor_Lewis.jpg"/>
 							<h4>CONNOR LEWIS<br/>
 							<span>Power Member</span></h4>
 						</div>
@@ -296,7 +296,7 @@ const Team2020_body = () =>{
 					</div>
 					<div className="stability-row row row-3">
 					<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Megan_Zhang.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Megan_Zhang.jpg"/>
 							<h4>MEGAN ZHANG<br/>
 							<span>Power Member</span></h4>
 						</div>
@@ -331,7 +331,7 @@ const Team2020_body = () =>{
 							<span>Power Member</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Connor_Lewis.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Connor_Lewis.jpg"/>
 							<h4>CONNOR LEWIS<br/>
 							<span>Power Member</span></h4>
 						</div>
@@ -348,7 +348,7 @@ const Team2020_body = () =>{
 							<span>Power Member</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Megan_Zhang.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Megan_Zhang.jpg"/>
 							<h4>MEGAN ZHANG<br/>
 							<span>Power Member</span></h4>
 						</div>
@@ -467,7 +467,7 @@ const Team2020_body = () =>{
 							<span>Stability Co-Lead</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Patrick_Hong.jpg"/>
+							<img className="team-member" src="/images/team/20212022/Patrick_Hong.jpeg"/>
 							<h4>PATRICK HONG<br/>
 							<span>Stability Member</span></h4>
 						</div>
@@ -499,7 +499,7 @@ const Team2020_body = () =>{
 							<span>Stability Co-Lead</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Patrick_Hong.jpg"/>
+							<img className="team-member" src="/images/team/20212022/Patrick_Hong.jpeg"/>
 							<h4>PATRICK HONG<br/>
 							<span>Stability Member</span></h4>
 						</div>
@@ -520,7 +520,7 @@ const Team2020_body = () =>{
 				<div className="oneloop-team2019 brakes team-mobile">
 					<div className="brakes-row row row-1">
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Rajasibi_Rajendran.jpg"/>
+							<img className="team-member" src="/images/team/20212022/Rajasibi_Rajendran.jpeg"/>
 							<h4>RAJASIBI RAJENDRAN<br/>
 							<span>Structures Lead</span></h4>
 						</div>
@@ -552,7 +552,7 @@ const Team2020_body = () =>{
 				<div className="oneloop-team2019 brakes team-web">
 					<div className="brakes-row row row-1">
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Rajasibi_Rajendran.jpg"/>
+							<img className="team-member" src="/images/team/20212022/Rajasibi_Rajendran.jpeg"/>
 							<h4>RAJASIBI RAJENDRAN<br/>
 							<span>Structures Lead</span></h4>
 						</div>
