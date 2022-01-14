@@ -262,7 +262,7 @@ const Team2020_body = () =>{
 				<div className="oneloop-team2019 stability team-mobile">
 					<div className="stability-row row row-1">
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Forrest_Fankhausner.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Forrest_Fankhauser.jpeg"/>
 							<h4>FORREST FANKHAUSER<br/>
 							<span>Power Co-Lead</span></h4>
 						</div>
@@ -316,7 +316,7 @@ const Team2020_body = () =>{
 				<div className="oneloop-team2019 stability team-web">
 					<div className="stability-row row row-1">
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Forrest_Fankhausner.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Forrest_Fankhauser.jpeg"/>
 							<h4>FORREST FANKHAUSER<br/>
 							<span>Power Co-Lead</span></h4>
 						</div>
