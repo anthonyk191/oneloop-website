@@ -118,6 +118,11 @@ const Team2020_body = () =>{
 							<h4>ANDY YEN<br/>
 							<span>Business Member</span></h4>
 						</div>
+						<div className="team-member">
+							<img className="team-member" src="/images/team/20202021/Lucas_Dahlke.jpg"/>
+							<h4>LUCAS DAHLKE<br/>
+							<span>Business Member</span></h4>
+						</div>
 					</div>
 					<div className="stability-row row row-2">
 						<div className="team-member">
@@ -197,7 +202,7 @@ const Team2020_body = () =>{
 					</div>
 				</div>
 
-		
+
 
 				<h2>Controls</h2>
 				<div className="oneloop-team2019 controls team-mobile">
@@ -245,8 +250,8 @@ const Team2020_body = () =>{
 							<span>Controls Member</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Ananya_Tyagi.jpeg"/>
-							<h4>ANANYA TYAGI<br/>
+							<img className="team-member" src="/images/team/20192020/Annanya_Tyagi.jpeg"/>
+							<h4>ANNANYA TYAGI<br/>
 							<span>Controls Member</span></h4>
 						</div>
 					</div>
