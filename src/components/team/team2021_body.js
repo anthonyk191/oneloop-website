@@ -14,12 +14,12 @@ const Team2020_body = () =>{
 				<div className="oneloop-team2019 controls team-mobile">
 					<div className="controls-row row row-1">
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Jayden_Patel.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Jayden_Patel.jpg"/>
 							<h4>JAYDEN PATEL<br/>
 							<span>President</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Omri_Steinberg-Tatman.jpg"/>
+							<img className="team-member" src="/images/team/20212022/Omri_Steinberg-Tatman.png"/>
 							<h4>OMRI STEINBERG TATMAN<br/>
 							<span>Project Manager</span></h4>
 						</div>
@@ -41,17 +41,17 @@ const Team2020_body = () =>{
 				<div className="oneloop-team2019 controls team-web">
 					<div className="controls-row row row-1">
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Jayden_Patel.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Jayden_Patel.jpg"/>
 							<h4>JAYDEN PATEL<br/>
 							<span>President</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Omri_Steinberg-Tatman.jpg"/>
+							<img className="team-member" src="/images/team/20212022/Omri_Steinberg-Tatman.png"/>
 							<h4>OMRI STEINBERG TATMAN<br/>
 							<span>Project Manager</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Jodan_Hal.jpg"/>
+							<img className="team-member" src="/images/team/20212022/Jodan_Hall.jpg"/>
 							<h4>JORDAN<br/>HALL<br/>
 							<span>Chief Engineer</span></h4>
 						</div>
@@ -83,12 +83,12 @@ const Team2020_body = () =>{
 				<div className="oneloop-team2019 executive team-mobile-1">
 					<div className="executive-row row row-1">
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Ashir_Bhalla-Levine.jpg"/>
+							<img className="team-member" src="/images/team/20212022/Ashir+Bhalla-Levine.jpg"/>
 							<h4>ASHIR<br/>BHALLA-LEVINE<br/>
 							<span>Brakes Co-Lead</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Gaurav_Dhirar.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Gaurav_Dhirar.jpg"/>
 							<h4>GAURAV DHIRAR<br/>
 							<span>Brakes Co-Lead</span></h4>
 						</div>
@@ -109,7 +109,7 @@ const Team2020_body = () =>{
 							<span>Business Co-Lead</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Zbynka_Kekula.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Zbynka_Kekula.jpg"/>
 							<h4>ZBYNKA KEKULA<br/>
 							<span>Business Co-Lead</span></h4>
 						</div>
@@ -131,7 +131,7 @@ const Team2020_body = () =>{
 							<span>Business Member</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Lucas_Dahlke.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Lucas_Dahlke.jpg"/>
 							<h4>LUCAS DAHLKE<br/>
 							<span>Business Member</span></h4>
 						</div>
@@ -143,7 +143,7 @@ const Team2020_body = () =>{
 					</div>
 					<div className="stability-row row row-3">
 					<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Ruri_Sakakibara.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Ruri_Sakakibara.jpg"/>
 							<h4>RURI SAKAKIBARA<br/>
 							<span>Business Member</span></h4>
 						</div>
@@ -163,7 +163,7 @@ const Team2020_body = () =>{
 							<span>Business Co-Lead</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Zbynka_Kekula.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Zbynka_Kekula.jpg"/>
 							<h4>ZBYNKA KEKULA<br/>
 							<span>Business Co-Lead</span></h4>
 						</div>
@@ -178,7 +178,7 @@ const Team2020_body = () =>{
 							<span>Business Member</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Lucas_Dahlke.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Lucas_Dahlke.jpg"/>
 							<h4>LUCAS DAHLKE<br/>
 							<span>Business Member</span></h4>
 						</div>
@@ -190,7 +190,7 @@ const Team2020_body = () =>{
 							<span>Business Member</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Ruri_Sakakibara.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Ruri_Sakakibara.jpg"/>
 							<h4>RURI SAKAKIBARA<br/>
 							<span>Business Member</span></h4>
 						</div>
@@ -208,7 +208,7 @@ const Team2020_body = () =>{
 				<div className="oneloop-team2019 controls team-mobile">
 					<div className="controls-row row row-1">
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Jayden_Patel.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Jayden_Patel.jpg"/>
 							<h4>JAYDEN PATEL<br/>
 							<span>Controls Co-Lead</span></h4>
 						</div>
@@ -235,7 +235,7 @@ const Team2020_body = () =>{
 				<div className="oneloop-team2019 controls team-web">
 					<div className="controls-row row row-1">
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Jayden_Patel.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Jayden_Patel.jpg"/>
 							<h4>JAYDEN PATEL<br/>
 							<span>Controls Co-Lead</span></h4>
 						</div>
@@ -267,7 +267,7 @@ const Team2020_body = () =>{
 							<span>Power Co-Lead</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Omri_Steinberg-Tatman.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Omri_Steinberg-Tatman.png"/>
 							<h4>OMRI STEINBERG-TATMAN<br/>
 							<span>Power Co-Lead</span></h4>
 						</div>
@@ -321,7 +321,7 @@ const Team2020_body = () =>{
 							<span>Power Co-Lead</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Omri_Steinberg-Tatman.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Omri_Steinberg-Tatman.png"/>
 							<h4>OMRI STEINBERG-TATMAN<br/>
 							<span>Power Co-Lead</span></h4>
 						</div>
@@ -369,12 +369,12 @@ const Team2020_body = () =>{
 				<div className="oneloop-team2019 stability team-mobile">
 					<div className="stability-row row row-1">
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Isabel_Baeza.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Isabel_Baeza.jpg"/>
 							<h4>ISABEL BAEZA<br/>
 							<span>Propulsion Co-Lead</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Joseph_Tiu.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Joseph_Tiu.jpg"/>
 							<h4>JOSEPH TIU<br/>
 							<span>Propulsion Co-Lead</span></h4>
 						</div>
@@ -386,12 +386,12 @@ const Team2020_body = () =>{
 					</div>
 					<div className="stability-row row row-2">
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Harry_Yang.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Harry_Yang.png"/>
 							<h4>HARRY YANG<br/>
 							<span>Propulsion Member</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Lucas_Dahlke.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Lucas_Dahlke.jpg"/>
 							<h4>LUCAS DAHLKE<br/>
 							<span>Propulsion Member</span></h4>
 						</div>
@@ -413,12 +413,12 @@ const Team2020_body = () =>{
 				<div className="oneloop-team2019 stability team-web">
 					<div className="stability-row row row-1">
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Isabel_Baeza.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Isabel_Baeza.jpg"/>
 							<h4>ISABEL BAEZA<br/>
 							<span>Propulsion Co-Lead</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Joseph_Tiu.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Joseph_Tiu.jpg"/>
 							<h4>JOSEPH TIU<br/>
 							<span>Propulsion Co-Lead</span></h4>
 						</div>
@@ -428,12 +428,12 @@ const Team2020_body = () =>{
 							<span>Propulsion Member</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Harry_Yang.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Harry_Yang.png"/>
 							<h4>HARRY YANG<br/>
 							<span>Propulsion Member</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Lucas_Dahlke.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Lucas_Dahlke.jpg"/>
 							<h4>LUCAS DAHLKE<br/>
 							<span>Propulsion Member</span></h4>
 						</div>
@@ -462,7 +462,7 @@ const Team2020_body = () =>{
 							<span>Stability Co-Lead</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Mark_Hagiwara.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Mark_Hagiwara.jpg"/>
 							<h4>MARK HAGIWARA<br/>
 							<span>Stability Co-Lead</span></h4>
 						</div>
@@ -494,7 +494,7 @@ const Team2020_body = () =>{
 							<span>Stability Co-Lead</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Mark_Hagiwara.jpeg"/>
+							<img className="team-member" src="/images/team/20212022/Mark_Hagiwara.jpg"/>
 							<h4>MARK HAGIWARA<br/>
 							<span>Stability Co-Lead</span></h4>
 						</div>
