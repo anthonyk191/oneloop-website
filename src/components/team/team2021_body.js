@@ -72,7 +72,7 @@ const Team2020_body = () =>{
 							<span></span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20202021/Samual_Menigoz.png"/>
+							<img className="team-member" src="/images/team/20202021/Sam_Menigoz.png"/>
 							<h4>SAMUAL MENIGOZ<br/>
 							<span>Project Manager</span></h4>
 						</div>
