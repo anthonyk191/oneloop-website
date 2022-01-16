@@ -11,8 +11,8 @@ const Team2020_body = () =>{
 				</div>
 
 				<h2>Executive Team</h2>
-				<div className="oneloop-team2019 controls team-mobile">
-					<div className="controls-row row row-1">
+				<div className="oneloop-team2019 executive team-mobile">
+					<div className="executive-row row row-1">
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20212022/Jayden_Patel.jpg"/>
 							<h4>JAYDEN PATEL<br/>
@@ -29,7 +29,7 @@ const Team2020_body = () =>{
 							<span>Chief Engineer</span></h4>
 						</div>
 					</div>
-					<div className="controls-row row row-2">
+					<div className="executive-row row row-2">
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20212022/Alex_Shaban.jpeg"/>
 							<h4>ALEX SHABAN<br/>
@@ -38,8 +38,8 @@ const Team2020_body = () =>{
 					</div>
 				</div>
 
-				<div className="oneloop-team2019 controls team-web">
-					<div className="controls-row row row-1">
+				<div className="oneloop-team2019 executive team-web">
+					<div className="executive-row row row-1">
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20212022/Jayden_Patel.jpg"/>
 							<h4>JAYDEN PATEL<br/>
