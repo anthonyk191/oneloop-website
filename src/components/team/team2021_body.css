@@ -34,8 +34,8 @@
 	}
 
  .team-member img{
-		height: 25vw;
-		width: 12.5vw;
+		height: 300px;
+		width: 300px;
 		margin-bottom: -15px;
 	}
 	.team-member h4{
@@ -45,7 +45,4 @@
 	.oneloop-team2019-title{
 		text-align: left;
 	}
-
-  img.team-member{
-    height: 100px;
-  }
+}

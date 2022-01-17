@@ -1,4 +1,4 @@
-import './team2020_body.css';
+import './team2021_body.css';
 
 import React, { useEffect } from 'react';
 
