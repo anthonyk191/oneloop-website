@@ -16,7 +16,7 @@
 
 .oneloop-team2019-title{
 	text-align: center;
-}	
+}
 
 @media (min-width: 887px){
 	.oneloop-team2020-body{
@@ -35,9 +35,9 @@
 
 	.team-member img{
 		height: 25vw;
-		width: 12.5vw;
+		
 		margin-bottom: -15px;
-	} 
+	}
 	.team-member h4{
 		font-size: 1.2vw;
 	}
@@ -45,5 +45,5 @@
 	.oneloop-team2019-title{
 		text-align: left;
 	}
- 
+
 }
