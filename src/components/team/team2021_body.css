@@ -33,7 +33,7 @@
 		display: none;
 	}
 
-	.team-member img{
+ .team-member img{
 		height: 25vw;
 		width: 12.5vw;
 		margin-bottom: -15px;
@@ -46,4 +46,6 @@
 		text-align: left;
 	}
 
-}
+  img.team-member{
+    height: 100px;
+  }
