@@ -43,17 +43,17 @@ function App() {
 					<Route path="/teamintro">
 						<Teamintro />
 					</Route>
-					<Route path="/team2018">
-						<Team2018 />
-					</Route>
-					<Route path="/team2019">
-						<Team2019 />
+					<Route path="/team2021">
+						<Team2021 />
 					</Route>
 					<Route path="/team2020">
 						<Team2020 />
 					</Route>
-					<Route path="/team2021">
-						<Team2021 />
+					<Route path="/team2019">
+						<Team2019 />
+					</Route>
+					<Route path="/team2018">
+						<Team2018 />
 					</Route>
 					<Route path="/sponsors">
 						<Sponsors />

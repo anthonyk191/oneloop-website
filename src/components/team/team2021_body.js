@@ -7,7 +7,7 @@ const Team2020_body = () =>{
 		<React.Fragment>
 			<div className="oneloop-team2020-body">
 				<div className="oneloop-team2019-title">
-					<h1>2020-2021 Team</h1>
+					<h1>2021-2022 Team</h1>
 				</div>
 
 				<h2>Executive Team</h2>

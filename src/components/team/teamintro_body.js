@@ -41,6 +41,7 @@ const Teamintro_body = () =>{
 				<div className="oneloop-previous-teams">
 					<h2>Previous Teams</h2>
 					<div className="oneloop-previous-teams">
+						<a href="/team2021">2021-2022</a>
 						<a href="/team2020">2020-2021</a>
 						<a href="/team2019">2019-2020</a>
 						<a href="/team2018">2018-2019</a>
