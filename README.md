@@ -120,10 +120,16 @@ Follow instructions carefully:
 
 Make sure to use Git Bash to run these commands (unless you're on Mac).
 
+### Install npm
+* Follow nvm install [instructions](https://github.com/nvm-sh/nvm)
+* `nvm install --lts`
+
 ### Testing only the frontend (email functions won't work)
 
 * `cd <path_to_directory>`
 * `npm install`
+* `cd server && npm install && cd ..`
+* `cd functions && npm install && cd ..`
 * `npm start`
 * website will open at `http://localhost:3000/`
 
