@@ -128,13 +128,13 @@ const RightNav = ({ open }) => {
     <Ul open={open}>
       <li><a href="/">Home</a></li>
       <li><a href="/about">About Us</a></li>
-      <li id="dropdown-button"><a href="/teamintro">Team</a>
+      <li id="dropdown-button">Team
         <ul id="dropdown-menu">
-          <li id="firstitem"><a href="/teamintro">Team Intro</a></li>
-          <li><a href="/team2018">Team 2018-2019</a></li>
-          <li><a href="/team2019">Team 2019-2020</a></li>
+          <li><a href="/teamintro">Team Intro</a></li>
+          <li><a href="/team2021">Team 2021-2022</a></li>
           <li><a href="/team2020">Team 2020-2021</a></li>
-          <li id="lastitem"><a href="/team2021">Team 2021-2022</a></li>		  
+          <li><a href="/team2019">Team 2019-2020</a></li>
+          <li><a href="/team2018">Team 2018-2019</a></li>
         </ul>
       </li>
       <li><a href="/sponsors">Sponsors</a></li>

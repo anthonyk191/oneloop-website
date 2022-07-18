@@ -404,12 +404,12 @@ const Team2020_body = () =>{
 							<span>Stability Lead</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20202021/Mark_Hagiwara.jpeg"/>
+							<img className="team-member" src="/images/team/20202021/Anjali_Gupta.jpeg"/>
 							<h4>ANJALI GUPTA<br/>
 							<span>Stability Co-Lead</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20202021/Mark_Hagiwara.jpeg"/>
+							<img className="team-member" src="/images/team/20202021/Kansas_Seung.jpeg"/>
 							<h4>KANSAS SEUNG<br/>
 							<span>Stability Co-Lead</span></h4>
 						</div>
@@ -421,19 +421,19 @@ const Team2020_body = () =>{
 							<span>Stability Member</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20202021/Kyle_Heinzman.jpeg"/>
+							<img className="team-member" src="/images/team/20202021/Andrew_Gunlock.jpeg"/>
 							<h4>ANDREW GUNLOCK<br/>
 							<span>Stability Member</span></h4>
 						</div>
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20202021/Kyle_Heinzman.jpeg"/>
+							<img className="team-member" src="/images/team/20202021/Weijin_Tang.jpeg"/>
 							<h4>WEIJIN TANG<br/>
 							<span>Stability Member</span></h4>
 						</div>
 					</div>
 					<div className="stability-row row row-3">
 						<div className="team-member">
-							<img className="team-member" src="/images/team/20202021/Kyle_Heinzman.jpeg"/>
+							<img className="team-member" src="/images/team/20202021/Zoe_Wilf.jpeg"/>
 							<h4>ZOE WILF<br/>
 							<span>Stability Member</span></h4>
 						</div>

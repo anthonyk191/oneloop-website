@@ -41,7 +41,25 @@
 	background-color: #fff;
 }
 
+.sponsorHover {
+	display: flex;
+	width: 40vw;
+	height: 40vw;
+	margin-left: 1.5vw;
+	margin-right: 1.5vw;
+	margin-bottom: 3vw;
+	border: 15px solid goldenrod;
+	align-items: center;
+	background-color: #fff;
+}
+
 .sponsor img{
+	width: 25vw;
+	height: auto;
+	margin: auto;
+}
+
+.sponsorHover img{
 	width: 25vw;
 	height: auto;
 	margin: auto;
@@ -195,11 +213,23 @@
 		margin-bottom: 2vw;
 	}
 
+	.sponsorHover {
+		width: 17vw;
+		height: 17vw;
+		margin-left: 1vw;
+		margin-right: 1vw;
+		margin-bottom: 2vw;
+	}
+
 	.sponsorPopUp a{
 		margin-left: 0px;
 	}
 
 	.sponsor img{
+		width: 12vw;
+	}
+
+	.sponsorHover img{
 		width: 12vw;
 	}
 

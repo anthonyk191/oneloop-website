@@ -1,110 +1,9 @@
+import React, { useEffect, useState } from 'react';
+import SponsorModal from "./sponsor";
 import './sponsors_body.css';
 
-import React, { useEffect, useState } from 'react';
-import SponsorOne from './sponsorOne';
-import SponsorTwo from './sponsorTwo';
-import SponsorThree from './sponsorThree';
-import SponsorFour from './sponsorFour';
-import SponsorFive from './sponsorFive';
-import SponsorSix from './sponsorSix';
-import SponsorSeven from './sponsorSeven';
-import SponsorEight from './sponsorEight';
-import SponsorNine from './sponsorNine';
-import SponsorTen from './sponsorTen';
-import SponsorEleven from './sponsorEleven';
-import SponsorTwelve from './sponsorTwelve';
-import SponsorThirteen from './sponsorThirteen';
-import SponsorFourteen from './sponsorFourteen';
-import SponsorFifteen from './sponsorFifteen';
-import SponsorSixteen from './sponsorSixteen';
-import SponsorSeventeen from './sponsorSeventeen';
-import SponsorEighteen from './sponsorEighteen';
-import SponsorNineteen from './sponsorNineteen';
-import SponsorTwenty from './sponsorTwenty';
-
-
-const Sponsors_body = () =>{
-	const [showResults1, setShowResults1] = React.useState(false)
-  	const onClick1 = () => setShowResults1(true)
-	const [isOpen1,setIsOpen1] = useState(false)
-
-	const [showResults2, setShowResults2] = React.useState(false)
-  	const onClick2 = () => setShowResults2(true)
-	const [isOpen2,setIsOpen2] = useState(false)
-
-	const [showResults3, setShowResults3] = React.useState(false)
-  	const onClick3 = () => setShowResults3(true)
-	const [isOpen3,setIsOpen3] = useState(false)
-
-	const [showResults4, setShowResults4] = React.useState(false)
-  	const onClick4 = () => setShowResults4(true)
-	const [isOpen4,setIsOpen4] = useState(false)
-
-	const [showResults5, setShowResults5] = React.useState(false)
-  	const onClick5 = () => setShowResults5(true)
-	const [isOpen5,setIsOpen5] = useState(false)
-
-	const [showResults6, setShowResults6] = React.useState(false)
-  	const onClick6 = () => setShowResults6(true)
-	const [isOpen6,setIsOpen6] = useState(false)
-
-	const [showResults7, setShowResults7] = React.useState(false)
-  	const onClick7 = () => setShowResults7(true)
-	const [isOpen7,setIsOpen7] = useState(false)
-
-	const [showResults8, setShowResults8] = React.useState(false)
-  	const onClick8 = () => setShowResults8(true)
-	const [isOpen8,setIsOpen8] = useState(false)
-
-	const [showResults9, setShowResults9] = React.useState(false)
-  	const onClick9 = () => setShowResults9(true)
-	const [isOpen9,setIsOpen9] = useState(false)
-
-	const [showResults10, setShowResults10] = React.useState(false)
-  	const onClick10 = () => setShowResults10(true)
-	const [isOpen10,setIsOpen10] = useState(false)
-
-	const [showResults11, setShowResults11] = React.useState(false)
-  	const onClick11 = () => setShowResults11(true)
-	const [isOpen11,setIsOpen11] = useState(false)
-
-	const [showResults12, setShowResults12] = React.useState(false)
-  	const onClick12 = () => setShowResults12(true)
-	const [isOpen12,setIsOpen12] = useState(false)
-
-	const [showResults13, setShowResults13] = React.useState(false)
-  	const onClick13 = () => setShowResults13(true)
-	const [isOpen13,setIsOpen13] = useState(false)
-
-	const [showResults14, setShowResults14] = React.useState(false)
-  	const onClick14 = () => setShowResults14(true)
-	const [isOpen14,setIsOpen14] = useState(false)
-
-	const [showResults15, setShowResults15] = React.useState(false)
-  	const onClick15 = () => setShowResults15(true)
-	const [isOpen15,setIsOpen15] = useState(false)
-
-	const [showResults16, setShowResults16] = React.useState(false)
-  	const onClick16 = () => setShowResults16(true)
-	const [isOpen16,setIsOpen16] = useState(false)
-
-	const [showResults17, setShowResults17] = React.useState(false)
-  	const onClick17 = () => setShowResults17(true)
-	const [isOpen17,setIsOpen17] = useState(false)
-
-	const [showResults18, setShowResults18] = React.useState(false)
-  	const onClick18 = () => setShowResults18(true)
-	const [isOpen18,setIsOpen18] = useState(false)
-
-	const [showResults19, setShowResults19] = React.useState(false)
-  	const onClick19 = () => setShowResults19(true)
-	const [isOpen19,setIsOpen19] = useState(false)
-
-	const [showResults20, setShowResults20] = React.useState(false)
-  	const onClick20 = () => setShowResults20(true)
-	const [isOpen20,setIsOpen20] = useState(false)
-
-	return(
+const Sponsors_body = () => {
+	return (
 		<React.Fragment>
 			<div className="oneloop-sponsors-body">
 				<div className="oneloop-sponsors-title">
@@ -182,72 +81,152 @@ const Sponsors_body = () =>{
 				<div className="sponsor-logos">
 					<div className="sponsor-row">
 						<div className="sponsor-row-top-half">
-							<button onClick={() => setIsOpen1(true)} className="sponsor"><img src="images/logo/etel-logo.png"/></button>
-							<SponsorOne open ={isOpen1} onClose = {() => setIsOpen1(false)}></SponsorOne>
-							<button onClick={() => setIsOpen2(true)} className="sponsor"><img src="images/logo/Beckhoff_Logo.svg.png"/></button>
-							<SponsorTwo open ={isOpen2} onClose = {() => setIsOpen2(false)}></SponsorTwo>
+							<SponsorModal
+								img={"images/logo/etel-logo.png"}
+								title={"ETEL"}
+								description={"ETEL is a company based in Switzerland which designs and builds motion systems in-house. They create systems that meet a range of needs from high-precision to high-power."}
+								url={"https://www.etel.ch"}
+							/>
+							<SponsorModal
+								img={"images/logo/Beckhoff_Logo.svg.png"}
+								title={"Beckhoff"}
+								description={"Works on the development and implementation of PC-based control technology all over the globes. This work spans over multiple different industries and product lines, cemented by their global presence."}
+								url={"https://www.beckhoff.com/en-us/"}
+							/>
 						</div>
 						<div className="sponsor-row-bottom-half">
-							<button onClick={() => setIsOpen3(true)} className="sponsor"><img src="images/logo/ANSYS_Logo.png"/></button>
-							<SponsorThree open ={isOpen3} onClose = {() => setIsOpen3(false)}></SponsorThree>
-							<button onClick={() => setIsOpen4(true)} className="sponsor"><img src="images/logo/Valispace_Logo.png"/></button>
-							<SponsorFour open ={isOpen4} onClose = {() => setIsOpen4(false)}></SponsorFour>
+							<SponsorModal
+								img={"images/logo/ANSYS_Logo.png"}
+								title={"ANSYS"}
+								description={"Develops and markets multiphysics engineering simulation software for product design, testing and operation and offers its products and services to customers worldwide."}
+								url={"https://www.ansys.com"}
+							/>
+							<SponsorModal
+								img={"images/logo/Valispace_Logo.png"}
+								title={"Valispace"}
+								description={"Helps engineers streamline their engineering efforts by centralizing ‘loose’ engineering data into one place. This provides a way for engineers to maximize their time and effort and design with their system of detailed documentation and secured user deployment."}
+								url={"https://www.valispace.com/"}
+							/>
 						</div>
 					</div>
 					<div className="sponsor-row">
 						<div className="sponsor-row-top-half">
-							<button onClick={() => setIsOpen5(true)} className="sponsor"><img src="images/logo/siemens-logo.png"/></button>
-							<SponsorFive open ={isOpen5} onClose = {() => setIsOpen5(false)}></SponsorFive>
-							<button onClick={() => setIsOpen6(true)} className="sponsor"><img src="images/logo/WCBranham_logo.gif"/></button>
-							<SponsorSix open ={isOpen6} onClose = {() => setIsOpen6(false)}></SponsorSix>
+							<SponsorModal
+								img={"images/logo/siemens-logo.png"}
+								title={"Seimens"}
+								description={"Siemens is the largest manufacturing company in Europe. A multinational conglomerate company whose varied acquisitions allowed it to be involved in wind power, gas power, energy management, transportation, health care, automation and more."}
+								url={"https://www.siemens.com/global/en.html"}
+							/>
+							<SponsorModal
+								img={"images/logo/WCBranham_logo.gif"}
+								title={"WC Branham"}
+								description={"For over three decades, WC Branham has been a customer-focused family-owned business which excels in manufacturing power transmissions and fluid power systems. They are also a supplier of many other products that have served across the automotive, medical, and food processing industries."}
+								url={"https://www.wcbranham.com/index.cfm"}
+							/>
 						</div>
 						<div className="sponsor-row-bottom-half">
-							<button onClick={() => setIsOpen7(true)} className="sponsor"><img src="images/logo/air-caster-squarelogo.png"/></button>
-							<SponsorSeven open ={isOpen7} onClose = {() => setIsOpen7(false)}></SponsorSeven>
-							<button onClick={() => setIsOpen8(true)} className="sponsor"><img src="images/logo/FluidFlow_logo.jpg"/></button>
-							<SponsorEight open ={isOpen8} onClose = {() => setIsOpen8(false)}></SponsorEight>
+							<SponsorModal
+								img={"images/logo/air-caster-squarelogo.png"}
+								title={"AirCaster"}
+								description={"AirCaster designs & builds air bearing systems that transport heavy loads across industries which includes but is not limited to aerospace, oil, defense, and automotive. They are known for their durability and customization to meet unique needs."}
+								url={"https://www.aircaster.com"}
+							/>
+							<SponsorModal
+								img={"images/logo/FluidFlow_logo.jpg"}
+								title={"Fluid Flow"}
+								description={"FluidFlow is a pipe flow design software allowing users to design pressure drop systems of any needs. Flows can include non-newtonian and slurry flow, two-phase flow, thermal energy transfer and compressible flow for example."}
+								url={"https://fluidflowinfo.com"}
+							/>
 						</div>
 					</div>
 					<div className="sponsor-row">
 						<div className="sponsor-row-top-half">
-							<button onClick={() => setIsOpen9(true)} className="sponsor"><img src="images/logo/AquaEnvironment_Logo.png"/></button>
-							<SponsorNine open ={isOpen9} onClose = {() => setIsOpen9(false)}></SponsorNine>
-							<button onClick={() => setIsOpen10(true)} className="sponsor"><img src="images/logo/TitanFittings_logo.png"/></button>
-							<SponsorTen open ={isOpen10} onClose = {() => setIsOpen10(false)}></SponsorTen>
+							<SponsorModal
+								img={"images/logo/AquaEnvironment_Logo.png"}
+								title={"Aqua Environment"}
+								description={"Specialize in manufacturing high pressure components such as valves and regulators for gas and fluid control. Products are used in wide rage of commercial firefighting, military, sports-diving, natural gas, natural gas fill stations, and other applications (shipping worldwide)."}
+								url={"https://www.aquaenvironmentinc.com/index.html"}
+							/>
+							<SponsorModal
+								img={"images/logo/TitanFittings_logo.png"}
+								title={"Titan Fittings"}
+								description={"Stainless steel line is composed of over 10,000 stainless fittings in multiple product families that include hydraulic adapters, stainless hose ends, instrumental tube fittings, and Titan stainless valves. Company manufactures precise stainless components for large corporate and government clients nationally and has evolved into supplying high quality standard fittings for industrial applications globally."}
+								url={"https://www.titanfittings.com/"}
+							/>
 						</div>
 						<div className="sponsor-row-bottom-half">
-							<button onClick={() => setIsOpen11(true)} className="sponsor"><img src="images/logo/uc-davis-mechanical-aerospace-engineering-new-faculty-2020.jpg"/></button>
-							<SponsorEleven open ={isOpen11} onClose = {() => setIsOpen11(false)}></SponsorEleven>
-							<button onClick={() => setIsOpen12(true)} className="sponsor"><img src="images/logo/Gerberlabs_logo.png"/></button>
-							<SponsorTwelve open ={isOpen12} onClose = {() => setIsOpen12(false)}></SponsorTwelve>
+							<SponsorModal
+								img={"images/logo/uc-davis-mechanical-aerospace-engineering-new-faculty-2020.jpg"}
+								title={"Mechanical and Aerospace Engineering Department"}
+								description={"Department offering comprehensive resources for students, faculty, and staff at UC Davis (offering undergraduate advising and research opportunities)."}
+								url={"https://mae.ucdavis.edu"}
+							/>
+							<SponsorModal
+								img={"images/logo/Gerberlabs_logo.png"}
+								title={"Gerber Labs"}
+								description={"The leading provider of printed circuit boards (PCB’s) for anyone from large companies to individuals working on home projects. Provides low-cost and high-quality custom boards made easily accessible to the public."}
+								url={"https://www.gerberlabs.com/"}
+							/>
 						</div>
 					</div>
 					<div className="sponsor-row">
 						<div className="sponsor-row-top-half">
-							<button onClick={() => setIsOpen13(true)} className="sponsor"><img src="images/logo/SICKInc_Logo.jpg"/></button>
-							<SponsorThirteen open ={isOpen13} onClose = {() => setIsOpen13(false)}></SponsorThirteen>
-							<button onClick={() => setIsOpen14(true)} className="sponsor"><img src="images/logo/Rockwell_Automation_Logo.png"/></button>
-							<SponsorFourteen open ={isOpen14} onClose = {() => setIsOpen14(false)}></SponsorFourteen>
+							<SponsorModal
+								img={"images/logo/SICKInc_Logo.jpg"}
+								title={"SICK Inc."}
+								description={"Manufactures sensor technology for anything from factory automation to logistics and process automation. These are sold and used in a wide range of industries, and create the perfect basis for controlling processes securely and efficiently, protecting individuals from accidents, and preventing damage to the environment."}
+								url={"https://www.sick.com/us/en/"}
+							/>
+							<SponsorModal
+								img={"images/logo/Rockwell_Automation_Logo.png"}
+								title={"Rockwell Automation"}
+								description={"A provider of both information technology and industrial automation. Many of their products are recognized across the globe for excellence."}
+								url={"https://www.rockwellautomation.com/en-us.html"}
+							/>
 						</div>
 						<div className="sponsor-row-bottom-half">
-							<button onClick={() => setIsOpen15(true)} className="sponsor"><img src="images/logo/Citris_logo.svg"/></button>
-							<SponsorFifteen open ={isOpen15} onClose = {() => setIsOpen15(false)}></SponsorFifteen>
-							<button onClick={() => setIsOpen16(true)} className="sponsor"><img src="images/logo/TCMetal_Electric_Steel_Logo.png"/></button>
-							<SponsorSixteen open ={isOpen16} onClose = {() => setIsOpen16(false)}></SponsorSixteen>
+							<SponsorModal
+								img={"images/logo/Citris_logo.svg"}
+								title={"CITRIS"}
+								description={"An institute opened by the university of california to help further the research might of the general university of california system, and help it to connect with the entrepreneurial spirit of silicon valley, bridging the gap between companies, students, and policy makers. "}
+								url={"https://citris-uc.org"}
+							/>
+							<SponsorModal
+								img={"images/logo/TCMetal_Electric_Steel_Logo.png"}
+								title={"TCMetal Electric Steel"}
+								description={"Provides high quality grain oriented and non-oriented electrical steel to the leading manufacturers in North America. With high efficiency cores that meet their high quality standards."}
+								url={"https://tcmetal.com/"}
+							/>
 						</div>
 					</div>
 					<div className="sponsor-row">
 						<div className="sponsor-row-top-half">
-							<button onClick={() => setIsOpen17(true)} className="sponsor"><img src="images/logo/KeySight_Technology_Logo.png"/></button>
-							<SponsorSeventeen open ={isOpen17} onClose = {() => setIsOpen17(false)}></SponsorSeventeen>
-							<button onClick={() => setIsOpen18(true)} className="sponsor"><img src="images/logo/SecondOrderEffects_Logo.png"/></button>
-							<SponsorEighteen open ={isOpen18} onClose = {() => setIsOpen18(false)}></SponsorEighteen>
+							<SponsorModal
+								img={"images/logo/KeySight_Technology_Logo.png"}
+								title={"Keysight Technology"}
+								description={"Provides many services in technology consultation, design, and software to address pressing issues for business and technological advancement."}
+								url={"https://www.keysight.com/us/en/home.html"}
+							/>
+							<SponsorModal
+								img={"images/logo/SecondOrderEffects_Logo.png"}
+								title={"Second Order Effects"}
+								description={"Develops and designs many solutions to challenges that are solved by their broad range of expertise in electronics, automotive, healthcare, and industrial automation industries. Reaching a solution that produces maximized results."}
+								url={"https://soeffects.com"}
+							/>
 						</div>
 						<div className="sponsor-row-bottom-half">
-							<button onClick={() => setIsOpen19(true)} className="sponsor"><img src="images/logo/Ubiquiti_Networks_Logo.svg.png"/></button>
-							<SponsorNineteen open ={isOpen19} onClose = {() => setIsOpen19(false)}></SponsorNineteen>
-							<button onClick={() => setIsOpen20(true)} className="sponsor"><img src="images/logo/CompositeOne_Logo.png"/></button>
-							<SponsorTwenty open ={isOpen20} onClose = {() => setIsOpen20(false)}></SponsorTwenty>
+							<SponsorModal
+								img={"images/logo/Ubiquiti_Networks_Logo.svg.png"}
+								title={"Ubiquiti Networks"}
+								description={"A provider of multi-application network operating systems that offers many services such as identification across networks, network management, and IT customization."}
+								url={"https://www.ui.com"}
+							/>
+							<SponsorModal
+								img={"images/logo/CompositeOne_Logo.png"}
+								title={"Composite One"}
+								description={"Lead supplier in composite materials with high performance ratings and used across many industries including aerospace, construction and infrastructure."}
+								url={"https://www.compositesone.com"}
+							/>
 						</div>
 					</div>
 				</div>
