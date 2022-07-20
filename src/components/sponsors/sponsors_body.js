@@ -12,9 +12,10 @@ const Sponsors_body = () => {
 				</div>
 
                 <div className="thanks">
-                    <p>Thank you to all of our kind sponsors!</p>
-                    <p><a href ="davishyperloop@gmail.com">Email us</a>for more information on becoming our sponsor or 
+                    <p>Thank you to all of our kind sponsors!
+                        <a href ="davishyperloop@gmail.com">Email us</a>for more information on becoming our sponsor or 
                         <a href ="https://give.ucdavis.edu/2450/VCHLOOP">donate now!</a></p>
+                    <p>Special thanks to BAE Staff: Jed Roach, Andy Cobb, and Tom Bell; Victor Duraj; and Tim Keller of<a href ="https://www.inventopia.org/">Inventopia!</a></p>
                 </div>
 
 				<div className="sponsor-logos">
