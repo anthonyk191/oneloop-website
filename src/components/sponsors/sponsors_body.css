@@ -184,9 +184,17 @@
 .thanks p {
 	font-size: 20px;
 	align-self: left;
-	padding-left: 30px;
+	padding-left: 20px;
 	padding-right: 10px;
 	margin-bottom: 30px;
+}
+
+.special_thanks p {
+	font-size: 20px;
+	align-self: left;
+	padding-left: 35px;
+	padding-right: 10px;
+	margin-bottom: 20px;
 }
 
 @media only screen and (min-width: 887px){
