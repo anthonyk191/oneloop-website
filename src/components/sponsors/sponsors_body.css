@@ -181,6 +181,14 @@
 	padding-right: 20px;
 }
 
+.thanks p {
+	font-size: 20px;
+	align-self: left;
+	padding-left: 30px;
+	padding-right: 10px;
+	margin-bottom: 30px;
+}
+
 @media only screen and (min-width: 887px){
 
 	.oneloop-sponsors-body{

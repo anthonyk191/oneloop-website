@@ -118,11 +118,7 @@ const Team2020_body = () =>{
 							<h4>ANDY YEN<br/>
 							<span>Business Member</span></h4>
 						</div>
-						<div className="team-member">
-							<img className="team-member" src="/images/team/20202021/Lucas_Dahlke.jpg"/>
-							<h4>LUCAS DAHLKE<br/>
-							<span>Business Member</span></h4>
-						</div>
+						
 					</div>
 					<div className="business-row row row-2">
 						<div className="team-member">
@@ -147,11 +143,7 @@ const Team2020_body = () =>{
 							<h4>RURI SAKAKIBARA<br/>
 							<span>Business Member</span></h4>
 						</div>
-						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Sofia_Stahl.jpeg"/>
-							<h4>SOFIA STAHL<br/>
-							<span>Business Member</span></h4>
-						</div>
+						
 					</div>
 				</div>
 
@@ -177,13 +169,15 @@ const Team2020_body = () =>{
 							<h4>JINGUANG CHAI<br/>
 							<span>Business Member</span></h4>
 						</div>
+						
+					</div>
+					<div className="business-row row row-2">
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20212022/Lucas_Dahlke.jpg"/>
 							<h4>LUCAS DAHLKE<br/>
 							<span>Business Member</span></h4>
 						</div>
-					</div>
-					<div className="business-row row row-2">
+
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20212022/Rebekah_Friedman.jpeg"/>
 							<h4>REBEKAH FRIEDMAN<br/>
@@ -194,11 +188,7 @@ const Team2020_body = () =>{
 							<h4>RURI SAKAKIBARA<br/>
 							<span>Business Member</span></h4>
 						</div>
-						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Sofia_Stahl.jpeg"/>
-							<h4>SOFIA STAHL<br/>
-							<span>Business Member</span></h4>
-						</div>
+						
 					</div>
 				</div>
 
@@ -335,13 +325,15 @@ const Team2020_body = () =>{
 							<h4>CONNOR LEWIS<br/>
 							<span>Power Member</span></h4>
 						</div>
+						
+					</div>
+					<div className="power-row row row-2">
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20212022/Christian_Molina.jpeg"/>
 							<h4>CHRISTIAN MOLINA<br/>
 							<span>Power Member</span></h4>
 						</div>
-					</div>
-					<div className="power-row row row-2">
+
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20212022/Jan_Truong.jpeg"/>
 							<h4>JAN TRUONG<br/>
@@ -357,6 +349,8 @@ const Team2020_body = () =>{
 							<h4>PARTH PAWAR<br/>
 							<span>Power Member</span></h4>
 						</div>
+					</div>
+					<div className="power-row row row-3">
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20212022/Shyam_Agarwal.jpeg"/>
 							<h4>SHYAM AGARWAL<br/>
@@ -378,18 +372,14 @@ const Team2020_body = () =>{
 							<h4>JOSEPH TIU<br/>
 							<span>Propulsion Co-Lead</span></h4>
 						</div>
-						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Ali_Gangeh.jpeg"/>
-							<h4>ALI GANGEH<br/>
-							<span>Propulsion Member</span></h4>
-						</div>
-					</div>
-					<div className="propulsion-row row row-2">
+
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20212022/Harry_Yang.png"/>
 							<h4>HARRY YANG<br/>
 							<span>Propulsion Member</span></h4>
 						</div>
+					</div>
+					<div className="propulsion-row row row-2">
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20212022/Lucas_Dahlke.jpg"/>
 							<h4>LUCAS DAHLKE<br/>
@@ -422,11 +412,7 @@ const Team2020_body = () =>{
 							<h4>JOSEPH TIU<br/>
 							<span>Propulsion Co-Lead</span></h4>
 						</div>
-						<div className="team-member">
-							<img className="team-member" src="/images/team/20212022/Ali_Gangeh.jpeg"/>
-							<h4>ALI GANGEH<br/>
-							<span>Propulsion Member</span></h4>
-						</div>
+						
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20212022/Harry_Yang.png"/>
 							<h4>HARRY YANG<br/>
@@ -508,6 +494,8 @@ const Team2020_body = () =>{
 							<h4>WEIJIN TANG<br/>
 							<span>Stability Member</span></h4>
 						</div>
+					</div>
+					<div className="stability-row row row-2">
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20212022/Zoe_Wilf.jpeg"/>
 							<h4>ZOE WILF<br/>
@@ -571,6 +559,8 @@ const Team2020_body = () =>{
 							<h4>BRYAN TIANG<br/>
 							<span>Structures Member</span></h4>
 						</div>
+					</div>
+					<div className="structures-row row row-2">
 						<div className="team-member">
 							<img className="team-member" src="/images/team/20212022/Joey_Voss.jpeg"/>
 							<h4>JOEY VOSS<br/>
