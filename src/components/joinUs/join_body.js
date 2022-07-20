@@ -286,7 +286,7 @@ const Join_body = () => {
       <div className="oneloop-joinus-basic-qualifications">
         <h2 className="oneloop-joinus-heading1"> Basic Qualifications </h2>
         <li> Currently pursuing an undergraduate or graduate degree at UC Davis </li>
-        <li> $40/year dues </li>
+        <li> $50/year dues </li>
         <li> 4hr/week minimum commitment (weekly subteam meetings and individual projects) </li>
         <li> Accountable for projects assigned by leads and willing to learn; proactive </li>
       </div>
