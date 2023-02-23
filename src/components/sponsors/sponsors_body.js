@@ -127,7 +127,7 @@ const Sponsors_body = () => {
 								url={"http://www.force.co.uk/"}
 							/>
 						</div>
-
+						<div className="sponsor-row-bottom-half">
 							<SponsorModal
 								img={"images/logo/BAE 16x9.jpg"}
 								title={"UC Davis Biological and Agricultural Engineering"}
@@ -141,8 +141,12 @@ const Sponsors_body = () => {
 								description={""}
 								url={"https://ece.ucdavis.edu/"}
 							/>
+
+						</div>
+							
 					</div>
 					<div className="sponsor-row">
+						<div className="sponsor-row-top-half">
 							<SponsorModal
 								img={"images/logo/inventopia.png"}
 								title={"Inventopia"}
@@ -156,7 +160,7 @@ const Sponsors_body = () => {
 								description={""}
 								url={"https://www.ti.com/"}
 							/>
-						
+						</div>
 					</div>
 				</div>
 
