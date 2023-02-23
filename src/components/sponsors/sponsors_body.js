@@ -18,10 +18,6 @@ const Sponsors_body = () => {
                     </p>
                 </div>
 
-                <div className="special_thanks">
-                    <p>Special thanks to BAE Staff: Jed Roach, Andy Cobb, and Tom Bell; Victor Duraj; and Tim Keller of<a id="bolder" href ="https://www.inventopia.org/">Inventopia!</a></p>
-                </div>
-
 				<div className="sponsor-logos">
 					<div className="sponsor-row">
 						<div className="sponsor-row-top-half">
@@ -131,6 +127,35 @@ const Sponsors_body = () => {
 								url={"http://www.force.co.uk/"}
 							/>
 						</div>
+
+							<SponsorModal
+								img={"images/logo/BAE 16x9.jpg"}
+								title={"UC Davis Biological and Agricultural Engineering"}
+								description={"Special thanks to BAE Shop Staff: Jed Roach, Andy Cobb, and Tom Bell"}
+								url={"https://bae.ucdavis.edu/"}
+							/>
+
+							<SponsorModal
+								img={"images/logo/ece_logo_125px.png"}
+								title={"UC Davis Electrical and Computer Engineering"}
+								description={""}
+								url={"https://ece.ucdavis.edu/"}
+							/>
+					</div>
+					<div className="sponsor-row">
+							<SponsorModal
+								img={"images/logo/inventopia.png"}
+								title={"Inventopia"}
+								description={"Thanks to Tim Keller"}
+								url={"https://www.inventopia.org/"}
+							/>
+
+							<SponsorModal
+								img={"images/logo/texas_inst.png"}
+								title={"Texas Instruments"}
+								description={""}
+								url={"https://www.ti.com/"}
+							/>
 						
 					</div>
 				</div>

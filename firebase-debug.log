@@ -1,0 +1,82 @@
+[debug] [2023-02-23T01:52:05.663Z] ----------------------------------------------------------------------
+[debug] [2023-02-23T01:52:05.665Z] Command:       /usr/local/bin/firebase /home/anj/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase serve
+[debug] [2023-02-23T01:52:05.665Z] CLI Version:   11.2.1
+[debug] [2023-02-23T01:52:05.665Z] Platform:      linux
+[debug] [2023-02-23T01:52:05.665Z] Node Version:  v16.15.0
+[debug] [2023-02-23T01:52:05.666Z] Time:          Wed Feb 22 2023 17:52:05 GMT-0800 (Pacific Standard Time)
+[debug] [2023-02-23T01:52:05.666Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-23T01:52:05.727Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-23T01:52:05.728Z] > authorizing via signed-in user (anjgupta@ucdavis.edu)
+[debug] [2023-02-23T01:52:05.728Z] [iam] checking project oneloop-website for permissions ["firebase.projects.get"]
+[debug] [2023-02-23T01:52:05.729Z] > refreshing access token with scopes: []
+[debug] [2023-02-23T01:52:05.731Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-02-23T01:52:05.731Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-02-23T01:52:09.811Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-02-23T01:52:09.812Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-02-23T01:52:09.812Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/oneloop-website:testIamPermissions [none]
+[debug] [2023-02-23T01:52:09.812Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/oneloop-website:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2023-02-23T01:52:09.928Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/oneloop-website:testIamPermissions 401
+[debug] [2023-02-23T01:52:09.929Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/oneloop-website:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions","service":"cloudresourcemanager.googleapis.com"}}]}}
+[debug] [2023-02-23T01:52:09.929Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-02-23T01:52:09.929Z] > refreshing access token with scopes: []
+[debug] [2023-02-23T01:52:09.930Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-02-23T01:52:09.930Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-02-23T01:52:10.025Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-02-23T01:52:10.025Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-02-23T01:52:10.026Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/oneloop-website [none]
+[debug] [2023-02-23T01:52:10.354Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/oneloop-website 401
+[debug] [2023-02-23T01:52:10.355Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/oneloop-website {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2023-02-23T01:52:10.355Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-02-23T01:52:10.426Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (/home/anj/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/home/anj/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/apiv2.js:287:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project oneloop-website. Please make sure the project exists and your account has permission to access it.
+[debug] [2023-02-23T02:19:49.447Z] ----------------------------------------------------------------------
+[debug] [2023-02-23T02:19:49.451Z] Command:       /usr/local/bin/firebase /home/anj/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase deploy
+[debug] [2023-02-23T02:19:49.452Z] CLI Version:   11.2.1
+[debug] [2023-02-23T02:19:49.452Z] Platform:      linux
+[debug] [2023-02-23T02:19:49.452Z] Node Version:  v16.15.0
+[debug] [2023-02-23T02:19:49.454Z] Time:          Wed Feb 22 2023 18:19:49 GMT-0800 (Pacific Standard Time)
+[debug] [2023-02-23T02:19:49.454Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-02-23T02:19:49.558Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-02-23T02:19:49.559Z] > authorizing via signed-in user (anjgupta@ucdavis.edu)
+[debug] [2023-02-23T02:19:49.559Z] [iam] checking project oneloop-website for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-02-23T02:19:49.563Z] > refreshing access token with scopes: []
+[debug] [2023-02-23T02:19:49.566Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-02-23T02:19:49.566Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-02-23T02:19:49.729Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-02-23T02:19:49.730Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-02-23T02:19:49.730Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/oneloop-website:testIamPermissions [none]
+[debug] [2023-02-23T02:19:49.731Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/oneloop-website:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-02-23T02:19:49.832Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/oneloop-website:testIamPermissions 401
+[debug] [2023-02-23T02:19:49.832Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/oneloop-website:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"service":"cloudresourcemanager.googleapis.com","method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions"}}]}}
+[debug] [2023-02-23T02:19:49.833Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-02-23T02:19:49.833Z] > refreshing access token with scopes: []
+[debug] [2023-02-23T02:19:49.834Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-02-23T02:19:49.834Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-02-23T02:19:49.937Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-02-23T02:19:49.937Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-02-23T02:19:49.937Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/oneloop-website/serviceAccounts/oneloop-website@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-02-23T02:19:49.937Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/oneloop-website/serviceAccounts/oneloop-website@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-02-23T02:19:50.025Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/oneloop-website/serviceAccounts/oneloop-website@appspot.gserviceaccount.com:testIamPermissions 401
+[debug] [2023-02-23T02:19:50.025Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/oneloop-website/serviceAccounts/oneloop-website@appspot.gserviceaccount.com:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"service":"iam.googleapis.com","method":"google.iam.admin.v1.IAM.TestIamPermissions"}}]}}
+[debug] [2023-02-23T02:19:50.025Z] [functions] service account IAM check errored, deploy may fail:HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project. {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"service":"iam.googleapis.com","method":"google.iam.admin.v1.IAM.TestIamPermissions"}}]}},"response":{"statusCode":401}},"exit":1,"message":"HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":401}
+[debug] [2023-02-23T02:19:50.026Z] > refreshing access token with scopes: []
+[debug] [2023-02-23T02:19:50.026Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-02-23T02:19:50.026Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-02-23T02:19:50.118Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2023-02-23T02:19:50.118Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-02-23T02:19:50.119Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/oneloop-website [none]
+[debug] [2023-02-23T02:19:50.241Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/oneloop-website 401
+[debug] [2023-02-23T02:19:50.242Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/oneloop-website {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2023-02-23T02:19:50.242Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2023-02-23T02:19:50.299Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (/home/anj/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/home/anj/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/apiv2.js:287:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project oneloop-website. Please make sure the project exists and your account has permission to access it.

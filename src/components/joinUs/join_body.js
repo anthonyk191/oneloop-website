@@ -4,255 +4,257 @@ import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import contact_img from './contact_image.jpeg';
 
 const Join_body = () => {
-  const { executeRecaptcha } = useGoogleReCaptcha();
-  const softwareOtherRef = useRef(null);
-  const langOtherRef = useRef(null);
-  const refOtherRef = useRef(null);
-  const joinFormRef = useRef(null);
-  const [softwareOther, setSoftwareOther] = useState('');
-  const [langOther, setLangOther] = useState('');
-  const [refOther, setRefOther] = useState('');
-  const [workPostResponse, setWorkPostResponse] = useState('');
-  const [joinPostResponse, setJoinPostResponse] = useState('');
-  const [workSubmitted, setWorkSubmitted] = useState(true);
-  const [joinSubmitted, setJoinSubmitted] = useState(false);
+  // const { executeRecaptcha } = useGoogleReCaptcha();
+  // const softwareOtherRef = useRef(null);
+  // const langOtherRef = useRef(null);
+  // const refOtherRef = useRef(null);
+  // const joinFormRef = useRef(null);
+  // const [softwareOther, setSoftwareOther] = useState('');
+  // const [langOther, setLangOther] = useState('');
+  // const [refOther, setRefOther] = useState('');
+  // const [workPostResponse, setWorkPostResponse] = useState('');
+  // const [joinPostResponse, setJoinPostResponse] = useState('');
+  // const [workSubmitted, setWorkSubmitted] = useState(true);
+  // const [joinSubmitted, setJoinSubmitted] = useState(false);
 
-  const [workFormData, setWorkFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-    subject: "OneLoop Work With Us Inquiry"
-  });
+  // const [workFormData, setWorkFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   message: "",
+  //   subject: "OneLoop Work With Us Inquiry"
+  // });
 
-  const [joinFormData, setJoinFormData] = useState({
-    name: "",
-    email: "",
-    year: "",
-    major: "",
-    gpa: "",
-    hours_to_commit: "",
-    subteams_interested: [],
-    ranking: "",
-    software_familiar: [],
-    programming_languages_familiar: [],
-    reference: [],
-    resume: "",
-    subject: "OneLoop Application"
-  });
+  // const [joinFormData, setJoinFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   year: "",
+  //   major: "",
+  //   gpa: "",
+  //   hours_to_commit: "",
+  //   subteams_interested: [],
+  //   ranking: "",
+  //   software_familiar: [],
+  //   programming_languages_familiar: [],
+  //   reference: [],
+  //   resume: "",
+  //   subject: "OneLoop Application"
+  // });
 
-  const workHandleChange = (e) => {
-    setWorkFormData({
-      ...workFormData,
+  // const workHandleChange = (e) => {
+  //   setWorkFormData({
+  //     ...workFormData,
 
-      [e.target.name]: e.target.value,
-    });
-  };
+  //     [e.target.name]: e.target.value,
+  //   });
+  // };
 
-  const workHandleSubmit = async(e) => {
-    e.preventDefault();
+  // const workHandleSubmit = async(e) => {
+  //   e.preventDefault();
 
-    if(!executeRecaptcha) {
-      // console.log("Execute recaptcha not yet available");
-      setWorkPostResponse('reCAPTCHA has not finished initializing; please wait a few moments before submitting');
-      setWorkSubmitted(true);
-      return;
-    }
-    workFormData.token = await executeRecaptcha();
+  //   if(!executeRecaptcha) {
+  //     // console.log("Execute recaptcha not yet available");
+  //     setWorkPostResponse('reCAPTCHA has not finished initializing; please wait a few moments before submitting');
+  //     setWorkSubmitted(true);
+  //     return;
+  //   }
+  //   workFormData.token = await executeRecaptcha();
 
-    // POST request to server:
-    const res = await fetch('/api/work-with-us', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(workFormData)
-    });
-    const response = await res.json();
-    const message = response.message;
-    setWorkPostResponse(message);
-    setWorkSubmitted(true);
-    if (message == 'Email sent!') {
-      setWorkFormData({
-        name: "",
-        email: "",
-        message: "",
-        subject: "OneLoop Work With Us Inquiry"
-      });
-    }
-  };
+  //   // POST request to server:
+  //   const res = await fetch('/api/work-with-us', {
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/json' },
+  //     body: JSON.stringify(workFormData)
+  //   });
+  //   const response = await res.json();
+  //   const message = response.message;
+  //   setWorkPostResponse(message);
+  //   setWorkSubmitted(true);
+  //   if (message == 'Email sent!') {
+  //     setWorkFormData({
+  //       name: "",
+  //       email: "",
+  //       message: "",
+  //       subject: "OneLoop Work With Us Inquiry"
+  //     });
+  //   }
+  // };
 
-  const joinHandleChange = (e) => {
-    // console.log(e.target.name);
-    setJoinFormData({
-      ...joinFormData,
+  // const joinHandleChange = (e) => {
+  //   // console.log(e.target.name);
+  //   setJoinFormData({
+  //     ...joinFormData,
 
-      [e.target.name]: e.target.value,
-    });
-    // console.log(joinFormData);
-  };
+  //     [e.target.name]: e.target.value,
+  //   });
+  //   // console.log(joinFormData);
+  // };
 
-  const joinHandleCheckboxChange = (e) => {
-    let str = e.target.name;
-    // console.log(str);/
-    let arr = joinFormData[str];
-    if (e.target.checked) {
-      arr.push(e.target.value);
-    } else {
-      let idx = arr.indexOf(e.target.value);
-      if (idx > -1) {
-        arr.splice(idx, 1);
-      }
-    }
-    setJoinFormData({
-      ...joinFormData,
+  // const joinHandleCheckboxChange = (e) => {
+  //   let str = e.target.name;
+  //   // console.log(str);/
+  //   let arr = joinFormData[str];
+  //   if (e.target.checked) {
+  //     arr.push(e.target.value);
+  //   } else {
+  //     let idx = arr.indexOf(e.target.value);
+  //     if (idx > -1) {
+  //       arr.splice(idx, 1);
+  //     }
+  //   }
+  //   setJoinFormData({
+  //     ...joinFormData,
 
-      [e.target.name]: arr,
-    });
-    // console.log(joinFormData);
-  }
+  //     [e.target.name]: arr,
+  //   });
+  //   // console.log(joinFormData);
+  // }
 
-  const joinHandleOtherChange = (e) => {
-    // console.log(e.target.name);
-    if (e.target.value) {
-      // console.log(softwareOtherRef.current.checked);
-      switch(e.target.name) {
-        case "software_familiar":
-          softwareOtherRef.current.checked = true;
-          setSoftwareOther(e.target.value);
-          break;
-        case "programming_languages_familiar":
-          langOtherRef.current.checked = true;
-          setLangOther(e.target.value);
-          break;
-        case "reference":
-          refOtherRef.current.checked = true;
-          setRefOther(e.target.value);
-          break;
-      }
-      setSoftwareOther(e.target.value);
-    } else {
-      switch(e.target.name) {
-        case "software_familiar":
-          softwareOtherRef.current.checked = false;
-          setSoftwareOther('');
-          break;
-        case "programming_languages_familiar":
-          langOtherRef.current.checked = false;
-          setLangOther('');
-          break;
-        case "reference":
-          refOtherRef.current.checked = false;
-          setRefOther('');
-          break;
-      }
-    }
-  }
+  // const joinHandleOtherChange = (e) => {
+  //   // console.log(e.target.name);
+  //   if (e.target.value) {
+  //     // console.log(softwareOtherRef.current.checked);
+  //     switch(e.target.name) {
+  //       case "software_familiar":
+  //         softwareOtherRef.current.checked = true;
+  //         setSoftwareOther(e.target.value);
+  //         break;
+  //       case "programming_languages_familiar":
+  //         langOtherRef.current.checked = true;
+  //         setLangOther(e.target.value);
+  //         break;
+  //       case "reference":
+  //         refOtherRef.current.checked = true;
+  //         setRefOther(e.target.value);
+  //         break;
+  //     }
+  //     setSoftwareOther(e.target.value);
+  //   } else {
+  //     switch(e.target.name) {
+  //       case "software_familiar":
+  //         softwareOtherRef.current.checked = false;
+  //         setSoftwareOther('');
+  //         break;
+  //       case "programming_languages_familiar":
+  //         langOtherRef.current.checked = false;
+  //         setLangOther('');
+  //         break;
+  //       case "reference":
+  //         refOtherRef.current.checked = false;
+  //         setRefOther('');
+  //         break;
+  //     }
+  //   }
+  // }
 
-  const joinHandleFileChange = (e) => {
-    // console.log(e.target.files[0]);
-    setJoinFormData({
-      ...joinFormData,
+  // const joinHandleFileChange = (e) => {
+  //   // console.log(e.target.files[0]);
+  //   setJoinFormData({
+  //     ...joinFormData,
 
-      [e.target.name]: e.target.files[0],
-    });
-    // console.log(joinFormData);
-  }
+  //     [e.target.name]: e.target.files[0],
+  //   });
+  //   // console.log(joinFormData);
+  // }
 
-  const joinHandleSubmit = async(e) => {
-    e.preventDefault();
+  // // const joinHandleSubmit = async(e) => {
+  // //   e.preventDefault();
 
-    if(!executeRecaptcha) {
-      // console.log("Execute recaptcha not yet available");
-      setJoinPostResponse('reCAPTCHA has not finished initializing; please wait a few moments before submitting');
-      setJoinSubmitted(true);
-      return;
-    }
-    joinFormData.token = await executeRecaptcha();
+  // //   if(!executeRecaptcha) {
+  // //     // console.log("Execute recaptcha not yet available");
+  // //     setJoinPostResponse('reCAPTCHA has not finished initializing; please wait a few moments before submitting');
+  // //     setJoinSubmitted(true);
+  // //     return;
+  // //   }
+  // //   joinFormData.token = await executeRecaptcha();
 
-    if (softwareOtherRef.current.checked) {
-      let arr = joinFormData.software_familiar;
-      arr.push(softwareOther);
-      setJoinFormData({
-        ...joinFormData,
+  // //   if (softwareOtherRef.current.checked) {
+  // //     let arr = joinFormData.software_familiar;
+  // //     arr.push(softwareOther);
+  // //     setJoinFormData({
+  // //       ...joinFormData,
 
-        software_familiar: arr,
-      })
-    }
-    if (langOtherRef.current.checked) {
-      let arr = joinFormData.programming_languages_familiar;
-      arr.push(langOther);
-      setJoinFormData({
-        ...joinFormData,
+  // //       software_familiar: arr,
+  // //     })
+  // //   }
+  // //   if (langOtherRef.current.checked) {
+  // //     let arr = joinFormData.programming_languages_familiar;
+  // //     arr.push(langOther);
+  // //     setJoinFormData({
+  // //       ...joinFormData,
 
-        software_familiar: arr,
-      })
-    }
-    if (refOtherRef.current.checked) {
-      let arr = joinFormData.reference;
-      arr.push(refOther);
-      setJoinFormData({
-        ...joinFormData,
+  // //       software_familiar: arr,
+  // //     })
+  // //   }
+  // //   if (refOtherRef.current.checked) {
+  // //     let arr = joinFormData.reference;
+  // //     arr.push(refOther);
+  // //     setJoinFormData({
+  // //       ...joinFormData,
 
-        software_familiar: arr,
-      })
-    }
+  // //       software_familiar: arr,
+  // //     })
+  // //   }
     
-    let form = new FormData();
-    for (const prop in joinFormData) {
-      if (Array.isArray(joinFormData[prop])) {
-        // for (const item in joinFormData[prop]) {
-        //   console.log(joinFormData[prop][item]);
-        //   form.append(prop, item);
-        // }
-        joinFormData[prop].forEach(val => {
-          // console.log(val);
-          form.append(prop, val);
-        })
-      } else {
-        form.append(prop, joinFormData[prop]);
-      }
-    }
+  // //   let form = new FormData();
+  // //   for (const prop in joinFormData) {
+  // //     if (Array.isArray(joinFormData[prop])) {
+  // //       // for (const item in joinFormData[prop]) {
+  // //       //   console.log(joinFormData[prop][item]);
+  // //       //   form.append(prop, item);
+  // //       // }
+  // //       joinFormData[prop].forEach(val => {
+  // //         // console.log(val);
+  // //         form.append(prop, val);
+  // //       })
+  // //     } else {
+  // //       form.append(prop, joinFormData[prop]);
+  // //     }
+  // //   }
     
-    // POST request to server:
-    const res = await fetch('/api/join-us', {
-      method: 'POST',
-      body: form
-    });
-    const response = await res.json();
-    const message = response.message;
-    setJoinPostResponse(message);
-    setJoinSubmitted(true);
-    if (message == 'Application sent!') {
-      setJoinFormData({
-        name: "",
-        email: "",
-        year: "",
-        major: "",
-        gpa: "",
-        hours_to_commit: "",
-        subteams_interested: [],
-        ranking: "",
-        software_familiar: [],
-        programming_languages_familiar: [],
-        reference: [],
-        resume: "",
-        subject: "OneLoop Application"
-      });
-      joinFormRef.current.reset();
-    }
-  };
+  // //   // POST request to server:
+  // //   const res = await fetch('/api/join-us', {
+  // //     method: 'POST',
+  // //     body: form
+  // //   });
+  // //   const response = await res.json();
+  // //   const message = response.message;
+  // //   setJoinPostResponse(message);
+  // //   setJoinSubmitted(true);
+  // //   if (message == 'Application sent!') {
+  // //     setJoinFormData({
+  // //       name: "",
+  // //       email: "",
+  // //       year: "",
+  // //       major: "",
+  // //       gpa: "",
+  // //       hours_to_commit: "",
+  // //       subteams_interested: [],
+  // //       ranking: "",
+  // //       software_familiar: [],
+  // //       programming_languages_familiar: [],
+  // //       reference: [],
+  // //       resume: "",
+  // //       subject: "OneLoop Application"
+  // //     });
+  // //     joinFormRef.current.reset();
+  // //   }
+  // // };
 
   return (
     <React.Fragment>
 
     <div className="oneloop-joinus-topcontainer">
-      <div className="oneloop-joinus-title"> <h1 className="contact_title"> Contact Us </h1> </div>
+      <div className="oneloop-joinus-title"> <h1 className="contact_title"> Join Us! </h1> </div>
+      <a id="bolder" href ="bit.ly/OneLoop22">OneLoop New Member Form</a> 
+      <a></a>
       <div className="Con_image">
             <img src={contact_img} className="contact_images"/><br />
       </div>
       <div className="oneloop-joinus-heading25"> INTERESTED IN GAINING HANDS-ON EXPERIENCE? JOIN THE TEAM! </div>
-      <p className="disclaimer"><i>(Click on options below to fill out appropriate form)</i></p>
+      {/* <p className="disclaimer"><i>(Click on options below to fill out appropriate form)</i></p> */}
     </div>
     
-    <div className="oneloop-joinus">
+    {/* <div className="oneloop-joinus">
       <h2 className="oneloop-joinus-heading1"> 
         <a href='#workwithus'className="join_link"> 
           Work with Us 
@@ -262,9 +264,9 @@ const Join_body = () => {
           Join Us  
         </a> 
       </h2>
-    </div>
+    </div> */}
 
-    <div className="oneloop-joinus-contact" section id = 'workwithus'>
+    {/* <div className="oneloop-joinus-contact" section id = 'workwithus'>
       <form onSubmit={workHandleSubmit}>
         <div className="joinus-contact">
           <label for="name"> Name:<br /></label>
@@ -280,7 +282,7 @@ const Join_body = () => {
         <input type="submit" value="Submit" className="JoinUs_button" />
       </form>
       <p style={{ display: workSubmitted ? "block" : "none" }}>{ workPostResponse }</p>
-    </div>
+    </div> */}
 
     <div className = "oneloop-joinus-section" section id = 'joinus' > 
       <div className="oneloop-joinus-basic-qualifications">
@@ -289,11 +291,13 @@ const Join_body = () => {
         <li> $50/year dues </li>
         <li> 4hr/week minimum commitment (weekly subteam meetings and individual projects) </li>
         <li> Accountable for projects assigned by leads and willing to learn; proactive </li>
+        <a id="bolder" href ="bit.ly/OneLoop22">OneLoop New Member Form</a> 
       </div>
 
       <div className="oneloop-joinus-application">
-          <h2 className="oneloop-joinus-applicationtitle"> OneLoop New Member Application </h2>
-          <body>
+          {/* <h2 className="oneloop-joinus-applicationtitle"> <a href ="bit.ly/OneLoop22">OneLoop New Member Form</a> </h2>
+          <p><a href ="bit.ly/OneLoop22">bit.ly/OneLoop22</a></p> */}
+          {/* <body>
             <form onSubmit={joinHandleSubmit} ref={joinFormRef}>
               <div className="Application">
                 <div className="oneloop-joinus-application-row1">
@@ -719,7 +723,7 @@ const Join_body = () => {
               <br />
             </form>
             <p style={{ display: joinSubmitted ? "block" : "none" }}>{ joinPostResponse }</p>
-          </body>
+          </body> */}
         </div>
       </div>
 
